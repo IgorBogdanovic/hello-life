@@ -1,7 +1,7 @@
 {
   "name": "hello-life",
   "version": "1.0.0",
-  "description": "Work under construction :)",
+  "description": "Hello life - Diwanee",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,5 +18,13 @@
     "gulp-sass": "^3.1.0",
     "gulp-uglyfly": "^1.4.2",
     "run-sequence": "^2.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giga0/hello-life.git"
+  },
+  "bugs": {
+    "url": "https://github.com/giga0/hello-life/issues"
+  },
+  "homepage": "https://github.com/giga0/hello-life/app/index.html"
 }

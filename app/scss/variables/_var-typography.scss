@@ -1,0 +1,5 @@
+$base-font-size: 10;
+
+html {
+  @include fontSizeVw($base-font-size, $base-font-size);
+}
