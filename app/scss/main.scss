@@ -1,12 +1,14 @@
-// @import 'base/module-base';
+@import 'base/module-base';
 
-// @import 'mixins/module-mixins';
+@import 'mixins/module-mixins';
 
-// @import 'variables/module-variables';
+@import 'variables/module-variables';
 
-// @import 'layout/module-layout';
+@import 'utilities/module-utilities';
 
-// @import 'components/module-components';
+@import 'layout/module-layout';
+
+@import 'components/module-components';
 
 // @import 'blocks/module-blocks';
 

@@ -1,0 +1,116 @@
+.u-clearfix {
+	*zoom: 1;
+	&:before, &:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+.u-pos-relative {
+	position: relative;
+}
+
+.u-dspl-flex-cntr {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.u-text {
+
+	&--uppercase {
+		text-transform: uppercase; 
+	}
+
+	&--black {
+		color: $black;
+	}
+
+	&--white {
+		color: $white;
+	}
+
+	&--black1 {
+		color: $black1;
+	}
+
+	&--lightGray {
+		color: $lightGray;
+	}
+
+	&--gray {
+		color: $gray;
+	}
+
+	&--darkBlue {
+		color: $darkBlue;
+	}
+
+	&--blue {
+		color: $blue;
+	}
+
+	&--lightBlue {
+		color: $lightBlue;
+	}
+
+	&--darkRed {
+		color: $darkRed;
+	}
+
+	&--lightRed {
+		color: $lightRed;
+	}
+}
+
+.u-background {
+	&--black {
+		background: $black;
+	}
+
+	&--white {
+		background: $white;
+	}
+
+	&--black1 {
+		background: $black1;
+	}
+
+	&--lightGray {
+		background: $lightGray;
+	}
+
+	&--gray {
+		background: $gray;
+	}
+
+	&--darkBlue {
+		background: $darkBlue;
+	}
+
+	&--blue {
+		background: $blue;
+	}
+
+	&--lightBlue {
+		background: $lightBlue;
+	}
+
+	&--darkRed {
+		background: $darkRed;
+	}
+
+	&--lightRed {
+		background: $lightRed;
+	}
+}
+
+

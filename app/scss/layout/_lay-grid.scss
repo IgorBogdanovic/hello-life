@@ -1,0 +1,25 @@
+.main-content {
+	width: 100%;
+	//padding-top: 10rem;
+
+	@include breakpoint(desktop) {
+		//padding-top: 6rem;
+	}
+}
+
+.main-wrapper {
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0 auto;
+	max-width: 1440px;
+
+	&--v1 {
+		padding-left: 8rem; 
+		padding-right: 8rem;
+
+		@include breakpoint(desktop) {
+			padding-left: 12.8rem;
+			padding-right: 12.8rem;
+		}
+	}
+}
