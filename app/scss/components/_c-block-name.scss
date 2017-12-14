@@ -1,0 +1,29 @@
+.c-block-name {
+	height: 3.7rem;
+	line-height: 3.7rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	display: inline-block;
+	font-family: 'HelloType-Bold';
+	@include fontSizeRem(22, 16);
+	background: $white;
+	color: $gray;
+
+	@include breakpoint(desktop) {
+		height: 2.4rem;
+		line-height: 2.4rem;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+		margin-right: 10rem;
+		-webkit-transform:rotate(270deg);
+		-moz-transform:rotate(270deg);
+		-o-transform:rotate(270deg);
+		-ms-transform:rotate(270deg);
+		position: absolute; //remove this
+		top: 12rem; //remove this
+	}
+
+	&--gray {
+		background: $lightGray;
+	}
+}

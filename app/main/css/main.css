@@ -192,22 +192,22 @@ html {
 
 @font-face {
   font-family: 'HelloType-Bold';
-  src: url("HelloType-Bold.eot");
-  src: url("HelloType-Bold.eot?#iefix") format("embedded-opentype"), url("HelloType-Bold.woff") format("woff"), url("HelloType-Bold.woff2") format("woff2"), url("HelloType-Bold.ttf") format("truetype"), url("HelloType-Bold.svg#HelloType-Bold") format("svg");
+  src: url("../../assets/fonts/hello-type/HelloType-Bold.eot");
+  src: url("../../assets/fonts/hello-type/HelloType-Bold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/hello-type/HelloType-Bold.woff") format("woff"), url("../../assets/fonts/hello-type/HelloType-Bold.woff2") format("woff2"), url("../../assets/fonts/hello-type/HelloType-Bold.ttf") format("truetype"), url("../../assets/fonts/hello-type/HelloType-Bold.svg#HelloType-Bold") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'HelloType-Regular';
-  src: url("Hello Type Regular.eot");
-  src: url("Hello Type Regular.eot?#iefix") format("embedded-opentype"), url("Hello Type Regular.woff") format("woff"), url("Hello Type Regular.woff2") format("woff2"), url("Hello Type Regular.ttf") format("truetype"), url("Hello Type Regular.svg#HelloType-Regular") format("svg");
+  src: url("../../assets/fonts/hello-type/Hello Type Regular.eot");
+  src: url("../../assets/fonts/hello-type/Hello Type Regular.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/hello-type/Hello Type Regular.woff") format("woff"), url("../../assets/fonts/hello-type/Hello Type Regular.woff2") format("woff2"), url("../../assets/fonts/hello-type/Hello Type Regular.ttf") format("truetype"), url("../../assets/fonts/hello-type/Hello Type Regular.svg#HelloType-Regular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Sketch';
-  src: url("Sketch.eot");
-  src: url("Sketch.eot?#iefix") format("embedded-opentype"), url("Sketch.woff") format("woff"), url("Sketch.woff2") format("woff2"), url("Sketch.ttf") format("truetype"), url("Sketch.svg#Sketch") format("svg");
+  src: url("../../assets/fonts/sketch/Sketch.eot");
+  src: url("../../assets/fonts/sketch/Sketch.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/sketch/Sketch.woff") format("woff"), url("../../assets/fonts/sketch/Sketch.woff2") format("woff2"), url("../../assets/fonts/sketch/Sketch.ttf") format("truetype"), url("../../assets/fonts/sketch/Sketch.svg#Sketch") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -311,9 +311,314 @@ html {
         padding-left: 12.8rem;
         padding-right: 12.8rem; } }
 
-.test {
-  height: 20rem;
-  background: green; }
+.c-block-name {
+  height: 3.7rem;
+  line-height: 3.7rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: inline-block;
+  font-family: 'HelloType-Bold';
+  background: #fff;
+  color: #999; }
+  @media (max-width: 750px) {
+    .c-block-name {
+      font-size: 2.2rem; } }
+  @media (min-width: 751px) {
+    .c-block-name {
+      font-size: 1.6rem; } }
+  @media (min-width: 751px) {
+    .c-block-name {
+      height: 2.4rem;
+      line-height: 2.4rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      margin-right: 10rem;
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      position: absolute;
+      top: 12rem; } }
+  .c-block-name--gray {
+    background: #f0f0f0; }
+
+.c-social {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #111;
+  height: 9.9rem;
+  padding-left: 5.6%;
+  padding-right: 6.8%;
+  padding-top: 3.3rem; }
+  @media (min-width: 751px) {
+    .c-social {
+      position: absolute;
+      top: 0;
+      height: 18.2rem;
+      width: 6rem;
+      padding: 0;
+      background: none; } }
+  .c-social__text {
+    width: 60%;
+    float: left;
+    font-family: 'HelloType-Bold';
+    color: #fff; }
+    @media (max-width: 750px) {
+      .c-social__text {
+        font-size: 2.6rem; } }
+    @media (min-width: 751px) {
+      .c-social__text {
+        font-size: 1.6rem; } }
+    @media (min-width: 751px) {
+      .c-social__text {
+        width: 18.2rem;
+        height: 2.4rem;
+        line-height: 2.4rem;
+        text-align: center;
+        -webkit-transform: rotate(270deg);
+        -moz-transform: rotate(270deg);
+        -o-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+        float: none;
+        position: absolute;
+        top: 7.9rem;
+        left: -8rem;
+        background: #111; } }
+  .c-social__icons {
+    width: 40%;
+    float: right;
+    text-align: right; }
+    @media (min-width: 751px) {
+      .c-social__icons {
+        float: none;
+        position: absolute;
+        top: 1.1rem;
+        right: 0; } }
+    .c-social__icons-fb {
+      width: 3.7rem;
+      height: 3.5rem;
+      display: inline-block;
+      margin-right: 6.4rem; }
+      @media (min-width: 751px) {
+        .c-social__icons-fb {
+          margin-right: 0;
+          width: 1.8rem;
+          height: 1.7rem;
+          margin-bottom: 2.4rem; } }
+      .c-social__icons-fb svg {
+        width: 100%;
+        height: 100%;
+        fill: #999; }
+    .c-social__icons-tw {
+      width: 3.6rem;
+      height: 3.2rem;
+      display: inline-block;
+      margin-right: 6.4rem; }
+      @media (min-width: 751px) {
+        .c-social__icons-tw {
+          margin-right: 0;
+          width: 1.7rem;
+          height: 1.5rem;
+          margin-bottom: 2.2rem; } }
+      .c-social__icons-tw svg {
+        width: 100%;
+        height: 100%;
+        fill: #999; }
+    .c-social__icons-in {
+      width: 3.5rem;
+      height: 3.1rem;
+      display: inline-block; }
+      @media (min-width: 751px) {
+        .c-social__icons-in {
+          width: 1.7rem;
+          height: 1.5rem; } }
+      .c-social__icons-in svg {
+        width: 100%;
+        height: 100%;
+        fill: #999; }
+  .c-social--hp {
+    position: absolute;
+    top: 0;
+    width: 28.3rem;
+    height: 23.1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 7.7rem;
+    background: #111;
+    z-index: 1; }
+    @media (min-width: 751px) {
+      .c-social--hp {
+        position: absolute;
+        height: 22rem;
+        width: 27rem;
+        padding-top: 7.6rem;
+        padding-right: 7rem;
+        padding-left: 7rem; } }
+    .c-social--hp .c-social__text {
+      width: 100%;
+      float: none;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 2.5rem; }
+      @media (max-width: 750px) {
+        .c-social--hp .c-social__text {
+          font-size: 2.2rem; } }
+      @media (min-width: 751px) {
+        .c-social--hp .c-social__text {
+          font-size: 1.2rem; } }
+      @media (max-width: 750px) {
+        .c-social--hp .c-social__text {
+          letter-spacing: 0.06em; } }
+      @media (min-width: 751px) {
+        .c-social--hp .c-social__text {
+          letter-spacing: 0.06em; } }
+      @media (min-width: 751px) {
+        .c-social--hp .c-social__text {
+          width: 100%;
+          height: auto;
+          line-height: 1.5;
+          text-align: center;
+          background: none;
+          -webkit-transform: rotate(0deg);
+          -moz-transform: rotate(0deg);
+          -o-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          float: none;
+          position: static;
+          margin-bottom: 2.3rem; } }
+    .c-social--hp .c-social__icons {
+      width: 100%;
+      float: none;
+      text-align: center; }
+      @media (min-width: 751px) {
+        .c-social--hp .c-social__icons {
+          position: static; } }
+      .c-social--hp .c-social__icons-fb {
+        width: 2.5rem;
+        height: 2.4rem;
+        margin-right: 2.1rem; }
+        @media (min-width: 751px) {
+          .c-social--hp .c-social__icons-fb {
+            width: 1.3rem;
+            height: 1.2rem;
+            margin-right: 0.9rem;
+            margin-bottom: 0; } }
+        .c-social--hp .c-social__icons-fb svg {
+          fill: #fff; }
+      .c-social--hp .c-social__icons-tw {
+        width: 2.7rem;
+        height: 2.4rem;
+        margin-right: 1.9rem; }
+        @media (min-width: 751px) {
+          .c-social--hp .c-social__icons-tw {
+            width: 1.4rem;
+            height: 1.2rem;
+            margin-right: 0.9rem;
+            margin-left: 0.1rem;
+            margin-bottom: 0; } }
+        .c-social--hp .c-social__icons-tw svg {
+          fill: #fff; }
+      .c-social--hp .c-social__icons-in {
+        width: 2.3rem;
+        height: 2.3rem;
+        margin-right: 0.1rem; }
+        @media (min-width: 751px) {
+          .c-social--hp .c-social__icons-in {
+            width: 1.4rem;
+            height: 1.2rem; } }
+        .c-social--hp .c-social__icons-in svg {
+          fill: #fff; }
+    .c-social--hp .c-social__back-text {
+      position: absolute;
+      top: 3.2rem;
+      left: 0;
+      font-family: 'Sketch';
+      color: #000;
+      text-align: center;
+      z-index: -1; }
+      @media (max-width: 750px) {
+        .c-social--hp .c-social__back-text {
+          font-size: 13rem; } }
+      @media (min-width: 751px) {
+        .c-social--hp .c-social__back-text {
+          font-size: 12.3rem; } }
+      @media (max-width: 750px) {
+        .c-social--hp .c-social__back-text {
+          line-height: 9.2rem; } }
+      @media (min-width: 751px) {
+        .c-social--hp .c-social__back-text {
+          line-height: 8.8rem; } }
+  @media (min-width: 751px) {
+    .c-social--quiz {
+      position: absolute;
+      top: 0;
+      height: 9.6rem;
+      width: 27rem;
+      padding-top: 2.1rem;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      background: #111; } }
+  .c-social--quiz .c-social__text {
+    margin-top: 0.7rem; }
+    @media (max-width: 750px) {
+      .c-social--quiz .c-social__text {
+        font-size: 2.2rem; } }
+    @media (min-width: 751px) {
+      .c-social--quiz .c-social__text {
+        font-size: 1.2rem; } }
+    @media (max-width: 750px) {
+      .c-social--quiz .c-social__text {
+        letter-spacing: 0.06em; } }
+    @media (min-width: 751px) {
+      .c-social--quiz .c-social__text {
+        letter-spacing: 0.06em; } }
+    @media (min-width: 751px) {
+      .c-social--quiz .c-social__text {
+        width: 100%;
+        height: auto;
+        line-height: 1.5;
+        text-align: center;
+        background: none;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        float: none;
+        position: static;
+        margin-bottom: 1.2rem;
+        text-transform: uppercase; } }
+  @media (min-width: 751px) {
+    .c-social--quiz .c-social__icons {
+      position: static;
+      float: none;
+      width: 100%;
+      text-align: center; } }
+  @media (min-width: 751px) {
+    .c-social--quiz .c-social__icons-fb {
+      width: 1.3rem;
+      height: 1.2rem;
+      margin-right: 0.9rem;
+      margin-bottom: 0; } }
+  @media (min-width: 751px) {
+    .c-social--quiz .c-social__icons-fb svg {
+      fill: #fff; } }
+  @media (min-width: 751px) {
+    .c-social--quiz .c-social__icons-tw {
+      width: 1.4rem;
+      height: 1.2rem;
+      margin-right: 0.9rem;
+      margin-bottom: 0; } }
+  @media (min-width: 751px) {
+    .c-social--quiz .c-social__icons-tw svg {
+      fill: #fff; } }
+  @media (min-width: 751px) {
+    .c-social--quiz .c-social__icons-in {
+      width: 1.4rem;
+      height: 1.2rem; } }
+  @media (min-width: 751px) {
+    .c-social--quiz .c-social__icons-in svg {
+      fill: #fff; } }
 
 /* Slider */
 .slick-slider {
