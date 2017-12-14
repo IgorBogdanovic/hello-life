@@ -1,0 +1,97 @@
+.c-pagination {
+	height: 8.7rem;
+	border: 1px solid #d9d9d9;
+	border-radius: 5rem;
+
+	@include breakpoint(desktop) {
+    	height: 6.4rem;
+    }
+
+	&__page {
+		height: 8.4rem;
+		color: $black1;
+
+		@include breakpoint(desktop) {
+	    	height: 6.2rem;
+	    }
+
+	    &.hidden {
+	    	visibility: hidden;
+	    }
+
+		&__text {
+			font-family: "HelloType-Bold", sans-serif;
+			@include fontSizeRem(26, 14);
+		}
+
+		&__arrow {
+			font-family: "HelloType-Regular", sans-serif;
+			@include fontSizeRem(60, 30.14);
+			top: 1.2rem;
+
+			@include breakpoint(desktop) {
+		    	top: 0.6rem;
+		    }
+		}
+
+		&--prev {
+			float: left;
+			margin-left: 4.5%;
+
+			@include breakpoint(desktop) {
+		    	margin-left: 2.4%;
+		    }
+
+			.c-pagination__page__text {
+				margin-left: 2rem;
+
+				@include breakpoint(desktop) {
+			    	line-height: 4.3;
+			    	margin-left: 2.6rem;
+			    }
+			}
+		}
+
+		&--next {
+			float: right;
+			margin-right: 4.5%;
+
+			@include breakpoint(desktop) {
+		    	margin-right: 2.4%;
+		    }
+
+			.c-pagination__page__text {
+				margin-right: 2rem;
+
+				@include breakpoint(desktop) {
+			    	line-height: 4.3;
+			    	margin-right: 2.6rem;
+			    }
+			}
+		}
+	}
+
+	&__page-list {
+
+		@include breakpoint(mobile) {
+	    	display: none;
+	    }
+
+	    display: block;
+		font-family: "HelloType-Bold", sans-serif;
+		@include fontSizeRem(26, 14);
+		color: $black1;
+		float: left;
+		line-height: 4.3;
+		margin-left: 25.2%;
+
+		&__li {
+			display: inline-block;
+			margin-right: 0.9rem;
+
+			&.active {
+				color: $lightBlue;
+			}
+		}
+	}
+}
