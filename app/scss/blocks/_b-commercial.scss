@@ -1,0 +1,68 @@
+.b-commercial {
+	background-image: url('../../assets/images/b-commercial/back-img.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding-top: 18.5%;
+
+	@include breakpoint(desktop) {
+		background-image: url('../../assets/images/b-commercial/back-img-mob.jpg');
+		display: inline-block;
+    	width: 50rem;
+    	padding-top: 7.7%;
+    }
+
+	&__heading {
+		font-family: "HelloType-Bold", sans-serif;
+		@include fontSizeRem(38, 25);
+		@include lineHeightRem(50, 33.49);
+		text-align: center;
+		width: 50%;
+	    margin: auto;
+
+	    @include breakpoint(desktop) {
+	    	margin-left: 22%;
+	    }
+	}
+
+	&__bank-logo {
+		width: 13.2%;
+		margin: auto;
+		margin-top: 6.8%;
+
+		@include breakpoint(desktop) {
+			width: 13.6%;
+		    margin-top: 6.1%;
+		    margin-left: 40.5%;
+	    }
+	}
+
+	&__button {
+		text-align: center;
+	    margin-top: 4.6%;
+
+	    @include breakpoint(desktop) {
+	    	text-align: inherit;
+			margin-top: 4.6%;
+    		margin-left: 21%;
+	    }
+	}
+
+	&__note {
+		font-family: "HelloType-Regular", sans-serif;
+		@include fontSizeRem(15, 10);
+		text-align: center;
+		margin-top: 5.7%;
+		padding-bottom: 18.3%;
+
+		@include breakpoint(desktop) {
+	    	text-align: inherit;
+			margin-top: 5.9%;
+		    margin-left: 38%;
+		    padding-bottom: 30%;
+	    }
+	}
+}

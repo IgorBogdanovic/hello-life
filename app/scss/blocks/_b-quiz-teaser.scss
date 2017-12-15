@@ -1,0 +1,74 @@
+.b-quiz-teaser {
+	background-color: #f7f9f9;
+	padding-right: 10.65%;
+	padding-left: 10.65%;
+	padding-bottom: 10%;
+    margin: auto;
+
+	@include breakpoint(desktop) {
+		display: inline-block;
+    	width: 33.6rem;
+    	padding-right: 0;
+		padding-left: 0;
+		padding-bottom: 2.4%;
+    }
+
+	&__media {
+		display: block;
+
+		@include breakpoint(desktop) {
+			width: 80.7%;
+		    margin: auto;
+
+		    &:hover > .b-quiz-teaser__media__info .b-quiz-teaser__media__info__heading {
+		    	background: $darkRed;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+		    }
+
+		    &:hover > .b-quiz-teaser__media__info .b-quiz-teaser__media__info__tag {
+		    	background: $darkRed;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+		    }
+	    }
+
+		&__info {
+			margin-top: 10%;
+
+			@include breakpoint(desktop) {
+				margin-top: 8%;
+		    }
+
+			&__heading {
+				font-family: "HelloType-Bold", sans-serif;
+				@include fontSizeRem(38, 30);
+				@include lineHeightRem(47, 37);
+				background: linear-gradient(to left, $lightRed 70%, $darkRed);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+
+			&__txt {
+				font-family: "HelloType-Regular", sans-serif;
+				@include fontSizeRem(24, 13);
+				@include lineHeightRem(29, 17);
+				margin-top: 4.9%;
+				margin-bottom: 8.7%;
+
+				@include breakpoint(desktop) {
+					margin-top: 5%;
+					margin-bottom: 5.5%;
+			    }
+			}
+
+			&__tag {
+				font-family: "HelloType-Bold", sans-serif;
+				@include fontSizeRem(26, 15);
+				background: linear-gradient(to left, $darkRed, $lightRed);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+	}
+}
