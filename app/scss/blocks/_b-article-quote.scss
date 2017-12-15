@@ -1,0 +1,62 @@
+.b-article-quote {
+	z-index: -1;
+	overflow: hidden;
+	background: linear-gradient(to right, $darkBlue, $blue);
+	text-align: center;
+	padding: 14% 23% 10.9% 23%;
+
+	@include breakpoint(desktop) {
+		display: inline-block;
+    	width: 50rem;
+    	padding: 0% 0% 0% 0%;
+    }
+
+    &__background-mark {
+    	position: absolute;
+    	z-index: -1;
+    	font-family: "HelloType-Bold", sans-serif;
+		@include fontSizeRem(670, 0);
+		color: $lightBlue;
+		opacity: 0.2;
+		text-shadow: -1rem 3rem 4rem $black;
+		top: 1%;
+    	right: -14%;
+    }
+
+	&__heading-bold {
+		z-index: 1;
+		font-family: "HelloType-Bold", sans-serif;
+		@include fontSizeRem(36, 20);
+		@include letterSpacingEm(-80, 0);
+	}
+
+	&__heading-reg {
+		z-index: 1;
+		font-family: "HelloType-Regular", sans-serif;
+		@include fontSizeRem(30, 18);
+		@include lineHeightRem(36, 18);
+		margin-top: 5%;
+	}
+
+	&__block-quote {
+		z-index: 1;
+		margin-top: 10%;
+
+		@include breakpoint(desktop) {
+			display: none;
+	    }
+
+		&__cite {
+			display: block;
+			font-family: "HelloType-Regular", sans-serif;
+			@include fontSizeRem(30, 22);
+			@include lineHeightRem(46, 22);
+			margin-bottom: 13.2%;
+		}
+
+		&__tag {
+			font-family: "HelloType-Bold", sans-serif;
+			@include fontSizeRem(21, 14);
+		}
+	}
+}
