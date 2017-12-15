@@ -1,0 +1,380 @@
+.c-media {
+	width: 100%;
+	margin-top: 10rem; //remove this
+	margin-bottom: 10rem; //remove this
+
+	@include breakpoint(desktop) {
+		width: 27rem;
+	}
+
+	&__icon {
+		text-align: center;
+		position: relative;
+		height: 11rem; 
+		padding-top: 2rem;
+		z-index: 1;
+
+		@include breakpoint(desktop) {
+			height: 6rem;
+		}
+
+		&::after {
+			content: "";
+			width: 6.4rem;
+			height: 6rem;
+			background: $lightGray;
+			display: block;
+			border-radius: 0.4rem;
+			position: absolute;
+			top: 0;
+			left: 26.2rem;
+			z-index: -1;
+
+			@include breakpoint(desktop) {
+				width: 4rem;
+				height: 3.8rem;
+				left: 11.5rem;
+				top: 0.4rem;
+			}
+		}
+
+		&::before {
+			content: "";
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 1rem 1rem 0;
+			border-color: transparent $lightGray transparent transparent;
+			display: block;
+			position: absolute;
+			top: 6rem;
+			left: 27.2rem;
+			z-index: -1;
+
+			@include breakpoint(desktop) {
+				border-width: 0 0.6rem 0.6rem 0;
+				left: 12.2rem;
+				top: 4.2rem;
+			}
+		}
+
+		& span {
+			font-family: 'HelloType-Regular';
+			@include fontSizeRem(20, 12);
+			text-transform: uppercase;
+			color: $black1;
+		}
+	}
+
+	&__content {
+		-webkit-transition: 0.3s all ease;
+	  	-moz-transition: 0.3s all ease;
+	  	-o-transition: 0.3s all ease;
+		transition: 0.3s all ease;
+
+		&:hover .c-media__link {
+			@include breakpoint(desktop) {
+				color: $blue;
+			}
+		}
+	}
+
+	&__img {
+		margin-bottom: 1.32rem;
+		display: block;
+		-webkit-transition: 0.3s all ease;
+	  	-moz-transition: 0.3s all ease;
+	  	-o-transition: 0.3s all ease;
+		transition: 0.3s all ease;
+
+		@include breakpoint(desktop) {
+			margin-bottom: 1.1rem;
+		}
+
+		& img {
+			width: 100%;
+		}
+
+		&:hover {
+			@include breakpoint(desktop) {
+				transform: translateY(-0.1rem);
+				box-shadow: 0px 1.7rem 2.1rem -2rem rgba(0,0,0,0.8);
+			}
+		}
+	}
+
+	&__body {
+
+		& h3 {
+			font-family: 'HelloType-Bold';
+			@include fontSizeRem(30, 20);
+			@include lineHeightRem(35, 25);
+			color: $black1;
+			margin-bottom: 5.8rem;
+			-webkit-transition: 0.3s all ease;
+		  	-moz-transition: 0.3s all ease;
+		  	-o-transition: 0.3s all ease;
+			transition: 0.3s all ease;
+
+			@include breakpoint(desktop) {
+				margin-bottom: 2.1rem; 
+			}
+
+			&:hover {
+				@include breakpoint(desktop) {
+					color: $blue;
+				}
+			}
+		}
+
+		& .c-media__link {
+			font-family: 'HelloType-Bold';
+			@include fontSizeRem(22, 12);
+			color: $black1;
+		}
+	}
+
+	//media for livenews page
+	&--small {
+		@include breakpoint(mobile) {
+			width: 28.2rem;
+		}
+
+		& .c-media__icon {
+			&::after {
+				@include breakpoint(mobile) {
+					top: 0;
+					left: 11.1rem;
+				}
+			}
+			&::before {
+				@include breakpoint(mobile) {
+					top: 6rem;
+					left: 12.1rem;
+				}
+			}
+		}
+
+		& .c-media__body {
+			& h3 {
+				@include breakpoint(mobile) {
+					margin-bottom: 4.1rem;
+				}
+			}
+		}
+	}
+
+	//media for homepage- lifestyle block
+	&--medium {
+		@include breakpoint(desktop) {
+			width: 57.5rem;
+		}
+
+		& .c-media__icon {
+			@include breakpoint(desktop) {
+				height: 7.3rem;
+			}
+
+			&::after {
+
+				@include breakpoint(desktop) {
+					left: 27rem;
+					top: 0.4rem;
+				}
+			}
+
+			&::before {
+
+				@include breakpoint(desktop) {
+					left: 27.7rem;
+					top: 4.2rem;
+				}
+			}
+
+			& span {
+				font-family: 'HelloType-Regular';
+				@include fontSizeRem(20, 12);
+				text-transform: uppercase;
+				color: $black1;
+			}
+		}
+
+		& .c-media__body {
+			& h3 {
+				@include breakpoint(desktop) {
+					width: 70%;
+				}
+			}
+		}
+	}
+
+	//media for dossier page
+	&--dossier {
+		background: green; //remove this
+		& .c-media__content {
+			&:hover .c-media__link {
+				@include breakpoint(desktop) {
+					color: $white;
+				}
+			}
+		}
+		& .c-media__img {
+			@include breakpoint(mobile) {
+				margin-bottom: 0;
+				float: left;
+				width: 18.1rem;
+			}
+
+			& img {
+				width: 100%;
+			}
+
+			&:hover {
+				@include breakpoint(desktop) {
+					transform: none;
+					box-shadow: none;
+				}
+			}
+		}
+
+		& .c-media__body {
+			@include breakpoint(mobile) {
+				float: left;
+				width: 38rem;
+				padding-left: 2.4rem;
+				margin-top: -0.4rem;
+			}
+
+			& h3 {
+				@include fontSizeRem(24, 20);
+				@include lineHeightRem(29, 25); 
+				color: $white; 
+				margin-bottom: 0;
+
+				@include breakpoint(desktop) {
+					margin-bottom: 2.1rem; 
+				}
+
+				&:hover {
+					@include breakpoint(desktop) {
+						color: $white;
+					}
+				}
+			}
+
+			& .c-media__link {
+				color: $white;
+				@include breakpoint(mobile) {
+					display: none;
+				}
+			}
+		}
+	}
+
+	//media for homepage
+	&--big {
+
+		@include breakpoint(desktop) {
+			width: 47.4rem;
+		}
+
+		& .c-media__icon {
+			@include breakpoint(mobile) {
+				height: 11.4rem;
+			}
+
+			&::after {
+				@include breakpoint(desktop) {
+					left: 21.6rem;
+				}
+			}
+
+			&::before {
+				@include breakpoint(desktop) {
+					left: 22.6rem;
+				}
+			}
+			
+		}
+
+		& .c-media__img {
+			margin-bottom: 0;
+
+			&:hover {
+				@include breakpoint(desktop) {
+					transform: translateY(-0.1rem);
+					box-shadow: 0px 2.2rem 2.1rem -2rem rgba(0,0,0,0.8);
+				}
+			}
+		}
+
+		& .c-media__body {
+			padding: 8.4rem 7.2rem;
+			text-align: center;
+
+			@include breakpoint(desktop) {
+				padding: 6.5rem 0rem 10.5rem;
+			}
+
+			& h3 {
+				font-family: 'HelloType-Bold';
+				@include fontSizeRem(36, 34);
+				@include lineHeightRem(42, 42); 
+				margin-bottom: 5rem;
+				position: relative;
+
+				@include breakpoint(desktop) {
+					padding: 0 2.8rem;
+					margin-bottom: 2.4rem; 
+
+				}
+
+				&:hover {
+					@include breakpoint(desktop) {
+						color: $black1;
+					}
+				}
+
+				&::after {
+					content: "";
+					display: block;
+					height: 0.6rem;
+					width: 6.8rem;
+					border-radius: 0.6rem;
+					background: $gray;
+					position: absolute;
+					top: -3.7rem;
+					left: 18.7rem;
+
+					@include breakpoint(desktop) {
+						height: 0.46rem;
+						border-radius: 0.46rem;
+						left: 20.8rem;
+						top: -2.3rem;
+						width: 5.9rem;
+					}
+				}
+			}
+
+			& p {
+				font-family: 'HelloType-Regular';
+				@include fontSizeRem(20, 15);
+				@include lineHeightRem(30, 22);
+				color: $gray;
+				margin-bottom: 6.9rem;
+
+				@include breakpoint(desktop) {
+					padding: 0 2rem; 
+					margin-bottom: 5.8rem;
+				}
+			}
+		}
+	}
+
+	//with gray background
+	&--big-gray {
+		& .c-media__content {
+			background: $lightGray;
+		}
+	}
+}
