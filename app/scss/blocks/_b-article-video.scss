@@ -1,0 +1,118 @@
+.b-article-video {
+	background-color:rgba(251, 121, 121, 0.15);
+	overflow: hidden;
+
+	@include breakpoint(desktop) {
+		display: inline-block;
+    	width: 50rem;
+    }
+
+	&__background-txt {
+		position: absolute;
+		font-family: "Sketch", sans-serif;
+		@include fontSizeRem(257.24, 169.71);
+		@include lineHeightRem(183.87, 121.3);
+		color: #ec8c8c;
+		opacity: 0.09;
+		text-align: right;
+		bottom: 2.2%;
+    	right: -2.8%;
+
+    	@include breakpoint(desktop) {
+			bottom: 5.6%;
+    		right: -2.4%;
+	    }
+	}
+
+	&__content {
+		display: block;
+		width: 79%;
+	    margin: auto;
+	    margin-top: 10%;
+	    margin-bottom: 12.4%;
+
+	    @include breakpoint(desktop) {
+	    	width: 54%;
+	    	margin-left: 20.5%;
+			margin-top: 17.6%;
+			margin-bottom: 20.6%;
+	    }
+		
+		&__teaser-name {
+			display: block;
+			font-family: "HelloType-Bold", sans-serif;
+			@include fontSizeRem(36, 20);
+			@include lineHeightRem(44, 25);
+			@include letterSpacingEm(-80, 0);
+			text-align: center;
+			color: $black1;
+			width: 45%;
+		    margin: auto;
+
+		    @include breakpoint(desktop) {
+		    	width: 60%;
+		    }
+		}
+
+		&__teaser-video {
+			padding-top: 5.8%;
+
+			@include breakpoint(desktop) {
+		    	padding-top: 13%;
+		    }
+			
+			&__img {
+				width: 100%;
+				margin: auto;
+			}
+
+			&__button {
+				position: absolute;
+				display: inline-block;
+				background: linear-gradient(to right, $blue, $lightBlue);
+				border-radius: 50%;
+				width: 9.5rem;
+				height: 9.5rem;
+				top: 36%;
+    			left: 41.9%;
+
+    			@include breakpoint(desktop) {
+			    	width: 4.4rem;
+				    height: 4.4rem;
+				    top: 41.5%;
+				    left: 43%;
+			    }
+				
+				&__play {
+					display: inline-block;
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 1.5rem 0 1.5rem 1.8rem;
+					border-color: transparent transparent transparent $black1;
+					top: 35%;
+    				left: 43.5%;
+
+    				@include breakpoint(desktop) {
+				    	border-width: 0.7rem 0 0.7rem 0.8rem;
+				    }
+				}
+			}
+
+			&__txt {
+				font-family: "HelloType-Regular", sans-serif;
+				@include fontSizeRem(33.87, 13.71);
+				text-align: center;
+				color: $gray;
+				position: absolute;
+				bottom: 12%;
+				line-height: 4rem;
+
+				@include breakpoint(desktop) {
+			    	bottom: 13%;
+    				line-height: 1.7rem;
+			    }
+			}
+		}
+	}
+}
