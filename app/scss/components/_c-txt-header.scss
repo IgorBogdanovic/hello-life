@@ -1,0 +1,12 @@
+.c-txt-header {
+	font-family: "HelloType-Regular", sans-serif;
+	@include fontSizeRem(25, 16);
+	@include lineHeightRem(30, 24);
+	@include letterSpacingEm(25, 25);
+	text-align: center;
+
+	@include breakpoint(desktop) {
+		width: 66%;
+    	margin: auto;
+	}
+}

@@ -1,0 +1,5 @@
+.c-heading {
+	font-family: "HelloType-Regular", sans-serif;
+	@include fontSizeRem(43, 48);
+	text-align: center;
+}
