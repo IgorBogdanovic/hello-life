@@ -641,7 +641,7 @@ html {
     content: ">";
     color: #111;
     position: absolute;
-    top: 30%;
+    top: 30.5%;
     left: 38%; }
   .c-arrow--left:before {
     content: "<"; }
@@ -653,7 +653,7 @@ html {
     -o-transform: rotate(270deg);
     transform: rotate(270deg); }
   .c-arrow--bottom:before {
-    left: 41%;
+    left: 39.5%;
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
@@ -1415,7 +1415,9 @@ html {
   @media (min-width: 751px) {
     .b-article-preview {
       display: inline-block;
-      width: 50rem; } }
+      width: 50rem;
+      padding-right: 0;
+      padding-left: 0; } }
   .b-article-preview__media {
     display: block;
     margin-bottom: 5.4%; }
@@ -1467,7 +1469,8 @@ html {
       letter-spacing: -0.1em; } }
       .b-article-preview__media__info__txt {
         font-family: "HelloType-Regular", sans-serif;
-        color: #111; }
+        color: #111;
+        margin-top: -1%; }
         @media (max-width: 750px) {
           .b-article-preview__media__info__txt {
             font-size: 2.4rem; } }
@@ -1488,7 +1491,8 @@ html {
             letter-spacing: -0.03em; } }
         @media (min-width: 751px) {
           .b-article-preview__media__info__txt {
-            font-family: "HelloType-Bold", sans-serif; } }
+            font-family: "HelloType-Bold", sans-serif;
+            margin-top: 0; } }
   .b-article-preview__button {
     text-align: center;
     padding-top: 11%; }
@@ -1595,7 +1599,7 @@ html {
     .b-article-quote {
       display: inline-block;
       width: 50rem;
-      padding: 0% 0% 0% 0%; } }
+      padding: 5.2% 7% 3.8% 7%; } }
   .b-article-quote__background-mark {
     position: absolute;
     z-index: -1;
@@ -1610,7 +1614,7 @@ html {
         font-size: 67rem; } }
     @media (min-width: 751px) {
       .b-article-quote__background-mark {
-        font-size: 0rem; } }
+        font-size: 45rem; } }
   .b-article-quote__heading-bold {
     z-index: 1;
     font-family: "HelloType-Bold", sans-serif; }
@@ -1641,13 +1645,13 @@ html {
         line-height: 3.6rem; } }
     @media (min-width: 751px) {
       .b-article-quote__heading-reg {
-        line-height: 1.8rem; } }
+        line-height: 2.3rem; } }
+    @media (min-width: 751px) {
+      .b-article-quote__heading-reg {
+        margin-top: 3.8%; } }
   .b-article-quote__block-quote {
     z-index: 1;
     margin-top: 10%; }
-    @media (min-width: 751px) {
-      .b-article-quote__block-quote {
-        display: none; } }
     .b-article-quote__block-quote__cite {
       display: block;
       font-family: "HelloType-Regular", sans-serif;
@@ -1663,7 +1667,10 @@ html {
           line-height: 4.6rem; } }
       @media (min-width: 751px) {
         .b-article-quote__block-quote__cite {
-          line-height: 2.2rem; } }
+          line-height: 3.2rem; } }
+      @media (min-width: 751px) {
+        .b-article-quote__block-quote__cite {
+          margin-bottom: 10.6%; } }
     .b-article-quote__block-quote__tag {
       font-family: "HelloType-Bold", sans-serif; }
       @media (max-width: 750px) {
