@@ -8,14 +8,14 @@
 	@include breakpoint(desktop) {
 		display: inline-block;
     	width: 50rem;
-    	padding: 0% 0% 0% 0%;
+    	padding: 5.2% 7% 3.8% 7%;
     }
 
     &__background-mark {
     	position: absolute;
     	z-index: -1;
     	font-family: "HelloType-Bold", sans-serif;
-		@include fontSizeRem(670, 0);
+		@include fontSizeRem(670, 450);
 		color: $lightBlue;
 		opacity: 0.2;
 		text-shadow: -1rem 3rem 4rem $black;
@@ -34,24 +34,28 @@
 		z-index: 1;
 		font-family: "HelloType-Regular", sans-serif;
 		@include fontSizeRem(30, 18);
-		@include lineHeightRem(36, 18);
+		@include lineHeightRem(36, 23);
 		margin-top: 5%;
+
+		@include breakpoint(desktop) {
+			margin-top: 3.8%;
+	    }
 	}
 
 	&__block-quote {
 		z-index: 1;
 		margin-top: 10%;
 
-		@include breakpoint(desktop) {
-			display: none;
-	    }
-
 		&__cite {
 			display: block;
 			font-family: "HelloType-Regular", sans-serif;
 			@include fontSizeRem(30, 22);
-			@include lineHeightRem(46, 22);
+			@include lineHeightRem(46, 32);
 			margin-bottom: 13.2%;
+
+			@include breakpoint(desktop) {
+				margin-bottom: 10.6%;
+		    }
 		}
 
 		&__tag {

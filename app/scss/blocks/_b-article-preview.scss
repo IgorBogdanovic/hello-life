@@ -6,6 +6,8 @@
 	@include breakpoint(desktop) {
 		display: inline-block;
     	width: 50rem;
+    	padding-right: 0;
+		padding-left: 0;
     }
 
 	&__media {
@@ -69,9 +71,11 @@
 				@include lineHeightRem(33.98, 15);
 				@include letterSpacingEm(0, -30);
 				color: $black1;
+				margin-top: -1%;
 
 				@include breakpoint(desktop) {
 					font-family: "HelloType-Bold", sans-serif;
+					margin-top: 0;
 			    }
 			}
 		}
