@@ -1,0 +1,134 @@
+.b-footer {
+	background-color: $white;
+
+	.main-wrapper--v1 {
+		padding-bottom: 5.1rem;
+
+		@include breakpoint(desktop) {
+			padding-left: 8.8rem;
+    		padding-right: 8.8rem;
+    		padding-bottom: 0.6rem;
+	    }
+	}
+
+	&__ul-txt-links {
+		width: 100%;
+		margin-top: 15.6%;
+
+		@include breakpoint(desktop) {
+			float: left;
+			width: 65%;
+			margin-top: 0;
+			padding-top: 1.2%;
+	    }
+
+		&__li {
+			display: inline-block;
+			margin-right: 4%;
+
+			@include breakpoint(desktop) {
+				margin-right: 2%;
+		    }
+
+			&:nth-child(5) {
+				margin-right: 0;
+			}
+
+			&:nth-child(4), &:nth-child(5) {
+				margin-top: 7.3%;
+			}
+
+			&__a {
+				font-family: "HelloType-Regular", sans-serif;
+				@include fontSizeRem(20, 14.5);
+				@include letterSpacingEm(25, 0);
+
+				&:hover {
+					color: $black;
+				}
+			}
+		}
+
+	}
+
+	&__social {
+		width: 100%;
+		margin-top: 12.7%;
+
+		@include breakpoint(desktop) {
+			float: right;
+			width: 35%;
+			margin-top: 0;
+			padding-top: 4.4%;
+			padding-left: 3.3%;
+	    }
+
+		&__ul-links {
+			float: left;
+			width: 83%;
+
+			@include breakpoint(desktop) {
+				width: 75%;
+		    }
+
+			&__li {
+				display: inline-block;
+			    background-color: #eee;
+			    border-radius: 50%;
+			    text-align: center;
+			    width: 7.8rem;
+			    height: 7.8rem;
+			    @include lineHeightRem(78, 50);
+			    margin-right: 4.5%;
+
+			    @include breakpoint(desktop) {
+					width: 5rem;
+			    	height: 5rem;
+			    	margin-right: 5.6%;
+			    }
+
+				&__a {
+
+					svg {
+						width: 2.5rem;
+						height: 100%;
+
+						@include breakpoint(desktop) {
+							width: 1.6rem;
+					    }
+					}
+
+					&--yt {
+						svg {
+							width: 2.8rem;
+
+							@include breakpoint(desktop) {
+								width: 1.8rem;
+						    }
+						}
+					}
+				}
+			}
+		}
+
+		&__logo-link {
+			display: inline-block;
+			position: relative;
+		    bottom: 0.3rem;
+		    left: 1.1rem;
+
+		    @include breakpoint(desktop) {
+				bottom: 2rem;
+				left: 1.2rem;
+		    }
+
+			svg {
+				width: 9.8rem;
+
+				@include breakpoint(desktop) {
+					width: 9.7rem;
+			    }
+			}
+		}
+	}
+}

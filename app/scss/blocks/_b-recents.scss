@@ -1,0 +1,66 @@
+.b-recents {
+	background-color: #efefef;
+
+	.main-wrapper--v1 {
+		padding-top: 7.3rem;
+		padding-bottom: 7.9rem;
+
+		@include breakpoint(desktop) {
+			padding-top: 10.5rem;
+			padding-bottom: 7.5rem;
+		}
+	}
+
+	&__heading {
+		text-align: center;
+
+		@include breakpoint(desktop) {
+			text-align: inherit;
+			position: absolute;
+			top: 45%;
+    		left: -1%;
+		}
+	}
+
+	&__news {
+		margin-top: 11.7%;
+
+		@include breakpoint(desktop) {
+			margin-top: 0;
+		}
+	}
+
+	&__button {
+		text-align: center;
+		margin-top: 8.4%;
+		margin-bottom: 10.7%;
+
+		.c-btn {
+			padding-left: 10.1rem;
+    		padding-right: 10.1rem;
+		}
+
+		@include breakpoint(desktop) {
+			display: none;
+		}
+	}
+
+	&--6-media {
+		background-color: $white;
+		
+		.main-wrapper--v1 {
+			padding-bottom: 10.5rem;
+
+			@include breakpoint(desktop) {
+				padding-bottom: 4.9rem;
+			}
+		}
+
+		.b-recents__heading {
+			@include breakpoint(desktop) {
+				top: 46.5%;
+    			left: 2.2%;
+			}
+		}
+	}
+}

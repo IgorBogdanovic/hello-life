@@ -1,7 +1,5 @@
 .c-media {
 	width: 100%;
-	margin-top: 10rem; //remove this
-	margin-bottom: 10rem; //remove this
 
 	@include breakpoint(desktop) {
 		width: 27rem;

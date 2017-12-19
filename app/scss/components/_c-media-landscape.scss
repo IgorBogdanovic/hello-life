@@ -1,5 +1,5 @@
 .c-media-landscape {
-	margin-bottom: 3.4rem; //check this
+	margin-bottom: 5.3%;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -12,8 +12,15 @@
 	transition: 0.3s all ease;
 
 	@include breakpoint(desktop) {
-		width: 37.2rem; //check this
-		padding-left: 2.6rem;
+		float: left;
+		width: 31.4%;
+		padding-left: 2.1%;
+		margin-bottom: 3%;
+		margin-left: 2.9%;
+
+		&:nth-child(3n+1) {
+			margin-left: 0;
+		}
 	}
 
 	&:hover .c-media-landscape__body {
@@ -31,21 +38,21 @@
 		margin-top: -0.5rem;
 
 		@include breakpoint(desktop) {
-			width: 41%;
+			width: 43%;
 			margin-top: -0.4rem;
 			font-family: 'HelloType-Bold';
 		}
 	}
 
 	&__img {
-		width: 18.1rem;
+		width: 30.677%;
 		-webkit-transition: 0.3s all ease;
 	  	-moz-transition: 0.3s all ease;
 	  	-o-transition: 0.3s all ease;
 		transition: 0.3s all ease;
 
 		@include breakpoint(desktop) {
-			width: 16.9rem;
+			width: 48.7%;
 		}
 
 		&:hover {

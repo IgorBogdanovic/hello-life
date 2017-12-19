@@ -44,6 +44,10 @@
 				font-family: "HelloType-Bold", sans-serif;
 				@include fontSizeRem(38, 30);
 				@include lineHeightRem(47, 37);
+				background: -webkit-linear-gradient(to left, $lightRed 70%, $darkRed);
+				background: -moz-linear-gradient(to left, $lightRed 70%, $darkRed);
+				background: -o-linear-gradient(to left, $lightRed 70%, $darkRed);
+				background: -ms-linear-gradient(to left, $lightRed 70%, $darkRed);
 				background: linear-gradient(to left, $lightRed 70%, $darkRed);
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
@@ -65,6 +69,10 @@
 			&__tag {
 				font-family: "HelloType-Bold", sans-serif;
 				@include fontSizeRem(26, 15);
+				background: -webkit-linear-gradient(to left, $darkRed, $lightRed);
+				background: -moz-linear-gradient(to left, $darkRed, $lightRed);
+				background: -o-linear-gradient(to left, $darkRed, $lightRed);
+				background: -ms-linear-gradient(to left, $darkRed, $lightRed);
 				background: linear-gradient(to left, $darkRed, $lightRed);
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
