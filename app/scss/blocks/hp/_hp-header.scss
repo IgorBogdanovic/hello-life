@@ -1,5 +1,11 @@
 .hp-header {
-	background-color: $white;
+	//background-color: $white;
+	margin-top: -5.8rem;
+
+	@include breakpoint(desktop) {
+		margin-top: 0;
+		padding-top: 13.8rem;
+	}
 
 	&:after {
 		content: '';

@@ -176,6 +176,10 @@
 
 				& svg {
 					fill: $white;
+
+					&:hover {
+						fill: #3b5998;
+					}
 				}
 			}
 
@@ -194,6 +198,10 @@
 
 				& svg {
 					fill: $white;
+
+					&:hover {
+						fill: #4099ff;
+					}
 				}
 			}
 
@@ -209,6 +217,10 @@
 
 				& svg {
 					fill: $white;
+
+					&:hover {
+						fill: #0077b5;
+					}
 				}
 			}
 		}
