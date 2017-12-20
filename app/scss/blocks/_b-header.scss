@@ -1,0 +1,769 @@
+.b-header {
+	height: auto; 
+	z-index: 10; 
+
+	@include breakpoint(desktop) {
+		-webkit-transition: 0.3s height ease;
+		-moz-transition: 0.3s height ease;
+	 	-o-transition: 0.3s height ease;
+		transition: 0.3s height ease;
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	&.active {
+		height: 100vh;
+		overflow-y: auto;
+		background: linear-gradient(45deg, #005a80, $blue);
+	}
+
+	&.activeDesk {
+		height: 38.4rem;
+		overflow: hidden;
+		background: linear-gradient(45deg, #005a80, $blue);
+	}
+
+	&.stickyDesk {
+		background: $white;
+
+		&.activeDesk {
+			background: linear-gradient(45deg, #005a80, $blue);
+			height: 35rem;
+		}
+
+		& .b-header__logo {
+			margin-top: 0.7rem;
+			height: 8rem;
+			& svg {
+				width: 11rem;
+				height: 7rem;
+			}
+		}
+
+		& .b-header__logo-brand {
+			margin-top: 1.6rem;
+			& span {
+				@include fontSizeRem(24, 13);
+				margin-right: -0.8rem;
+			}
+			&-wrap {
+				width: 7.2rem;
+				height: 6rem;
+			}
+		}
+
+		& .b-header__navigation-item {
+			& > a {
+				padding-top: 3.2rem;
+			}
+		}
+
+		& .b-header__search-desk {
+			padding-top: 8rem;
+		}
+
+		& .b-header__drop-down {
+			top: 11.6rem;
+
+			& .b-header__drop-down-slide {
+				margin-top: 3.3rem;
+			}
+		}
+	}
+
+	& .main-wrapper {
+		position: relative;
+		overflow: hidden;
+
+		@include breakpoint(desktop) {
+			padding-left: 7.8rem; 
+			padding-right: 7.9rem;
+			overflow: visible;
+		}
+	}
+
+	&__wrapper {
+		height: 0;
+		visibility: hidden;
+		opacity: 0;
+		padding-bottom: 5.8rem;
+
+		@include breakpoint(desktop) {
+			height: auto;
+			visibility: visible;
+			opacity: 1;
+		}
+
+		&.active {
+			height: auto;
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+
+	&__logo {
+		position: absolute;
+		top: 2.8rem;
+		left: 6rem;
+		width: 22.1rem;
+		height: 14.4rem;
+		z-index: 2; 
+
+		@include breakpoint(desktop) {
+			position: relative;
+			top: 0; 
+			left: 0;
+			float: left;
+			width: 15rem;
+			height: 11rem;
+			margin-top: 2rem;
+			-webkit-transition: 0.3s all ease;
+			-moz-transition: 0.3s all ease;
+		 	-o-transition: 0.3s all ease;
+			transition: 0.3s all ease;
+		}
+
+		& svg {
+			width: 100%;
+			height: 100%;
+			-webkit-transition: 0.3s all ease;
+			-moz-transition: 0.3s all ease;
+		 	-o-transition: 0.3s all ease;
+			transition: 0.3s all ease;
+
+			& .cls-1 {
+				fill: url(#linear-gradient);
+			}
+		}
+
+		&.activeDesk {
+			& svg .cls-5 {
+				fill: $white;
+			}
+		}
+ 	}
+
+	&__mobile {
+		width: 100%;
+		height: 18.5rem;
+		padding: 7.8rem 8rem;
+		position: relative;
+		background: $white;
+		box-shadow: 0rem 0.1rem 1.5rem -0.1rem rgba(0,0,0,0.43);
+		z-index: 1;
+
+		@include breakpoint(desktop) {
+			display: none;
+		}
+
+		&.active {
+			background: transparent;
+			box-shadow: none;
+		}
+
+
+		&-trigger {
+			width: 5rem;
+			float: right;
+
+			& span {
+				display: block;
+				width: 5rem;
+				height: 0.4rem;
+				margin-bottom: 0.8rem;
+				background: $black1;
+			}
+
+			&.inactive {
+				display: none;
+			}
+		}
+
+		&-close {
+			position: absolute;
+			top: 5.9rem;
+			right: 7.8rem;
+			width: 6.7rem; 
+			height: 6.7rem; 
+			display: none; 
+
+			& svg {
+				width: 100%;
+				height: 100%;
+				fill: $white; 
+			}
+
+			&.active {
+				display: block;
+			}
+		}	
+	}
+
+	&__search {
+		background: #006686;
+		margin-bottom: 3.7rem;
+
+		@include breakpoint(desktop) {
+			display: none; 
+		}
+
+		&-wrap {
+			padding-left: 7.9rem;
+			padding-right: 5rem;
+			position: relative;
+		}
+
+		& input {
+			height: 14.6rem;
+			width: 100%;
+			padding-right: 4rem;
+			-webkit-appearance: none; 
+			-moz-appearance: none;
+			appearance: none;
+			border: none;
+			background: transparent;
+			font-family: 'HelloType-Regular', sans-serif;
+			@include fontSizeRem(40, 28);
+			color: $white;
+
+			&::-webkit-input-placeholder {
+			  	color: $white;
+			}
+			&::-moz-placeholder { 
+			  	color: $white;
+			  	opacity: 1; 
+			}
+			&:-moz-placeholder { 
+				color: $white;
+				opacity: 1;
+			}
+			&:-ms-input-placeholder { 
+				color: $white;
+			}
+		}
+
+		& button {
+			position: absolute;
+			top: 5.2rem;
+			right: 9.6rem;
+			-webkit-appearance: none; 
+			-moz-appearance: none;
+			appearance: none;
+			border: none;
+			width: 3.8rem;
+			height: 3.8rem;
+			background: transparent;
+			padding: 0;
+
+			@include breakpoint(desktop) {
+				display: none;
+			}
+
+			& svg {
+				width: 100%;
+				height: 100%;
+				fill: $white;
+			}
+		}
+	}
+
+	&__navigation {
+		margin-bottom: 5.4rem;
+
+		@include breakpoint(desktop) {
+			float: left;
+			margin-bottom: 0;
+			padding-left: 2.54rem;
+		}
+
+		&-item {
+			position: relative;
+
+			@include breakpoint(desktop) {
+				position: static;
+				float: left;
+			}
+
+			& a {
+				display: block;
+				height: 8rem;
+				line-height: 8rem;
+				padding-left: 8rem;
+				font-family: 'HelloType-Bold', sans-serif;
+				@include fontSizeRem(40, 14);
+				color: $white;
+				text-transform: uppercase;
+				-webkit-transition: 0.3s all ease;
+			  	-moz-transition: 0.3s all ease;
+			  	-o-transition: 0.3s all ease;
+				transition: 0.3s all ease;
+
+				@include breakpoint(desktop) {
+					color: $gray;
+					padding: 6.6rem 0.72rem 1.8rem;
+					height: auto;
+					line-height: 1;
+					border-top: 0.2rem solid transparent;
+				}
+
+				&:hover {
+					@include breakpoint(desktop) {
+						border-top: 0.2rem solid $lightBlue;
+						color: $lightBlue;
+					}
+				}
+			}
+
+			&.active {
+				& a {
+					margin-bottom: 5.2rem;
+				}
+
+				& .b-header__navigation-list-icon {
+				
+					&::after {
+						display: none;
+					}
+				}
+
+				& .b-header__drop-down {
+					opacity: 1;
+					visibility: visible;
+					height: auto;
+				}
+			}
+
+			&.activeDesk {
+				& a {
+					color: $white;
+				}
+			}
+		}
+
+		&-search {
+			display: none;
+
+			@include breakpoint(desktop) {
+				display: block;
+				margin-left: 2.2rem;
+
+				& a {
+					font-family: 'HelloType-Bold', sans-serif;
+					@include fontSizeRem(0, 14);
+					color: $black;
+					display: inline-block;
+
+					&:hover {
+						color: $black;
+						border-top: 0.2rem solid transparent;
+					}
+				}
+
+				&-icon {
+					display: inline-block;
+					width: 1.8rem;
+					height: 1.8rem;
+					vertical-align: middle;
+					margin-bottom: 0.5rem;
+					margin-left: -0.2rem;
+
+					& svg {
+						width: 100%;
+						height: 100%;
+					}
+				}
+			}
+
+			&.activeDesk {
+				& a {
+					color: $white;
+				}
+
+				& svg {
+					fill: $white;
+				}
+			}
+		}
+
+		&-list-icon {
+			position: absolute;
+			top: 3.5rem;
+			right: 9.8rem;
+
+			@include breakpoint(desktop) {
+				display: none;
+			}
+
+			&::before {
+				content: "";
+				display: block;
+				width: 2.9rem;
+				height: 0.4rem;
+				background: $white;
+				border-radius: 0.4rem;
+			}
+
+			&::after {
+				content: "";
+				display: block;
+				height: 2.9rem;
+				width: 0.4rem;
+				background: $white;
+				margin-top: -1.7rem;
+				margin-left: 1.3rem;
+				border-radius: 0.4rem;
+			}
+		}
+
+		& .b-header__drop-down {
+			background: $white;
+			opacity: 0;
+			visibility: hidden;
+			height: 0;
+
+			@include breakpoint(desktop) {
+				display: none; 
+				display: block;
+				opacity: 1; 
+				visibility: visible;
+				height: auto;
+				position: absolute;
+				top: 14rem;
+				left: 0;
+				width: 100%;
+				padding-left: 8%;
+				padding-right: 8%;
+				z-index: 1;
+				background: none;
+				display: none;
+				-webkit-transition: 0.3s top ease;
+			  	-moz-transition: 0.3s top ease;
+			  	-o-transition: 0.3s top ease;
+				transition: 0.3s top ease;
+
+				&.activeDesk {
+					display: block;
+				}
+			}
+
+			&-wrap {
+				padding-top: 5rem;
+				padding-bottom: 29rem;
+				margin-bottom: 3rem;
+
+				@include breakpoint(desktop) {
+					padding-top: 0;
+					padding-bottom: 0;
+					margin-bottom: 0;
+				}
+
+				& ul {
+					margin-bottom: 13.2rem;
+
+					@include breakpoint(desktop) {
+						width: 30%;
+						float: left;
+						margin-bottom: 0;
+						padding-top: 3rem;
+						padding-left: 0.8rem;
+					}
+
+					& li {
+						& a {
+							font-family: 'HelloType-Regular', sans-serif;
+							@include fontSizeRem(38, 15);
+							color: $black1;
+							text-transform: none;
+							margin-bottom: 0;
+
+							@include breakpoint(desktop) {
+								color: $white;
+								padding: 0.5rem;
+								border-top: 0;
+							}
+
+							&:hover {
+								color: $lightBlue;
+								border-top: 0;
+							}
+						}
+
+						&:nth-of-type(1) {
+							@include breakpoint(desktop) {
+								display: none;
+							}
+						}
+					} 
+				} 
+			}
+
+			& .b-header__drop-down-slider {
+				margin-left: 8rem;
+
+				@include breakpoint(desktop) {
+					margin-left: 0;
+					width: 48.6%;
+					float: right;
+				}
+			}
+
+			& .b-header__drop-down-slide {
+				width: 38.5rem;
+				margin-right: 2.2rem;
+
+				@include breakpoint(desktop) {
+					width: 28.8%;
+					margin-right: 5.7%;
+					margin-top: 4.4rem;
+					float: left;
+					-webkit-transition: 0.3s margin-top ease;
+				  	-moz-transition: 0.3s margin-top ease;
+				  	-o-transition: 0.3s margin-top ease;
+					transition: 0.3s margin-top ease;
+				}
+
+				&:last-of-type {
+					margin-right: 0;
+				}
+
+				& a {
+					height: auto;
+					margin-bottom: 0;
+					line-height: 1;
+					padding-left: 0;
+					text-transform: none;
+					padding: 0;
+
+					@include breakpoint(desktop) {
+						border-top: 0;
+					}
+
+					&:hover {
+						@include breakpoint(desktop) {
+							border-top: 0;
+						}
+					}
+				}
+
+				&-img {
+					width: 38.5rem;
+					margin-bottom: 2rem;
+
+					@include breakpoint(desktop) {
+						width: 100%;
+						margin-bottom: 1.8rem;
+						-webkit-transition: 0.3s all ease;
+					  	-moz-transition: 0.3s all ease;
+					  	-o-transition: 0.3s all ease;
+						transition: 0.3s all ease;
+					}
+
+					&:hover {
+						@include breakpoint(desktop) {
+							transform: translateY(-0.1rem);
+							box-shadow: 0px 1.7rem 2.1rem -2rem rgba(0,0,0,0.8);
+						}
+					}
+
+					& img {
+						width: 100%;
+					}
+				}
+
+				& p {
+					font-family: 'HelloType-Regular', sans-serif;
+					@include fontSizeRem(24, 11);
+					color: $black1;
+
+					@include breakpoint(desktop) {
+						color: $white;
+						line-height: 1.1;
+					}
+				}
+			}
+		}
+	}
+
+	&__logo-brand {
+		padding-left: 49.5rem;
+		position: relative;
+		z-index: 1;
+
+		@include breakpoint(desktop) {
+			position: static;
+    		float: right;
+    		padding-left: 0;
+    		margin-top: 2.6rem;
+    		-webkit-transition: 0.3s all ease;
+			-moz-transition: 0.3s all ease;
+		 	-o-transition: 0.3s all ease;
+			transition: 0.3s all ease;
+		}
+
+		& span {
+			font-family: 'HelloType-Regular', sans-serif;
+			@include fontSizeRem(24, 19);
+			color: $white;
+
+			@include breakpoint(desktop) {
+				color: $black1;
+				-webkit-transition: 0.3s all ease;
+				-moz-transition: 0.3s all ease;
+			 	-o-transition: 0.3s all ease;
+				transition: 0.3s all ease;
+			}
+		}
+
+		&-wrap {
+			display: inline-block;
+			width: 13.4rem;
+			height: 13.4rem;
+			vertical-align: middle;
+			-webkit-transition: 0.3s all ease;
+			-moz-transition: 0.3s all ease;
+		 	-o-transition: 0.3s all ease;
+			transition: 0.3s all ease;
+
+			@include breakpoint(desktop) {
+				width: 9.4rem;
+				height: 10.4rem;
+				margin-top: -0.3rem;
+			}
+
+			& svg {
+				width: 100%;
+				height: 100%;
+
+				& .cls-2 {
+					fill: #555;
+				}
+			}
+		}
+
+		&.activeDesk {
+			& span {
+				color: $white;
+			}
+		}
+	}
+
+	&__hello {
+		font-family: 'HelloType-Bold', sans-serif;
+		@include fontSizeRem(320, 360);
+		color: $white;
+		position: absolute;
+		bottom: -2rem;
+		left: -9.2rem;
+		opacity: 0.1;
+		text-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
+		z-index: 0;
+
+		@include breakpoint(desktop) {
+			left: 30.2rem;
+			bottom: -35.4rem; 
+			display: none;
+			
+			&.activeDesk {
+				display: block;
+			}
+		}
+	}
+
+	&__search-desk {
+		display: none;
+
+		@include breakpoint(desktop) {
+			position: absolute;
+		    background: #f7f9f9;
+		    width: 100%;
+		    top: 0;
+		    left: 0;
+		   	padding-top: 14.9rem;
+		   	padding-bottom: 3.6rem;
+		    -webkit-transition: 0.3s padding-top ease;
+		  	-moz-transition: 0.3s padding-top ease;
+		  	-o-transition: 0.3s padding-top ease;
+			transition: 0.3s padding-top ease;
+		}
+
+		&.active {
+			display: block;
+		}
+
+		&-wrap {
+			& input {
+				@include breakpoint(desktop) {
+					width: 100%;
+					height: 4rem;
+					text-align: center;
+					color: $gray;
+					-webkit-appearance: none; 
+					-moz-appearance: none;
+					appearance: none;
+					border: none;
+					background: transparent;
+					font-family: 'HelloType-Regular', sans-serif;
+					@include fontSizeRem(40, 28);
+
+					&::-webkit-input-placeholder {
+					  	@include breakpoint(desktop) {
+					  		color: rgba(25, 25, 25, 0.3);
+					  	}
+					}
+					&::-moz-placeholder {  
+					  	@include breakpoint(desktop) {
+					  		color: rgba(25, 25, 25, 0.3);
+					  	}
+					}
+					&:-moz-placeholder { 
+						@include breakpoint(desktop) {
+					  		color: rgba(25, 25, 25, 0.3);
+					  	}
+					}
+					&:-ms-input-placeholder { 
+						@include breakpoint(desktop) {
+					  		color: rgba(25, 25, 25, 0.3);
+					  	}
+					}
+				}
+			}
+
+			& button {
+				-webkit-appearance: none; 
+				-moz-appearance: none;
+				appearance: none;
+				border: none;
+				background: transparent;
+				padding: 0;
+			}
+		}
+	}
+}
+
+
+.div1 {
+	width: 20rem;
+	height: 100rem;
+	background: green;
+	margin-top: 20rem;
+	//display: none;
+}
+
+.div2 {
+	width: 20rem;
+	height: 100rem;
+	background: blue;
+	//display: none;
+}
+
+
+
+
+
+
+
+
+
+
