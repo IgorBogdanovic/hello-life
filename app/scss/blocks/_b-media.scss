@@ -1,0 +1,37 @@
+.b-media {
+
+	& .c-media {
+		margin-bottom: 7.2rem;
+
+		@include breakpoint(desktop) {
+			float: left;
+			width: 22.8%;
+			margin-right: 3%;
+			margin-top: 8.28rem;
+			margin-bottom: 0;
+		}
+
+		&:nth-child(3) {
+			@include breakpoint(desktop) {
+				margin-right: 0;
+			}
+		}
+
+		&:nth-child(5) {
+			@include breakpoint(desktop) {
+				margin-right: 0;
+			}
+		}
+
+		&--big {
+			margin-bottom: 3.4rem;
+
+			@include breakpoint(desktop) {
+				width: 40%;
+				margin-right: 11.4%;
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+		}
+	}
+}

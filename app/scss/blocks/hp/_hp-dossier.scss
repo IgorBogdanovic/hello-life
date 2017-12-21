@@ -1,0 +1,86 @@
+.hp-dossier {
+	position: relative;
+
+	&__img {
+		width: 100%;
+
+		& img {
+			width: 100%;
+		}
+	}
+
+	& .main-wrapper {
+		position: absolute;
+		top: 12.2rem; 
+		left: 0;
+		text-align: center;
+
+		@include breakpoint(desktop) {
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			-moz-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			transform: translateX(-50%);
+			top: 22.5rem;
+			text-align: right;
+		}
+	}
+
+	& .c-block-name {
+		margin-bottom: 6.4rem;
+
+		@include breakpoint(desktop) {
+			margin-bottom: 0;
+			position: absolute;
+			top: 12.1rem;
+			left: -2.7rem;
+		}
+	}
+
+	&__content {
+		& h6 {
+			font-family: 'HelloType-Regular', sans-serif;
+			@include fontSizeRem(30, 20);
+			color: $white;
+			margin-bottom: 2.9rem;
+
+			@include breakpoint(desktop) {
+				margin-bottom: 2rem;
+			}
+		}
+		& h2 {
+			font-family: 'HelloType-Regular', sans-serif;
+			@include fontSizeRem(56, 38);
+			line-height: 1.18;
+			color: $white;
+			padding: 0 10%;
+			margin-bottom: 1.6rem;
+
+			@include breakpoint(desktop) {
+				padding: 0;
+				padding-left: 70%;
+				margin-bottom: 1.2rem;
+			}
+		}
+
+		& p {
+			font-family: 'HelloType-Regular', sans-serif;
+			@include fontSizeRem(23, 16);
+			@include lineHeightRem(32.81, 22.06); 
+			@include letterSpacingEm(25, 25);
+			color: $lightGray;
+			margin-bottom: 4.6rem;
+
+			@include breakpoint(desktop) {
+				padding-left: 72%;
+				margin-bottom: 7.2rem;
+			}
+		}
+
+		& .c-btn {
+			border: 0;
+		}
+	}
+
+}

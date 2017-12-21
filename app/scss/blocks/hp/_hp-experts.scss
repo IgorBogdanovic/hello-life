@@ -1,0 +1,57 @@
+.hp-experts {
+	& .c-block-heading {
+
+		&__second-h2 {
+			color: $blue;
+			transform: translateY(-7rem);
+
+			@include breakpoint(desktop) {
+				transform: translateY(-6rem);
+			}
+
+			&:after {
+				background: $lightRed;
+				margin-top: -0.6rem;
+
+				@include breakpoint(desktop) {
+					margin-top: -0.7rem;
+				}
+			}
+		}
+	}
+
+	&__about {
+		font-family: 'HelloType-Regular', sans-serif;
+		@include fontSizeRem(28, 14);
+		@include lineHeightRem(34, 20); 
+		@include letterSpacingEm(25, 25);
+		margin-top: -2.1rem;
+		margin-bottom: 12.8rem;
+		text-align: center;
+
+		@include breakpoint(desktop) {
+			padding-left: 57%;
+			padding-right: 5%;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	& .b-media {
+		margin-bottom: 3.5rem;
+		@include breakpoint(desktop) {
+			position: relative;
+			top: -4.9rem;
+			margin-bottom: 0;
+		}
+	}
+
+	&__btn {
+		text-align: center;
+
+		@include breakpoint(desktop) {
+			position: relative;
+			top: -1.4rem;
+		}
+	}
+}

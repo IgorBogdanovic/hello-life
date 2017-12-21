@@ -6,5 +6,10 @@
 @import 'b-footer';
 @import 'b-recents';
 @import 'b-lifestyle';
-@import 'hp/hp-header';
 @import 'b-header';
+@import 'b-media';
+
+//Homepage
+@import 'hp/hp-header';
+@import 'hp/hp-experts';
+@import 'hp/hp-dossier';
