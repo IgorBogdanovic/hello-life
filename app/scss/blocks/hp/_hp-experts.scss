@@ -1,4 +1,10 @@
 .hp-experts {
+	margin-bottom: 13.9%;
+
+	@include breakpoint(desktop) {
+		margin-bottom: 6.4%;
+	}
+
 	& .c-block-heading {
 
 		&__second-h2 {
