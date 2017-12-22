@@ -4,7 +4,7 @@
 	padding-left: 2rem;
 	padding-right: 2rem;
 	display: inline-block;
-	font-family: 'HelloType-Bold';
+	font-family: 'HelloType-Bold', sans-serif;
 	@include fontSizeRem(22, 16);
 	background: $white;
 	color: $gray;

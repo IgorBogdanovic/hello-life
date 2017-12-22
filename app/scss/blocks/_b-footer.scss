@@ -65,7 +65,7 @@
 
 		&__ul-links {
 			float: left;
-			width: 83%;
+			width: 80%;
 
 			@include breakpoint(desktop) {
 				width: 75%;
@@ -79,7 +79,7 @@
 			    width: 7.8rem;
 			    height: 7.8rem;
 			    @include lineHeightRem(78, 50);
-			    margin-right: 4.5%;
+			    margin-right: 4.7%;
 
 			    @include breakpoint(desktop) {
 					width: 5rem;
@@ -115,7 +115,7 @@
 			display: inline-block;
 			position: relative;
 		    bottom: 0.3rem;
-		    left: 1.1rem;
+		    left: 2.9rem;
 
 		    @include breakpoint(desktop) {
 				bottom: 2rem;

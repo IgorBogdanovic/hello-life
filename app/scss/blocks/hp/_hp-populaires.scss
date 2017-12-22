@@ -1,0 +1,124 @@
+.hp-populaires {
+	background: $backGray;
+
+	&__wrap {
+		position: relative;
+	}
+
+	&__img {
+		width: 100%;
+
+		@include breakpoint(desktop) {
+			width: 48.9%;
+			float: right;
+		}
+
+		& img {
+			width: 100%;
+		}
+	}
+
+	&__body {
+		padding: 11.5rem 10.9% 8.4rem 10.4%;
+
+		@include breakpoint(desktop) {
+			width: 51.1%;
+			float: left;
+			padding: 9.7rem 9.2% 0 10.8%; 
+		}
+	}
+
+	&__heading {
+		text-align: center;
+		margin-bottom: 7.2rem;
+
+		@include breakpoint(desktop) {
+			margin-bottom: 0;
+			text-align: initial;
+		}
+
+		& .c-block-name {
+			@include breakpoint(desktop) {
+				position: absolute;
+				top: 23.9rem;
+				left: -3.1rem;
+			}
+		}
+	}
+
+	&__slider {
+		&-slide {
+			& h4 {
+				font-family: 'HelloType-Regular', sans-serif;
+				@include fontSizeRem(30, 16);
+				color: $black1;
+				text-transform: uppercase;
+				margin-bottom: 4.6rem;
+
+				@include breakpoint(desktop) {
+					margin-bottom: 3.8rem;
+				}
+			}
+
+			& ul li {
+				margin-bottom: 5.1rem;
+				margin-left: 0.2rem;
+
+				@include breakpoint(desktop) {
+					margin-bottom: 2.2rem;
+				}
+
+				& a {
+					font-family: 'HelloType-Regular', sans-serif;
+					@include fontSizeRem(24, 14);
+					color: $black1;
+					line-height: 1.18;
+				}
+			}
+		}
+
+		& .slick-dots {
+			position: absolute;
+			top: 1rem;
+			right: 0;
+
+			@include breakpoint(desktop) {
+				top: 0.3rem;
+			}
+
+			& li {
+				width: 1.4rem;
+				height: 1.4rem;
+				float: left;
+				margin-right: 1.8rem;
+				border-radius: 50%;
+				border: 0.1rem solid $black;
+
+				@include breakpoint(desktop) {
+					width: 0.8rem;
+					height: 0.8rem;
+					margin-right: 1.038rem;
+				}
+
+				&.slick-active {
+					background: $black;
+				}
+
+				&:last-of-type {
+					margin-right: 0;
+				}
+			}
+
+			& button {
+				font-size: 0;
+				border: 0;
+				padding: 0;
+
+			}
+		}
+
+		& .slick-slide {
+			outline: none;
+		}
+	}
+}

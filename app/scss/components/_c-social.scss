@@ -178,7 +178,9 @@
 					fill: $white;
 
 					&:hover {
-						fill: #3b5998;
+						@include breakpoint(desktop) {
+							fill: #3b5998;
+						}
 					}
 				}
 			}
@@ -200,7 +202,9 @@
 					fill: $white;
 
 					&:hover {
-						fill: #4099ff;
+						@include breakpoint(desktop) {
+							fill: #4099ff;
+						}
 					}
 				}
 			}
@@ -219,7 +223,9 @@
 					fill: $white;
 
 					&:hover {
-						fill: #0077b5;
+						@include breakpoint(desktop) {
+							fill: #0077b5;
+						}
 					}
 				}
 			}

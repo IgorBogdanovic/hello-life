@@ -1,5 +1,10 @@
 .hp-dossier {
 	position: relative;
+	margin-bottom: 9.9rem;
+
+	@include breakpoint(desktop) {
+		margin-bottom: 9.7rem;
+	}
 
 	&__img {
 		width: 100%;
