@@ -1,0 +1,222 @@
+.dossier-expert {
+	@include breakpoint(desktop) {
+		display: flex;
+	}
+
+	.main-wrapper {
+		@include breakpoint(desktop) {
+			max-width: 720px;
+
+			&--v1 {
+				padding-left: 8.4rem;
+				padding-right: 8.4rem;
+			}
+		}
+	}
+
+	&__question {
+		background-color: $lightGray;
+		text-align: center;
+		padding-top: 12.1%;
+		padding-bottom: 9.6%;
+
+		@include breakpoint(desktop) {
+			float: left;
+			width: 50%;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+		.main-wrapper {
+			@include breakpoint(desktop) {
+				margin-top: 13%;
+    			margin-bottom: 8.6%;
+			}
+		}
+
+		&__heading {
+			font-family: 'HelloType-Regular', sans-serif;
+			@include fontSizeRem(31.95, 30.7);
+			@include lineHeightRem(40, 37);
+
+			span {
+				font-family: 'HelloType-Bold', sans-serif;
+			}
+		}
+
+		&__form-wrapper {
+			margin-top: 12%;
+
+			@include breakpoint(desktop) {
+				margin-top: 11.2%;
+				padding-left: 8%;
+			}
+
+			:-ms-input-placeholder {
+			    color: $black1;
+			}
+
+			::-ms-input-placeholder {
+			    color: $black1;
+			}
+
+			::placeholder {
+			    color: $black1;
+			    opacity: 1;
+			}
+
+			textarea {
+				font-family: 'HelloType-Regular', sans-serif;
+				@include fontSizeRem(26, 24);
+				@include letterSpacingEm(-10, -10);
+				width: 100%;
+				resize: none;
+				padding-top: 4.3%;
+				padding-bottom: 2.7%;
+    			padding-left: 4.7%;
+
+    			@include breakpoint(desktop) {
+					padding-top: 5%;
+				    padding-bottom: 3.2%;
+				    padding-left: 5.3%;
+				}
+			}
+
+			input {
+				font-family: 'HelloType-Bold', sans-serif;
+				@include fontSizeRem(18, 14);
+				@include lineHeightRem(54, 54);
+				@include letterSpacingEm(-10, 0);
+				width: 100%;
+				padding-bottom: 0.9%;
+    			padding-left: 4.7%;
+
+    			@include breakpoint(desktop) {
+					padding-bottom: 0.7%;
+    				padding-left: 5%;
+				}
+			}
+		}
+
+		&__button {
+			text-align: center;
+			margin-top: 11.5%;
+
+			@include breakpoint(desktop) {
+				margin-top: 6%;
+				padding-left: 8%;
+			}
+		}
+	}
+
+	&__slider {
+		background-color: #fafafa;
+		padding-top: 10.5%;
+		padding-bottom: 9.4%;
+
+		@include breakpoint(desktop) {
+			float: right;
+			width: 50%;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+		.main-wrapper {
+			@include breakpoint(desktop) {
+				margin-top: 10.8%;
+    			margin-bottom: 8.5%;
+			}
+		}
+
+		&__carousel {
+			width: 100%;
+
+			&__slide {
+				text-align: center;
+
+				&__img {
+					width: 92.37%;
+    				margin: auto;
+    				margin-bottom: 5.6%;
+
+    				@include breakpoint(desktop) {
+						width: 94.757%;
+						margin-bottom: 5.1%;
+					}
+				}
+
+				&__span {
+					font-family: 'HelloType-Regular', sans-serif;
+					@include fontSizeRem(18, 14);
+					@include lineHeightRem(26, 24.72);
+				}
+
+				&__heading {
+					font-family: 'HelloType-Bold', sans-serif;
+					@include fontSizeRem(40, 38);
+					@include lineHeightRem(42, 40);
+					@include letterSpacingEm(-10, -15);
+					margin-top: 0.5%;
+					margin-bottom: 5.6%;
+
+					@include breakpoint(desktop) {
+						margin-top: 0;
+						margin-bottom: 5.6%;
+					}
+				}
+			}
+
+			.slick-dots {
+				width: 30%;
+    			margin: auto;
+
+				@include breakpoint(desktop) {
+					width: 18.3%;
+				}
+
+				& li {
+					width: 1.4rem;
+					height: 1.4rem;
+					display: inline-block;
+					margin-right: 1.8rem;
+					border-radius: 50%;
+					border: 1px solid $black;
+
+					@include breakpoint(desktop) {
+						width: 0.8rem;
+						height: 0.8rem;
+						margin-right: 1.038rem;
+					}
+
+					&.slick-active {
+						background: $black;
+					}
+
+					&:last-of-type {
+						margin-right: 0;
+					}
+				}
+
+				& button {
+					font-size: 0;
+					border: 0;
+					padding: 0;
+
+				}
+			}
+
+			& .slick-slide {
+				outline: none;
+			}
+		}
+
+		&__button {
+			text-align: center;
+			margin-top: 11.4%;
+
+			@include breakpoint(desktop) {
+				margin-top: 13.4%;
+			}
+		}
+	}
+}

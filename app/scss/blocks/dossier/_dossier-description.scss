@@ -1,0 +1,15 @@
+.dossier-description {
+	padding-top: 11%;
+	padding-bottom: 11.8%;
+
+	@include breakpoint(desktop) {
+		padding-top: 6.7%;
+		padding-bottom: 6.5%;
+	}
+
+	&__txt {
+		font-family: 'HelloType-Regular', sans-serif;
+		@include fontSizeRem(26, 28);
+		@include lineHeightRem(49, 40);
+	}
+}
