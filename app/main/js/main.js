@@ -4684,6 +4684,43 @@ $(window).on('load', function(){
 
 $(document).ready(function() {
 
+	if($('.dossier-expert').length) {
+
+		var dossierExpertSlider = $('.dossier-expert__slider__carousel');
+
+		dossierExpertSlider.slick({
+			arrows: false,
+			dots: true,
+			slidesToShow: 1,
+			slidesToScroll: 1
+		});
+
+	}
+	
+});
+
+$(document).ready(function() {
+
+	if($('.dossier-header').length) {
+
+		var dossierHeaderTagLi = $('.dossier-header__info__tags__list__li'),
+			dossierHeaderTagLiLink = $('.dossier-header__info__tags__list__li__link');
+
+		dossierHeaderTagLiLink.click(
+
+			function() {
+				$('.dossier-header__info__tags__list__li.active').removeClass('active');
+				$(this).parent().addClass('active');
+			}
+
+		);
+
+	}
+	
+});
+
+$(document).ready(function() {
+
 	if($('.hp-hello').length) {
 
 		var helloSlider = $('.hp-hello__slider__carousel'),

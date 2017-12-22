@@ -1,0 +1,148 @@
+.dossier-header {
+	width: 100%;
+
+	&__back-img {
+		img {
+			width: 100%;
+		}
+	}
+
+	&__info {
+		position: absolute;
+		top: 0;
+    	left: 0;
+    	width: 100%;
+    	padding-top: 9.1%;
+    	padding-left: 10.1%;
+
+    	@include breakpoint(desktop) {
+    		width: 72rem;
+			padding-top: 22.3%;
+    		padding-left: 8.6%;
+		}
+
+		&__span {
+			font-family: 'HelloType-Bold', sans-serif;
+			@include fontSizeRem(32, 19);
+		}
+		
+		&__heading {
+			font-family: 'HelloType-Regular', sans-serif;
+			@include fontSizeRem(43, 48);
+			@include lineHeightRem(52, 58); 
+			width: 55%;
+			margin-top: 3%;
+
+			@include breakpoint(desktop) {
+				width: 70%;
+    			margin-top: 1.8%;
+			}
+		}
+
+		&__tags {
+			margin-top: 32.9%;
+			margin-left: 0.6%;
+
+			@include breakpoint(desktop) {
+				margin-top: 15%;
+    			margin-left: 0.7%;
+			}
+
+			&__list {
+				@include breakpoint(mobile) {
+					overflow-x: auto;
+					white-space: nowrap;
+				}
+
+				&__li {
+					background-color: rgba(0, 0, 0, 0.3);
+					border-radius: 2.8rem;
+					display: inline-block;
+					padding: 1.3rem 2.2rem 1.3rem 2.2rem;
+					margin-right: 2%;
+					margin-bottom: 2.5rem;
+
+					&.active {
+						background-color: $white;
+
+						.dossier-header__info__tags__list__li__link {
+							color: $black1;
+						}
+					}
+
+					@include breakpoint(desktop) {
+						padding: 0.7rem 1rem 0.7rem 1rem;
+						margin-bottom: 2%;
+
+						&:hover {
+							background-color: $white;
+
+							.dossier-header__info__tags__list__li__link {
+								color: $black1;
+							}
+						}
+					}
+
+					&__link {
+						font-family: 'HelloType-Regular', sans-serif;
+						@include fontSizeRem(28, 12);
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+
+	.c-media {
+		padding-left: 8rem; 
+		padding-right: 8rem;
+		margin-top: 9.7%;
+
+		@include breakpoint(desktop) {
+			position: absolute;
+			top: 0;
+		    right: 0;
+			width: 27rem;
+			padding-left: 0; 
+			padding-right: 0;
+		    margin-top: 22.2%;
+		    margin-right: 8.9%;
+		}
+
+		&__icon {
+
+			&:before {
+				@include breakpoint(desktop) {
+					border-color: transparent $darkBlue transparent transparent;
+				}
+			}
+
+			&:after {
+				@include breakpoint(desktop) {
+					background-color: $darkBlue;
+				}
+			}
+
+			span {
+				@include breakpoint(desktop) {
+					color: $white;
+				}
+			}
+		}
+
+		&__body {
+
+			h3 {
+				@include breakpoint(desktop) {
+					color: $white;
+				}
+			}
+		}
+
+		&__link {
+			@include breakpoint(desktop) {
+				display: none;
+			}
+		}
+	}
+}
