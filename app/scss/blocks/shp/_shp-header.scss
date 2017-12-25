@@ -1,0 +1,101 @@
+.shp-header {
+	position: relative;
+	margin-bottom: 7.2rem;
+	margin-top: 18.5rem;
+
+	@include breakpoint(desktop) {
+		margin-bottom: 10.4rem;
+		margin-top: 0;
+	}
+
+	&__img {
+		width: 100%;
+
+		& img {
+			width: 100%;
+		}
+	}
+
+	& .main-wrapper {
+		position: absolute;
+		top: 10.4rem; 
+		left: 0;
+
+		@include breakpoint(desktop) {
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			-moz-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			transform: translateX(-50%);
+			top: 20.2rem;
+		}
+	}
+
+	& .c-heading {
+		color: $white;
+		margin-bottom: 6.6rem;
+
+		@include breakpoint(desktop) {
+			margin-bottom: 3.5rem;
+		}
+	}
+
+	&__nav {
+		margin-left: 8rem; 
+		margin-bottom: 5.5rem;
+
+		@include breakpoint(desktop) {
+			text-align: center;
+			margin-left: 0rem;
+			margin-bottom: 4.5rem;
+		}
+
+		& ul {
+			overflow-x: auto;
+			white-space: nowrap;
+			width: 100%;
+
+			@include breakpoint(desktop) {
+				overflow-x: visible;
+			}
+
+			& li {
+				display: inline-block;
+				background: #24484e;
+				padding: 1.4rem 2.1rem;
+				border-radius: 3.4rem;
+				margin-right: 1.5rem;
+				margin-bottom: 2.5rem;
+				-webkit-transition: 0.3s all ease;
+			  	-moz-transition: 0.3s all ease;
+			  	-o-transition: 0.3s all ease;
+				transition: 0.3s all ease;
+
+				@include breakpoint(desktop) {
+					background: #478f9c;
+					padding: 0.7rem 1.4rem;
+					margin-right: 0.5rem;
+				}
+
+				&:hover {
+					@include breakpoint(desktop) {
+						background: $black;
+					}
+				}
+
+				& a {
+					font-family: 'HelloType-Regular', sans-serif;
+					@include fontSizeRem(28, 12);
+					color: $white;
+				}
+			}
+		}
+	}
+
+	& .c-txt-header {
+		color: $white;
+		padding-left: 8rem; 
+		padding-right: 8rem;
+	}
+}

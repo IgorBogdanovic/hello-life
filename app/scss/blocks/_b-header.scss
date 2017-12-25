@@ -2,12 +2,17 @@
 	height: auto; 
 	z-index: 10; 
 
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
 	@include breakpoint(desktop) {
 		-webkit-transition: 0.3s height ease;
 		-moz-transition: 0.3s height ease;
 	 	-o-transition: 0.3s height ease;
 		transition: 0.3s height ease;
-		position: fixed;
+		position: fixed; //remove this
 		width: 100%;
 		top: 0;
 		left: 0;

@@ -376,5 +376,28 @@
 		& .c-media__content {
 			background: $lightGray;
 		}
+		& .c-media__body {
+			& h3 {
+				@include breakpoint(mobile) {
+					padding: 0 7.4rem; 
+					margin-bottom: 4.9rem;
+				}
+			}
+			& p {
+				@include breakpoint(mobile) {
+					padding: 0 7rem; 
+				}
+			}
+		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
