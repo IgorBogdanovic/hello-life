@@ -1,0 +1,14 @@
+.shp-page {
+	& .b-recents {
+
+		.main-wrapper--v1 {
+			padding-top: 7.3rem;
+			padding-bottom: 6.4rem;
+
+			@include breakpoint(desktop) {
+				padding-top: 10.5rem;
+				padding-bottom: 5.9rem;
+			}
+		}
+	}
+}

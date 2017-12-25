@@ -92,7 +92,7 @@
 				float: left;
 				margin-right: 1.8rem;
 				border-radius: 50%;
-				border: 0.1rem solid $black;
+				border: 1px solid $black;
 
 				@include breakpoint(desktop) {
 					width: 0.8rem;
