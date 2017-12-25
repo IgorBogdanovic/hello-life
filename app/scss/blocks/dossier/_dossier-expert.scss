@@ -74,6 +74,8 @@
 				padding-top: 4.3%;
 				padding-bottom: 2.7%;
     			padding-left: 4.7%;
+    			outline: none;
+    			border: none;
 
     			@include breakpoint(desktop) {
 					padding-top: 5%;
@@ -90,6 +92,8 @@
 				width: 100%;
 				padding-bottom: 0.9%;
     			padding-left: 4.7%;
+    			outline: none;
+    			border: none;
 
     			@include breakpoint(desktop) {
 					padding-bottom: 0.7%;
@@ -167,12 +171,7 @@
 			}
 
 			.slick-dots {
-				width: 30%;
-    			margin: auto;
-
-				@include breakpoint(desktop) {
-					width: 18.3%;
-				}
+				text-align: center;
 
 				& li {
 					width: 1.4rem;

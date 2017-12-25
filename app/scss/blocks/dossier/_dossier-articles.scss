@@ -1,0 +1,135 @@
+.dossier-articles {
+	padding-top: 11.5%;
+
+	@include breakpoint(desktop) {
+		padding-top: 19.1rem;
+    }
+
+    &__tag-list { // active only on desktop
+		float: left;
+		width: 30%;
+
+    	&__file {
+    		opacity: 0.5;
+    		margin-bottom: 5rem;
+
+    		&__heading {
+				font-family: "HelloType-Bold", sans-serif;
+
+				span {
+					display: block;
+				}
+
+    			&__no {
+					@include fontSizeRem(0, 16);
+					@include lineHeightRem(0, 16);
+					margin-bottom: -1.5%;
+				}
+
+				&__txt {
+					@include fontSizeRem(0, 34);
+					@include lineHeightRem(0, 42);
+					transform: scale(0.75);
+    				transform-origin: left;
+				}
+			}
+
+			&__txt {
+				font-family: "HelloType-Regular", sans-serif;
+				@include fontSizeRem(0, 13);
+				@include lineHeightRem(0, 16);
+				opacity: 0.5;
+				width: 85%;
+				margin-top: -2%;
+			}
+
+			&.active {
+				opacity: 1;
+
+				.dossier-articles__tag-list__file__heading__no {
+					margin-bottom: 3%;
+				}
+
+				.dossier-articles__tag-list__file__heading__txt {
+					transform: inherit;
+    				transform-origin: inherit;
+				}
+
+				.dossier-articles__tag-list__file__txt {
+					margin-top: 3.5%;
+				}
+			}
+    	}
+    }
+
+	&__article-list {
+		@include breakpoint(desktop) {
+			float: right;
+	    	width: 48.6%;
+	    }
+
+		&__file {
+			margin-bottom: 16.2%;
+
+			@include breakpoint(desktop) {
+				margin-bottom: 18rem;
+		    }
+
+			&__tag { // active only on mobile
+				margin-bottom: 9%;
+
+				&__heading {
+					font-family: "HelloType-Bold", sans-serif;
+
+					span {
+						display: block;
+					}
+
+					&__no {
+						@include fontSizeRem(30, 0);
+						@include lineHeightRem(30, 0);
+						margin-bottom: 4%;
+					}
+
+					&__txt {
+						@include fontSizeRem(40, 0);
+						@include lineHeightRem(49, 0);
+					}
+				}
+
+				&__txt {
+					font-family: "HelloType-Regular", sans-serif;
+					@include fontSizeRem(30, 0);
+					@include lineHeightRem(38, 0);
+					opacity: 0.5;
+					margin-top: 5.3%;
+				}
+			}
+
+			.c-media--dossier {
+				margin-bottom: 5.85%;
+
+				@include breakpoint(desktop) {
+					margin-bottom: 9.6%;
+					
+					&:nth-child(odd) {
+						float: left;
+					}
+
+					&:nth-child(even) {
+						float: right;
+					}
+			    }
+			}
+
+			&__button {
+				text-align: center;
+				padding-top: 5%;
+
+				@include breakpoint(desktop) {
+					padding-top: 1.5%;
+			    }
+			}
+		}
+	}
+}
