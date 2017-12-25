@@ -1,0 +1,28 @@
+.credits-header {
+	margin-top: 18.5rem;
+	background: $blue;
+	padding-top: 10.4rem;
+
+	@include breakpoint(desktop) {
+		margin-top: 0;
+		padding-top: 20.4rem;
+	}
+
+	& .c-heading {
+		color: $white;
+		margin-bottom: 7.3rem;
+
+		@include breakpoint(desktop) {
+			margin-bottom: 12.4rem;
+		}
+	}
+
+	& .c-txt-header {
+		color: $white;
+		margin-bottom: 24.3rem;
+
+		@include breakpoint(desktop) {
+			margin-bottom: 27.6rem;
+		}
+	}
+}

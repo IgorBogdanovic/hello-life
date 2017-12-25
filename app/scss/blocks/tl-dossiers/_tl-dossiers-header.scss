@@ -1,0 +1,54 @@
+.tl-dossiers-header {
+	margin-top: 18.5rem;
+	margin-bottom: 8.1rem;
+	position: relative;
+
+	@include breakpoint(desktop) {
+		margin-top: 0;
+		margin-bottom: 5.4rem;
+	}
+
+	&__img {
+		width: 100%;
+
+		& img {
+			width: 100%;
+		}
+	}
+
+	& .main-wrapper {
+		position: absolute;
+		top: 10.4rem; 
+		left: 0;
+
+		@include breakpoint(desktop) {
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			-moz-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			transform: translateX(-50%);
+			top: 20.4rem;
+		}
+	}
+
+	& .c-heading {
+		color: $white;
+		margin-bottom: 7.8rem;
+
+		@include breakpoint(desktop) {
+			margin-bottom: 12.6rem;
+		}
+	}
+
+	& .c-txt-header {
+		color: $white;
+		padding-left: 8rem; 
+		padding-right: 8rem;
+
+		@include breakpoint(desktop) {
+			padding-left: 11.8rem;
+			padding-right: 11.8rem;
+		}
+	}
+}

@@ -8,6 +8,7 @@
 @import 'b-lifestyle';
 @import 'b-header';
 @import 'b-media';
+@import 'b-article-content';
 
 //Homepage
 @import 'hp/hp-header';
@@ -23,5 +24,9 @@
 
 //SHP
 @import 'shp/shp-header';
-@import 'shp/shp-content';
 
+//Credits
+@import 'credits/credits-header';
+
+//Tous les dossiers
+@import 'tl-dossiers/tl-dossiers-header';

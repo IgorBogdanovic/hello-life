@@ -1,0 +1,14 @@
+.tl-dossiers-page {
+	.b-article-content {
+
+		& .c-pagination {
+			margin-top: 2.8rem;
+			margin-bottom: 4.6rem;
+
+			@include breakpoint(desktop) {
+				margin-top: 12.4rem;
+				margin-bottom: 7.7rem;
+			}
+		}
+	}
+}
