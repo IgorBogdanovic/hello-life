@@ -33,6 +33,9 @@ gulp.task('concatJS', function() {
   .pipe(order([
     "plugins/slick.js",
     "plugins/picturefill.js",
+    "plugins/ScrollMagic.js",
+    "plugins/debug.addIndicators.js",
+    "plugins/animation.gsap.js",
     "**/*.js"
   ]))
   .pipe(concat('main.js'))

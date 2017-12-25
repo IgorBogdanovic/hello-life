@@ -13,6 +13,18 @@
 	position: relative;
 }
 
+.u-only-mobile {
+	@include breakpoint(desktop) {
+    	display: none;
+    }
+}
+
+.u-only-desktop {
+	@include breakpoint(mobile) {
+    	display: none;
+    }
+}
+
 .u-dspl-flex-cntr {
 	display: -webkit-box;
 	display: -ms-flexbox;
