@@ -1,0 +1,393 @@
+.article-content {
+	margin-top: 18.5rem;
+	padding-top: 3rem;
+
+	@include breakpoint(desktop) {
+		margin-top: 14.4rem;
+		margin-bottom: 0;
+		padding-top: 0;
+	}
+
+	& .main-wrapper--v1 {
+		padding-left: 0;
+		padding-right: 0;
+		@include breakpoint(desktop) {
+			padding-left: 5.8rem;
+			padding-right: 0;
+		}
+	}
+
+	& .c-social {
+		@include breakpoint(desktop) {
+			width: 4.3%;
+			float: left;
+			margin-top: 3.3rem;
+		}
+	}
+
+	&__text {
+		margin-bottom: 13.8rem;
+		padding-left: 8rem; 
+		padding-right: 8rem;
+		
+		@include breakpoint(desktop) {
+			width: 49.6%;
+			padding-left: 8.1%;
+			float: left;
+			margin-bottom: 12rem;
+			padding-right: 0;
+			margin-top: 3.3rem;
+		}
+
+		& h1 {
+			font-family: 'HelloType-Bold', sans-serif;
+			@include fontSizeRem(44, 38);
+			@include lineHeightRem(53, 40); 
+			color: $black1;
+			text-align: center;
+			margin-bottom: 2.7rem;
+
+			@include breakpoint(desktop) {
+				margin-bottom: 2.2rem;
+			}
+		}
+
+		&-date {
+			font-family: 'HelloType-Bold', sans-serif;
+			@include fontSizeRem(20, 13);
+			color: $gray;
+			text-align: center;
+			display: block;
+			margin-bottom: 6.1rem;
+
+			@include breakpoint(desktop) {
+				margin-bottom: 4.9rem;
+			}
+		}
+
+		& figure {
+			width: 100%;
+			margin-bottom: 5.5rem;
+
+			@include breakpoint(desktop) {
+				margin-bottom: 7.5rem;
+			}
+
+			& img {
+				width: 100%;
+				margin-bottom: 2.7rem;
+
+				@include breakpoint(desktop) {
+					margin-bottom: 4rem;
+				}
+			}
+
+			& figcaption {
+				font-family: 'HelloType-Regular', sans-serif;
+				@include fontSizeRem(20, 14);
+				@include letterSpacingEm(-20, 0);
+				color: $gray;
+				text-align: center;
+				font-style: italic;
+			}
+
+			&:nth-of-type(2) {
+				margin-bottom: 8rem;
+
+				@include breakpoint(desktop) {
+					margin-top: 7.3rem;
+				}
+			}
+		}
+
+		&-intro {
+			font-family: 'HelloType-Bold', sans-serif;
+			@include fontSizeRem(30, 16);
+			@include lineHeightRem(42, 25);
+			@include letterSpacingEm(-20, -20);
+			color: $gray;
+			text-align: center;
+			display: block;
+			margin-bottom: 8.2rem;
+
+			@include breakpoint(desktop) {
+				color: $black1;
+				margin-bottom: 3rem;
+			}
+		}
+
+		& h2 {
+			font-family: 'HelloType-Bold', sans-serif;
+			@include fontSizeRem(36, 25);
+			@include letterSpacingEm(-10, 0);
+			color: $black1;
+			margin-bottom: 6.2rem;
+
+			@include breakpoint(desktop) {
+				margin-bottom: 1.6rem;
+			}
+		}
+
+		& p {
+			font-family: 'HelloType-Regular', sans-serif;
+			@include fontSizeRem(26, 16);
+			@include lineHeightRem(48, 28); 
+			color: $black1;
+			margin-bottom: 5.8rem;
+
+			@include breakpoint(desktop) {
+				margin-bottom: 2.8rem;
+			}
+		}
+
+		&-quote {
+			position: relative;
+			width: 100%;
+			padding: 3.8rem 10% 6.8rem;
+			text-align: center;
+
+			@include breakpoint(desktop) {
+				padding-bottom: 5rem;
+			}
+			& q {
+				font-family: 'HelloType-Bold', sans-serif;
+				@include fontSizeRem(52, 50);
+				@include lineHeightRem(55, 54); 
+				color: $blue;
+				quotes: "‘’" "‘’";
+
+				&::before {
+					 content: open-quote;
+					 display: block;
+					 margin-bottom: -1.5rem;
+				}
+
+				&::after {
+					content: close-quote;
+					display: block;
+					margin-top: 2.3rem;
+				}
+			}
+
+			&-desc {
+				font-family: 'HelloType-Bold', sans-serif;
+				@include fontSizeRem(22, 16);
+				color: $blue;
+				-webkit-transform: rotate(270deg);
+				-moz-transform: rotate(270deg);
+				-o-transform: rotate(270deg);
+				-ms-transform: rotate(270deg);
+				transform: rotate(270deg);
+				position: absolute;
+				top: 18.9rem;
+				left: -13.6rem;
+
+				@include breakpoint(desktop) {
+					left: -25.1rem;
+				}
+			}
+		}
+
+		&-list {
+			margin-left: 4rem;
+			margin-top: -1rem;
+
+			& li {
+				font-family: 'HelloType-Regular', sans-serif;
+				@include fontSizeRem(26, 16);
+				@include lineHeightRem(48, 28); 
+				color: $black1;
+				text-indent: -4rem;
+				margin-bottom: 0.5rem;
+
+				&::before {
+					content: "";
+					display: inline-block;
+					width: 1.6rem;
+					height: 0.8rem;
+					background: $gray;
+					border-radius: 0.4rem;
+					margin-right: 2.4rem;
+					margin-bottom: 0.4rem;
+				}
+			}
+		} 
+
+		&-block {
+			width: 59rem;
+			padding-top: 7.4rem;
+			background: #deebef;
+			text-align: center;
+			overflow: hidden;
+			margin-top: 4.8rem;
+			margin-bottom: 4.8rem;
+			position: relative;
+
+			@include breakpoint(desktop) {
+				width: 100%;
+				height: auto;
+				padding-top: 6.4rem;
+				position: relative;
+				margin-top: 7.6rem;
+				margin-bottom: 8.8rem;
+			}
+
+			& h4 {
+				font-family: 'HelloType-Bold', sans-serif;
+				@include fontSizeRem(40, 26);
+				color: $darkBlue;
+				position: relative;
+				margin-bottom: 1.6rem;
+
+				&::after {
+					content: "";
+					display: block;
+					width: 6.2rem;
+					height: 0.5rem;
+					border-radius: 0.25rem;
+					background: $lightRed;
+					position: absolute;
+					left: 50%;
+					top: -2.8rem;
+					-webkit-transform: translateX(-50%);
+					-moz-transform: translateX(-50%);
+					-o-transform: translateX(-50%);
+					-ms-transform: translateX(-50%);
+					transform: translateX(-50%);
+
+					@include breakpoint(desktop) {
+						width: 5.9rem;
+					}
+				}
+			}
+
+			& p {
+				font-family: 'HelloType-Bold', sans-serif;
+				@include fontSizeRem(26, 17);
+				@include lineHeightRem(30, 20); 
+				@include letterSpacingEm(25, 25);
+				color: $darkBlue;
+				margin-bottom: 3.5rem;
+				padding-left: 10%;
+				padding-right: 10%;
+
+				@include breakpoint(desktop) {
+					margin-bottom: 3.6rem;
+				}
+			}
+
+			& h6 {
+				font-family: 'HelloType-Bold', sans-serif;
+				@include fontSizeRem(185, 180); 
+				@include letterSpacingEm(10, 10);
+				color: $white;
+				opacity: 0.2;
+				text-shadow: 1rem 2rem 2rem rgba(0, 0, 0, 0.4);
+				margin-top: -1.6rem;
+				position: absolute;
+				bottom: -5rem;
+				left: 2.7rem;
+
+				@include breakpoint(desktop) {
+					position: absolute;
+					bottom: -4.8rem;
+					left: 2.5rem;
+				}
+			}
+
+			& .c-btn {
+				background: $darkBlue;
+				margin-bottom: 11.6rem;
+
+				@include breakpoint(desktop) {
+					margin-bottom: 3.2rem;
+				}
+			}
+		}
+
+		&-nav {
+			& ul {
+				margin-top: 5rem;
+
+				@include breakpoint(desktop) {
+					margin-top: -1rem;
+				}
+
+				& li {
+					display: inline-block;
+					height: 4.8rem;
+					line-height: 4.8rem;
+					background: $lightGray;
+					padding-left: 2.2rem;
+					padding-right: 2.2rem;
+					border-radius: 2.4rem;
+					margin-right: 1.8rem;
+					margin-top: 5rem;
+
+					@include breakpoint(desktop) {
+						height: 2.5rem;
+						line-height: 2.5rem;
+						background: $lightGray;
+						padding-left: 1.1rem;
+						padding-right: 1.1rem;
+						border-radius: 1.25rem;
+						margin-right: 0.8rem;
+					}
+
+					& a {
+						font-family: 'HelloType-Regular', sans-serif;
+						@include fontSizeRem(23, 12);
+						color: $black1;
+					}
+
+					&:last-of-type {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+
+	&__sidebar {
+		@include breakpoint(desktop) {
+			width: 46.1%;
+		    float: right;
+		    padding-left: 10%;
+		}
+
+		& .b-commercial {
+			@include breakpoint(desktop) {
+				padding-top: 11rem;
+			}
+		}
+
+		& .b-article-video {
+			margin-bottom: 9.6rem;
+
+			@include breakpoint(desktop) {
+				margin-bottom: 8.5rem;
+			}
+		}
+
+		& .b-article-preview {
+			margin-bottom: 10.6rem;
+
+			@include breakpoint(desktop) {
+				margin-bottom: 6rem;
+			}
+		}
+
+		& .b-quiz-teaser {
+			@include breakpoint(desktop) {
+				display: block;
+				margin-left: 13.2%;
+			}
+		}
+
+		& .b-article-quote {
+			@include breakpoint(desktop) {
+				margin-top: 9.2rem;
+			}
+		}
+	}
+}

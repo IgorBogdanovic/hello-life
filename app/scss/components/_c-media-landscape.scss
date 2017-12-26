@@ -31,7 +31,7 @@
 
 	&__body {
 		width: 61%;
-		font-family: 'HelloType-Regular';
+		font-family: 'HelloType-Regular', sans-serif;
 		@include fontSizeRem(24, 14);
 		@include lineHeightRem(34, 18); 
 		color: $black;
@@ -40,7 +40,7 @@
 		@include breakpoint(desktop) {
 			width: 43%;
 			margin-top: -0.4rem;
-			font-family: 'HelloType-Bold';
+			font-family: 'HelloType-Bold', sans-serif;
 		}
 	}
 
