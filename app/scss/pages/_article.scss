@@ -1,0 +1,45 @@
+.article-page {
+	& .b-recents {
+		& .main-wrapper--v1 {
+			@include breakpoint(desktop) {
+				padding-top: 10.6rem;
+				padding-bottom: 7.5rem;
+			}
+		}
+		&__heading {
+			@include breakpoint(desktop) {
+				top: 28rem;
+	    		left: -5.8rem;
+			}
+		}
+
+		&:last-of-type {
+			& .b-recents__heading {
+				@include breakpoint(desktop) {
+					top: 30rem;
+		    		left: -2.8rem;
+				}
+			}
+		}
+	}
+
+	& .b-lifestyle {
+		margin-top: 8.6rem;
+		margin-bottom: 3rem;
+
+		@include breakpoint(desktop) {
+			margin-top: 6.5rem;
+			margin-bottom: 8.9rem;
+		}
+	}
+
+	& .b-footer {
+		margin-bottom: 9.8rem;
+
+		@include breakpoint(desktop) {
+			margin-bottom: 0;
+		}
+	}
+}
+
+
