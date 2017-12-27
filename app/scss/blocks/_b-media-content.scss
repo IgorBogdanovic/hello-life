@@ -1,0 +1,62 @@
+.b-media-content {
+	margin-top: 18.5rem;
+	padding-top: 6.8rem;
+
+	@include breakpoint(desktop) {
+		margin-top: 0;
+		padding-top: 19.4rem;
+	}
+
+	& .c-heading {
+		color: $blue;
+		margin-bottom: 10.9rem;
+
+		@include breakpoint(desktop) {
+			margin-bottom: 9.4rem;
+		}
+	}
+
+	& .c-media--small {
+		width: 48%;
+		float: left;
+		margin-right: 4%;
+		margin-bottom: 9rem;
+
+		@include breakpoint(desktop) {
+			width: 22.8%;
+			margin-right: 2.93333333%;
+			margin-bottom: 4.8rem;
+		}
+
+		&:nth-of-type(2n) {
+			margin-right: 0;
+
+			@include breakpoint(desktop) {
+				margin-right: 2.93333333%;
+			}
+		}
+
+		&:nth-of-type(4n) {
+			@include breakpoint(desktop) {
+				margin-right: 0;
+			}
+		}
+
+		&:last-of-type {
+			margin-bottom: 11rem;
+
+			@include breakpoint(desktop) {
+				margin-bottom: 12.3rem;
+			}
+		}
+	}
+
+	& .c-pagination {
+		clear: both;
+		margin-bottom: 10.8rem;
+
+		@include breakpoint(desktop) {
+			margin-bottom: 10rem;
+		}
+	}
+}

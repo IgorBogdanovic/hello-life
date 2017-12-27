@@ -1,0 +1,83 @@
+.search-field {
+	margin-top: 30.3rem;
+	background: $lightGray;
+
+	@include breakpoint(desktop) {
+		margin-top: 28.9rem;
+	}
+
+	& .main-wrapper {
+		position: relative;
+	}
+
+	& h4 {
+		font-family: 'HelloType-Regular', sans-serif;
+		@include fontSizeRem(30, 24);
+		color: $gray;
+		text-align: center;
+		-webkit-transform: translateY(-7.8rem);
+		-ms-transform: translateY(-7.8rem);;
+		transform: translateY(-7.8rem);
+	}
+
+	& input {
+		width: 100%;
+		height: 15.4rem;
+    	padding-bottom: 3.6rem;
+    	padding-left: 0;
+		-webkit-appearance: none; 
+		-moz-appearance: none;
+		appearance: none;
+		border: none;
+		background: transparent;
+		font-family: 'HelloType-Regular', sans-serif;
+		@include fontSizeRem(43, 48);
+		color: $black1;
+
+		@include breakpoint(desktop) {
+			padding-bottom: 3rem;
+		}
+
+		&::-webkit-input-placeholder {
+		  	@include breakpoint(desktop) {
+	  			color: $gray;
+			}
+			&::-moz-placeholder {  
+		  		color: $gray;
+			}
+			&:-moz-placeholder { 
+		  		color: $gray;
+			}
+			&:-ms-input-placeholder { 
+		  		color: $gray;
+			}
+		}
+	}
+
+	& button {
+		position: absolute;
+		top: 6.8rem;
+		right: 8.1rem;
+		-webkit-appearance: none; 
+		-moz-appearance: none;
+		appearance: none;
+		border: none;
+		width: 3.9rem;
+		height: 3.9rem;
+		background: transparent;
+		padding: 0;
+
+		@include breakpoint(desktop) {
+			width: 4.2rem;
+			height: 4.2rem;
+			top: 6.6rem;
+			right: 13rem;
+		}
+
+		& svg {
+			width: 100%;
+			height: 100%;
+			fill: $black;
+		}
+	}
+}

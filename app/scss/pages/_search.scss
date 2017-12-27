@@ -1,0 +1,19 @@
+.search-page {
+	& .b-media-content {
+		margin-top: 0;
+		padding-top: 6.4rem;
+
+		@include breakpoint(desktop) {
+			margin-top: 0;
+			padding-top: 10rem;
+		}
+
+		& .c-pagination {
+			margin-bottom: 6.5rem;
+
+			@include breakpoint(desktop) {
+				margin-bottom: 10rem;
+			}
+		}
+	}
+}

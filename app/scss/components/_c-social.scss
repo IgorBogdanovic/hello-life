@@ -75,6 +75,16 @@
 				width: 100%;
 				height: 100%;
 				fill: $gray;
+				-webkit-transition: 0.3s all ease;
+			  	-moz-transition: 0.3s all ease;
+			  	-o-transition: 0.3s all ease;
+				transition: 0.3s all ease;
+
+				&:hover {
+					@include breakpoint(desktop) {
+						fill: #3b5998;
+					}
+				}
 			}
 		}
 		&-tw {
@@ -94,6 +104,16 @@
 				width: 100%;
 				height: 100%;
 				fill: $gray;
+				-webkit-transition: 0.3s all ease;
+			  	-moz-transition: 0.3s all ease;
+			  	-o-transition: 0.3s all ease;
+				transition: 0.3s all ease;
+
+				&:hover {
+					@include breakpoint(desktop) {
+						fill: #4099ff;
+					}
+				}
 			}
 		}
 		&-in {
@@ -110,6 +130,16 @@
 				width: 100%;
 				height: 100%;
 				fill: $gray;
+				-webkit-transition: 0.3s all ease;
+			  	-moz-transition: 0.3s all ease;
+			  	-o-transition: 0.3s all ease;
+				transition: 0.3s all ease;
+
+				&:hover {
+					@include breakpoint(desktop) {
+						fill: #0077b5;
+					}
+				}
 			}
 		}
 	}

@@ -1,0 +1,39 @@
+.article-diapo_page {
+	& .article-content__text-slider-wrap {
+		position: relative;
+
+		& .c-arrow--left {
+			position: absolute;
+			top: 16rem;
+			left: -4rem;
+			background: $white;
+
+			@include breakpoint(desktop) {
+				top: 14.2rem;
+				left: -7.3rem;
+			}
+		}
+
+		& .c-arrow--right {
+			position: absolute;
+			top: 16rem;
+			right: -4rem;
+			background: $white;
+
+			@include breakpoint(desktop) {
+				top: 14.2rem;
+				right: -7.3rem;
+			}
+		}
+	}
+
+	& .article-content__text {
+		& > figure {
+			margin-bottom: 8rem;
+
+			@include breakpoint(desktop) {
+				margin-top: 7.3rem;
+			}
+		}
+	}
+}

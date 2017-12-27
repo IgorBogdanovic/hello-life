@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello life - Article</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="main/css/main.css">
+</head>
+
+<body class="article-page article-diapo_page">
+	<header class="b-header">
+		<div class="b-header__search-desk">
+			<div class="b-header__search-desk-wrap">
+				<form action="" method="">
+					<input type="text" name="" placeholder="Recherche...">
+					<button></button>
+				</form>
+			</div>
+		</div>	
+		<div class="main-wrapper u-clearfix">
+			<a href="" class="b-header__logo">
+				<svg id="BD_RVB" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 702.48 475.28"><defs><style>.cls-1{fill:url(#linear-gradient);}.cls-2{fill:#fff;}.cls-3{fill:#0080a6;}.cls-4{fill:#0ad2e1;}.cls-5{fill:#464646;}</style><linearGradient id="linear-gradient" x1="220.67" y1="52.46" x2="220.67" y2="365.78" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4bbdd0"/><stop offset="1" stop-color="#0180a6"/></linearGradient></defs><title>Hello_Life_Logo2017_BD_RVB</title><path class="cls-1" d="M376,50.91H65.35A14.47,14.47,0,0,0,50.92,65.34V359a14.47,14.47,0,0,0,14.43,14.43H84.87l37.64,49.41c2.64,2.64,4.8,1.75,4.8-2V373.44H376A14.47,14.47,0,0,0,390.43,359V65.34A14.47,14.47,0,0,0,376,50.91Z"/><path class="cls-2" d="M84.87,170.3H100V206h41V170.3h15.11v86H141V220.05H100v36.23H84.87Z"/><path class="cls-2" d="M164.62,224.1v-.25c0-18.55,13.14-33.78,31.69-33.78,20.64,0,31.07,16.22,31.07,34.89,0,1.36-.12,2.71-.25,4.18H179.48c1.6,10.56,9.09,16.46,18.67,16.46,7.25,0,12.41-2.7,17.57-7.74l8.72,7.74c-6.14,7.37-14.62,12.16-26.53,12.16C179.11,257.75,164.62,244.12,164.62,224.1Zm48-4.79c-1-9.58-6.63-17.08-16.46-17.08-9.1,0-15.48,7-16.84,17.08Z"/><path class="cls-2" d="M236.24,166.6h14.86v89.68H236.24Z"/><path class="cls-2" d="M264.13,166.6H279v89.68H264.13Z"/><path class="cls-2" d="M287.32,224.22V224c0-18.55,14.74-33.91,34.64-33.91s34.52,15.11,34.52,33.67V224c0,18.43-14.74,33.78-34.76,33.78C301.94,257.75,287.32,242.65,287.32,224.22Zm54.3,0V224c0-11.42-8.23-20.88-19.9-20.88-11.92,0-19.53,9.34-19.53,20.64V224c0,11.31,8.24,20.88,19.77,20.88C334,244.85,341.62,235.4,341.62,224.22Z"/><rect class="cls-3" x="84.87" y="168.42" width="15.11" height="1.88"/><rect class="cls-3" x="99.98" y="204.16" width="41.03" height="1.88"/><rect class="cls-3" x="141.01" y="168.42" width="15.11" height="1.88"/><path class="cls-3" d="M196.31,190.07c20.26,0,30.68,15.64,31.06,33.88,0-.29,0-.58,0-.86,0-18.67-10.44-34.89-31.07-34.89-18.55,0-31.69,15.24-31.69,33.79v.24c0,.27,0,.53,0,.81C165,204.85,178,190.07,196.31,190.07Z"/><path class="cls-3" d="M212.65,219.31q-.1-1-.26-1.88H179.67q-.19.92-.32,1.88Z"/><path class="cls-3" d="M198.15,243.71c-9,0-16.15-5.2-18.31-14.58h-.36c1.6,10.56,9.09,16.46,18.67,16.46,7.25,0,12.41-2.7,17.57-7.74l8.72,7.74v-1.88L215.72,236C210.56,241,205.4,243.71,198.15,243.71Z"/><rect class="cls-3" x="236.24" y="164.72" width="14.86" height="1.88"/><rect class="cls-3" x="264.13" y="164.72" width="14.86" height="1.88"/><path class="cls-3" d="M322,188.19c-19.9,0-34.64,15.36-34.64,33.91v.24c0,.27,0,.55,0,.81.42-18.17,15-33.09,34.62-33.09s34.07,14.67,34.5,32.84c0-.27,0-.54,0-.81v-.24C356.48,203.3,341.87,188.19,322,188.19Z"/><path class="cls-3" d="M302.19,224c0,11.31,8.24,20.88,19.77,20.88,12,0,19.66-9.45,19.66-20.63V224c0-.26,0-.53,0-.79C341.23,234,333.7,243,322,243c-11.27,0-19.38-9.14-19.76-20.09,0,.28,0,.56,0,.85Z"/><rect class="cls-4" x="99.98" y="220.05" width="41.03" height="1.88"/><rect class="cls-4" x="84.87" y="256.28" width="15.11" height="1.88"/><rect class="cls-4" x="141.01" y="256.28" width="15.11" height="1.88"/><path class="cls-4" d="M196.19,202.23c-9.1,0-15.48,7-16.84,17.08h.32c1.86-9.06,8-15.2,16.52-15.2,9.17,0,14.7,6.53,16.2,15.2h.26C211.66,209.72,206,202.23,196.19,202.23Z"/><path class="cls-4" d="M197.91,257.75c-18.55,0-32.89-13.27-33.28-32.85,0,.28,0,.55,0,.83V226c0,20,14.5,33.66,33.3,33.66,11.9,0,20.38-4.78,26.53-12.16v-1.88C218.29,253,209.82,257.75,197.91,257.75Z"/><path class="cls-4" d="M227.14,229.13H179.48c.1.64.22,1.27.36,1.88h47.3c.12-1.47.25-2.82.25-4.18,0-.34,0-.68,0-1C227.33,226.89,227.24,228,227.14,229.13Z"/><rect class="cls-4" x="236.24" y="256.28" width="14.86" height="1.88"/><rect class="cls-4" x="264.13" y="256.28" width="14.86" height="1.88"/><path class="cls-4" d="M341.62,224c0-11.42-8.23-20.88-19.9-20.88-11.92,0-19.53,9.34-19.53,20.64V224c0,.26,0,.53,0,.79.37-10.91,7.9-19.8,19.52-19.8,11.4,0,19.51,9,19.88,20.09,0-.28,0-.56,0-.84Z"/><path class="cls-4" d="M321.72,257.75c-19.49,0-34-14.67-34.38-32.72,0,.27,0,.54,0,.82v.25c0,18.43,14.62,33.53,34.4,33.53,20,0,34.76-15.35,34.76-33.78v-.25c0-.28,0-.55,0-.82C356,242.85,341.44,257.75,321.72,257.75Z"/><path class="cls-5" d="M443.43,166.43a8.26,8.26,0,0,1,8.52,8.52v63H483.8a8.16,8.16,0,0,1,8.39,8.52v1.31a8.16,8.16,0,0,1-8.39,8.52H440a8.19,8.19,0,0,1-8.52-8.52V174.95a8.19,8.19,0,0,1,8.52-8.52Z"/><path class="cls-5" d="M513.94,159.35a8.34,8.34,0,0,1,8.52,8.52V169a8.23,8.23,0,0,1-8.52,8.39h-3.67a8.23,8.23,0,0,1-8.52-8.39v-1.18a8.34,8.34,0,0,1,8.52-8.52Zm0,28.83a8.23,8.23,0,0,1,8.52,8.39v51.25a8.26,8.26,0,0,1-8.52,8.52h-3.67a8.26,8.26,0,0,1-8.52-8.52V196.57a8.23,8.23,0,0,1,8.52-8.39Z"/><path class="cls-5" d="M545.4,188.19v-4.33c0-19.27,15.07-26.08,32.11-26.08,8,0,17.56.13,17.56,8.78,0,4.19-3.15,8.52-7.86,8.52-2.62,0-4.33-.65-8.91-.65-6.68,0-12.32,2.23-12.32,8.65v5.11h11.4c5.37,0,8.91,2.75,8.91,7.73a7.77,7.77,0,0,1-8.13,8.13H566V262.5c0,15.86-10.75,22.81-23.85,22.81-10.35,0-17.17-3.8-17.17-10.35,0-4.06,2.62-8.13,6.82-8.13,1.83,0,3.8.65,6.29.65,3.93,0,7.34-1.44,7.34-6.42V204h-4.85c-4.85,0-8.39-3-8.39-8,0-4.32,3.54-7.86,8.39-7.86Z"/><path class="cls-5" d="M604.9,228.82c2.23,7.6,6,12.85,16.12,12.85,13.11,0,14.16-3.54,19.53-3.54a7.23,7.23,0,0,1,7.6,7.34C648.16,253.72,636,258,620,258c-22.54,0-36.17-16.12-36.17-36.17,0-17.56,11-35.26,33.68-35.26,19.79,0,34.08,13.76,34.08,30.41v3.41a8.13,8.13,0,0,1-8.39,8.39Zm-.13-13.76h26.48c0-8.13-6.29-12.19-13.5-12.19C608.31,202.86,605.17,209.68,604.77,215.05Z"/></svg>
+			</a>
+			<div class="b-header__mobile">
+				<div class="b-header__mobile-trigger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="b-header__mobile-close">
+					<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+					    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+					    <path d="M0 0h24v24H0z" fill="none"/>
+					</svg>
+				</div>
+			</div>
+			<div class="b-header__wrapper">
+				<div class="b-header__search">
+					<div class="b-header__search-wrap">
+						<form action="" method="">
+							<input type="" name="" placeholder="Recherche">
+							<button>
+								<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 18"  xml:space="preserve">
+								<path d="M18,16.8l-5.5-5.5C13.4,10.1,14,8.6,14,7c0-3.9-3.1-7-7-7C3.1,0,0,3.1,0,7c0,0,0,0,0,0c0,3.9,3.1,7,7,7
+									c1.6,0,3.1-0.6,4.3-1.5l5.5,5.5L18,16.8z M7,12c-2.8,0-5-2.2-5-5c0-2.8,2.2-5,5-5c0,0,0,0,0,0c2.8,0,5,2.2,5,5C12,9.8,9.8,12,7,12z"
+									/>
+								</svg>
+							</button>
+						</form>
+					</div>
+				</div><!-- end .b-header__search-->
+				<nav class="b-header__navigation">
+					<ul class="b-header__navigation-list u-clearfix">
+						<li class="b-header__navigation-item with-drop-down">
+							<a href="">Banque en ligne</a>
+							<div class="b-header__navigation-list-icon"></div>
+							<div class="b-header__drop-down">
+								<div class="b-header__drop-down-wrap u-clearfix">
+									<ul>
+										<li><a href="">Banque en ligne</a></li>
+										<li><a href="">Crédits</a></li>
+										<li><a href="">Compte banquaire</a></li>
+										<li><a href="">Carte banquaire</a></li>
+										<li><a href="">Épargne</a></li>
+									</ul>
+									<div class="b-header__drop-down-slider">
+										<article class="b-header__drop-down-slide">
+											<a href="">
+												<div class="b-header__drop-down-slide-img">
+													<img src="assets/images/b-header/header-1.jpg" alt="">
+												</div>
+												<p>Vos comptes bancaires comme vous ne les avez jamais vus !</p>
+											</a>
+										</article>
+										<article class="b-header__drop-down-slide">
+											<a href="">
+												<div class="b-header__drop-down-slide-img">
+													<img src="assets/images/b-header/header-3.jpg" alt="">
+												</div>
+												<p>Vos comptes bancaires comme vous ne les avez jamais vus !</p>
+											</a>
+										</article>
+										<article class="b-header__drop-down-slide">
+											<a href="">
+												<div class="b-header__drop-down-slide-img">
+													<img src="assets/images/b-header/header-1.jpg" alt="">
+												</div>
+												<p>Vos comptes bancaires comme vous ne les avez jamais vus !</p>
+											</a>
+										</article>
+									</div>
+								</div>
+							</div> <!-- end .b-header__drop-down-->
+						</li>
+						<li class="b-header__navigation-item with-drop-down">
+							<a href="">immobilier</a>
+							<div class="b-header__navigation-list-icon"></div>
+							 <div class="b-header__drop-down">
+								<div class="b-header__drop-down-wrap">
+									<ul>
+										<li><a href="">Immobilier</a></li>
+										<li><a href="">Propriétaire</a></li>
+										<li><a href="">Locataire</a></li>
+										<li><a href="">Crédit immobilier</a></li>
+										<li><a href="">Aides financiéres</a></li>
+									</ul>
+									<div class="b-header__drop-down-slider">
+										<article class="b-header__drop-down-slide">
+											<a href="">
+												<div class="b-header__drop-down-slide-img">
+													<img src="assets/images/b-header/header-3.jpg" alt="">
+												</div>
+												<p>Vos comptes bancaires comme vous ne les avez jamais vus !</p>
+											</a>
+										</article>
+										<article class="b-header__drop-down-slide">
+											<a href="">
+												<div class="b-header__drop-down-slide-img">
+													<img src="assets/images/b-header/header-1.jpg" alt="">
+												</div>
+												<p>Vos comptes bancaires comme vous ne les avez jamais vus !</p>
+											</a>
+										</article>
+										<article class="b-header__drop-down-slide">
+											<a href="">
+												<div class="b-header__drop-down-slide-img">
+													<img src="assets/images/b-header/header-3.jpg" alt="">
+												</div>
+												<p>Vos comptes bancaires comme vous ne les avez jamais vus !</p>
+											</a>
+										</article>
+									</div>
+								</div>
+							</div>   <!-- end .b-header__drop-down-->
+						</li>
+						<li class="b-header__navigation-item no-drop-down">
+							<a href="">Patrimoine</a>
+						</li>
+						<li class="b-header__navigation-item no-drop-down">
+							<a href="">Impôts</a>
+						</li>
+						<li class="b-header__navigation-item no-drop-down">
+							<a href="">Bourse</a>
+						</li>
+						<li class="b-header__navigation-item no-drop-down">
+							<a href="">Famille</a>
+						</li>
+						<li class="b-header__navigation-item no-drop-down">
+							<a href="">Dossiers</a>
+						</li>
+						<li class="b-header__navigation-item no-drop-down">
+							<a href="">Quiz</a>
+						</li>
+						<li class="b-header__navigation-item no-drop-down">
+							<a href="">Vidéos</a>
+						</li>
+						<li class="b-header__navigation-item b-header__navigation-search">
+							<a href="">Recherche</a>
+							<div class="b-header__navigation-search-icon">
+								<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 18"  xml:space="preserve">
+								<path d="M18,16.8l-5.5-5.5C13.4,10.1,14,8.6,14,7c0-3.9-3.1-7-7-7C3.1,0,0,3.1,0,7c0,0,0,0,0,0c0,3.9,3.1,7,7,7
+									c1.6,0,3.1-0.6,4.3-1.5l5.5,5.5L18,16.8z M7,12c-2.8,0-5-2.2-5-5c0-2.8,2.2-5,5-5c0,0,0,0,0,0c2.8,0,5,2.2,5,5C12,9.8,9.8,12,7,12z"
+									/>
+								</svg>
+							</div>
+						</li>
+					</ul>
+				</nav> <!-- end .b-header__navigation-->
+				<div class="b-header__logo-brand">
+					<span>par</span>
+					<a class="b-header__logo-brand-wrap">
+						<svg id="BD_RVB" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1417.32 1417.32"><defs><style>.cls-1{fill:url(#Nouvelle_nuance_de_dégradé_1);}.cls-3{fill:#fff;}</style><linearGradient id="Nouvelle_nuance_de_dégradé_1" x1="170.36" y1="86.61" x2="1244.81" y2="1161.06" gradientUnits="userSpaceOnUse"><stop offset="0.01" stop-color="#0ad1e0"/><stop offset="1" stop-color="#0080a6"/></linearGradient></defs><title>Hello_Bank_Logo2017BD_RVB</title><path class="cls-1" d="M1225,86.63H190.17a48.21,48.21,0,0,0-48.07,48.07V1113A48.21,48.21,0,0,0,190.17,1161h65l125.38,164.59c8.8,8.8,16,5.82,16-6.63V1161H1225a48.21,48.21,0,0,0,48.07-48.07V134.7A48.21,48.21,0,0,0,1225,86.63Z"/><path class="cls-2" d="M464.09,1264.07a3.06,3.06,0,1,1,6.11,0v5.56c3.33-4.92,8.18-9.13,15.72-9.13,9.84,0,19.61,7.78,19.61,21.28v.16c0,13.42-9.69,21.36-19.61,21.36-7.62,0-12.54-4.13-15.72-8.73v17.86a3,3,0,0,1-3,3.1,3.05,3.05,0,0,1-3.1-3.1ZM499.26,1282v-.16c0-9.69-6.67-15.88-14.45-15.88-7.62,0-14.85,6.43-14.85,15.8v.16c0,9.53,7.22,15.88,14.85,15.88C492.75,1297.81,499.26,1291.94,499.26,1282Z"/><path class="cls-2" d="M521.66,1290.51v-.16c0-8.66,7.15-13.26,17.55-13.26a43.64,43.64,0,0,1,12.62,1.75v-1.43c0-7.38-4.52-11.19-12.23-11.19a25.65,25.65,0,0,0-10.64,2.3,3.11,3.11,0,0,1-1.11.24,2.71,2.71,0,0,1-2.7-2.62,2.8,2.8,0,0,1,1.67-2.54,32.33,32.33,0,0,1,13.42-2.78c5.79,0,10.24,1.51,13.26,4.53,2.78,2.78,4.21,6.75,4.21,12v22.47a2.9,2.9,0,0,1-2.94,3,2.82,2.82,0,0,1-2.94-2.86v-3.73a18,18,0,0,1-14.85,7.06C529.36,1303.29,521.66,1298.92,521.66,1290.51Zm30.25-3.17v-4a42.92,42.92,0,0,0-12.07-1.74c-7.7,0-12,3.33-12,8.49v.16c0,5.16,4.76,8.18,10.32,8.18C545.71,1298.45,551.91,1293.84,551.91,1287.33Z"/><path class="cls-2" d="M578.67,1264.07a3.09,3.09,0,0,1,3-3.1,3,3,0,0,1,3.09,3.1v7.7c3-6.83,9-11,14.13-11a2.94,2.94,0,0,1,3,3.1,3,3,0,0,1-2.7,3.1c-7.94,1-14.45,6.91-14.45,18.74v14a3.06,3.06,0,1,1-6.11,0Z"/><path class="cls-2" d="M651.56,1250a3.17,3.17,0,0,1,3.1-3.18h20.56c6.35,0,11.35,1.83,14.53,4.92a12.34,12.34,0,0,1,3.57,8.89v.16c0,7.22-4.45,11-8.81,12.86,6.59,2,11.91,5.8,11.91,13.42v.16c0,9.53-8,15.16-20.17,15.16h-21.6a3.17,3.17,0,0,1-3.1-3.17Zm22.63,21.6c7.54,0,12.78-3.41,12.78-9.92v-.16c0-5.48-4.37-9.05-12.31-9.05H657.76v19.14Zm2.22,25.17c8.42,0,13.66-3.73,13.66-9.92v-.16c0-6-5.08-9.53-14.77-9.53H657.76v19.61Z"/><path class="cls-2" d="M716.84,1249.7a3.15,3.15,0,0,1,3.1-3.1h.87a3.84,3.84,0,0,1,3.17,1.83l33.74,43v-41.92a3.06,3.06,0,1,1,6.11,0v50.18a2.82,2.82,0,0,1-2.86,2.94h-.32a4.3,4.3,0,0,1-3.25-1.91l-34.46-44.06v43a3.06,3.06,0,1,1-6.11,0Z"/><path class="cls-2" d="M787.51,1250a3.17,3.17,0,0,1,3.1-3.18h17.7c12.54,0,20.8,6.67,20.8,17.62v.16c0,12-10,18.18-21.83,18.18h-13.5v16.83a3.14,3.14,0,1,1-6.27,0Zm20,27.07c9.21,0,15.24-4.92,15.24-12.23v-.16c0-7.94-6-12.07-14.93-12.07H793.78v24.45Z"/><path class="cls-2" d="M880.25,1250a3.17,3.17,0,0,1,3.1-3.18h17.7c12.55,0,20.8,6.67,20.8,17.62v.16c0,12-10,18.18-21.83,18.18h-13.5v16.83a3.14,3.14,0,1,1-6.27,0Zm20,27.07c9.21,0,15.24-4.92,15.24-12.23v-.16c0-7.94-6-12.07-14.93-12.07H886.53v24.45Z"/><path class="cls-2" d="M932.66,1298.29l22.55-49.3a4.1,4.1,0,0,1,4-2.78h.32a4,4,0,0,1,3.89,2.78l22.55,49.22a4.26,4.26,0,0,1,.4,1.59,3,3,0,0,1-3,3,3.42,3.42,0,0,1-3.1-2.3l-5.8-12.78H943.94l-5.8,12.94a3.14,3.14,0,0,1-3,2.14,2.85,2.85,0,0,1-2.86-2.86A3.61,3.61,0,0,1,932.66,1298.29ZM972,1282l-12.78-28.43L946.4,1282Z"/><path class="cls-2" d="M1006.27,1250a3.17,3.17,0,0,1,3.1-3.18h20.8c6.83,0,12.31,2.07,15.8,5.56a15.35,15.35,0,0,1,4.29,11v.16c0,9.13-6.19,14.45-14.85,16.12l13.81,17.78a3.42,3.42,0,0,1,1,2.3,3.28,3.28,0,0,1-3.18,3.1,3.66,3.66,0,0,1-2.94-1.67l-15.64-20.32h-16v18.82a3.14,3.14,0,1,1-6.27,0Zm23.34,25.17c8.34,0,14.29-4.29,14.29-11.43v-.16c0-6.83-5.24-11-14.21-11h-17.15v22.55Z"/><path class="cls-2" d="M1072.18,1249.62a3.14,3.14,0,1,1,6.27,0v50a3.14,3.14,0,1,1-6.27,0Z"/><path class="cls-2" d="M1102.67,1250a3.17,3.17,0,0,1,3.1-3.18h20.56c6.35,0,11.35,1.83,14.53,4.92a12.34,12.34,0,0,1,3.57,8.89v.16c0,7.22-4.45,11-8.81,12.86,6.59,2,11.91,5.8,11.91,13.42v.16c0,9.53-8,15.16-20.17,15.16h-21.6a3.17,3.17,0,0,1-3.1-3.17Zm22.63,21.6c7.54,0,12.78-3.41,12.78-9.92v-.16c0-5.48-4.36-9.05-12.31-9.05h-16.91v19.14Zm2.22,25.17c8.42,0,13.66-3.73,13.66-9.92v-.16c0-6-5.08-9.53-14.77-9.53h-17.55v19.61Z"/><path class="cls-2" d="M1164.53,1298.29l22.55-49.3a4.1,4.1,0,0,1,4-2.78h.32a4,4,0,0,1,3.89,2.78l22.55,49.22a4.21,4.21,0,0,1,.4,1.59,3,3,0,0,1-3,3,3.42,3.42,0,0,1-3.09-2.3l-5.8-12.78H1175.8l-5.8,12.94a3.15,3.15,0,0,1-3,2.14,2.85,2.85,0,0,1-2.86-2.86A3.62,3.62,0,0,1,1164.53,1298.29Zm39.3-16.27L1191,1253.59,1178.26,1282Z"/><path class="cls-2" d="M1235.2,1295.75a2.82,2.82,0,0,1-1.19-2.38,3,3,0,0,1,3-3.1,2.77,2.77,0,0,1,1.91.71,25.28,25.28,0,0,0,17.55,6.59c7.46,0,12.38-4,12.38-9.45V1288c0-5.16-2.78-8.1-14.45-10.56-12.78-2.78-18.66-6.91-18.66-16v-.16c0-8.74,7.7-15.16,18.26-15.16,7.3,0,12.62,1.82,17.7,5.48a3.22,3.22,0,0,1,1.35,2.54,3,3,0,0,1-3,3,2.93,2.93,0,0,1-1.83-.56,23.24,23.24,0,0,0-14.37-4.84c-7.22,0-11.83,4-11.83,9v.16c0,5.24,2.86,8.18,15.08,10.8,12.39,2.7,18.1,7.23,18.1,15.72v.16c0,9.52-7.94,15.72-19,15.72A32.47,32.47,0,0,1,1235.2,1295.75Z"/><path class="cls-3" d="M255.2,341.56h45.48V449.15h123.5V341.56h45.47v258.8H424.18V491.31H300.68V600.36H255.2Z"/><path class="cls-3" d="M495.23,503.49v-.73c0-55.84,39.56-101.7,95.4-101.7,62.12,0,93.53,48.82,93.53,105,0,4.08-.36,8.16-.73,12.57H540c4.82,31.8,27.37,49.55,56.2,49.55,21.82,0,37.34-8.13,52.87-23.29L675.3,568.2c-18.49,22.19-44,36.61-79.85,36.61C538.87,604.8,495.23,563.76,495.23,503.49Zm144.58-14.41c-3-28.85-20-51.4-49.53-51.4-27.38,0-46.61,21.07-50.68,51.4Z"/><path class="cls-3" d="M710.84,330.43h44.74V600.36H710.84Z"/><path class="cls-3" d="M794.78,330.43H839.5V600.36H794.78Z"/><path class="cls-3" d="M864.57,503.86v-.74c0-55.83,44.37-102.06,104.27-102.06s103.9,45.49,103.9,101.33v.73c0,55.47-44.37,101.68-104.63,101.68C908.57,604.8,864.57,559.33,864.57,503.86Zm163.44,0v-.74c0-34.39-24.77-62.86-59.9-62.86-35.87,0-58.79,28.12-58.79,62.13v.73c0,34,24.79,62.86,59.52,62.86C1005.09,566,1028,537.52,1028,503.86Z"/><path class="cls-3" d="M1115.23,646.74H1160V847.81h-44.74Z"/><path class="cls-3" d="M1115.23,872.74H1160v39.55h-44.74Z"/><path class="cls-3" d="M679.65,717.38h44.75V747.7c12.58-18.49,30.7-34.39,61-34.39,44,0,69.52,29.59,69.52,75.08V912.61H810.19V801.68c0-30.3-15.17-47.68-41.79-47.68-25.88,0-44,18.11-44,48.43V912.61H679.65Z"/><path class="cls-3" d="M887.08,646.74h44.74V803.92l81-86.54h54.35l-77.66,79.5,80.23,115.73H1018l-58.79-84.3-27.35,28.47v55.83H887.08Z"/><path class="cls-3" d="M366.12,713.87c-28.3,0-55.59,12.31-66.2,17.93V645.93H255.2V865.18c31.16,44.09,79.05,52.06,110.92,52.06,52.93,0,97.06-36.62,97.06-101.3v-.76C463.18,750.46,419.55,713.87,366.12,713.87Zm57.8,102.07c0,38.44-27.26,62.46-61.9,62.46-13.82,0-38.75-1.86-62.17-22l.07-14.77V772A112.34,112.34,0,0,1,362,752.72c34.65,0,61.9,24.77,61.9,62.47Z"/><path class="cls-3" d="M619.07,902.74c-19.63,12.8-51.82,13.95-73.09,13.95-33.37,0-68.5-21.08-68.5-60.26v-.74c0-43.25,32.63-67.64,78.13-67.64,23.64,0,38.83,3.3,54,8.11v-3.69c0-27-17-40.13-48.06-40.13-21.82,0-38.1,4.81-55.85,12.19L493.48,730.7c21.46-9.61,42.53-16.27,74.32-16.27,57.69,0,84.78,35.47,84.78,82.46v47.51C652.57,859.74,647.7,884,619.07,902.74Zm-8.74-75.52c-11.47-4.42-27.37-7.75-44.76-7.75-28.09,0-49.3,15.14-49.3,34v.73c0,18.5,19,28.85,40.09,28.85,23.19,0,54-8.44,54-42.47Z"/></svg>
+					</a>
+				</div>
+				<div class="b-header__hello">
+					<span>Hello</span>
+				</div>
+			</div> <!-- end .b-header__wrapper-->
+		</div> <!-- end .main-wrapper-->
+	</header> <!-- end .b-header-->
+
+	<div class="main-content">
+		<section class="article-content">
+			<div class="main-wrapper main-wrapper--v1 u-clearfix">
+				<div class="c-social u-clearfix">
+					<div class="c-social__text">
+						<p>Partager l’article</p>
+					</div>
+					<div class="c-social__icons">
+						<a href="" class="c-social__icons-fb">
+							<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Plan de travail 1</title><path d="M22.67,0H1.32A1.32,1.32,0,0,0,0,1.32V22.68A1.32,1.32,0,0,0,1.32,24H12.82V14.71H9.69V11.08h3.13V8.41c0-3.1,1.89-4.79,4.66-4.79a25.66,25.66,0,0,1,2.8.14V7H18.36c-1.5,0-1.8.72-1.8,1.76v2.31h3.59l-.47,3.62H16.56V24h6.12A1.32,1.32,0,0,0,24,22.67V1.32A1.32,1.32,0,0,0,22.67,0Z"/></svg>
+						</a>
+						<a href="" class="c-social__icons-tw">
+							<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 19.5"><title>Plan de travail 1</title><path id="twitter-1" d="M24,2.31a9.85,9.85,0,0,1-2.83.78A4.94,4.94,0,0,0,23.34.36a9.85,9.85,0,0,1-3.13,1.19A4.93,4.93,0,0,0,11.82,6,14,14,0,0,1,1.67.9,4.93,4.93,0,0,0,3.19,7.48,4.9,4.9,0,0,1,1,6.86a4.93,4.93,0,0,0,3.95,4.89,4.94,4.94,0,0,1-2.22.08,4.93,4.93,0,0,0,4.6,3.42,9.91,9.91,0,0,1-7.29,2A13.94,13.94,0,0,0,7.55,19.5a13.93,13.93,0,0,0,14-14.65A10,10,0,0,0,24,2.31Z"/></svg>
+						</a>
+						<a href="" class="c-social__icons-in">
+							<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 23"><title>Plan de travail 1</title><path id="linkedin-1" d="M5,2.5A2.48,2.48,0,1,1,2.5,0,2.49,2.49,0,0,1,5,2.5ZM5,7H0V23H5Zm8,0H8V23h5V14.6c0-4.67,6-5.05,6,0V23h5V12.87C24,5,15.08,5.28,13,9.15Z"/></svg>
+						</a>
+					</div>
+				</div> 
+				<article class="article-content__text">
+					<h1>Vos comptes bancaires comme vous ne les avez jamais vus !</h1>
+					<span class="article-content__text-date">lundi 12 juillet 2014</span>
+					<div class="article-content__text-slider-wrap">
+						<div class="article-content__text-slider">
+							<div class="article-content__text-slider-slide">
+								<figure>
+									<picture>
+										<source media="(min-width: 751px)" srcset="assets/images/article/article-1d.jpg">
+										<img src="assets/images/article/article-1.jpg" alt="">
+									</picture>
+									<figcaption>
+										Quel est l'impact de l'inflation sur mes finances perso ?
+									</figcaption>
+								</figure>
+							</div>
+
+							<div class="article-content__text-slider-slide">
+								<figure>
+									<picture>
+										<source media="(min-width: 751px)" srcset="assets/images/article/article-1d.jpg">
+										<img src="assets/images/article/article-1.jpg" alt="">
+									</picture>
+									<figcaption>
+										Quel est l'impact de l'inflation sur mes finances perso ?
+									</figcaption>
+								</figure>
+							</div>
+						</div>
+						<button class="c-arrow  c-arrow--left  c-arrow--shadow">&lt;</button>
+						<button class="c-arrow  c-arrow--right  c-arrow--shadow">&gt;</button>
+					</div>
+					<span class="article-content__text-intro">Acheter d'occasion, c'est payer moins cher ! Certes. Mais pour certains types de produits, il vaut mieux ne pas se procurer des exemplaires déjà utilisés, pour des raisons d'hygiène, de sécurité ou encore de confort. Explication.</span>
+					<h2>Lorem ipsum dolor sit amet</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+					<figure>
+						<picture>
+							<source media="(min-width: 751px)" srcset="assets/images/article/article-2d.jpg">
+							<img src="assets/images/article/article-2.jpg" alt="">
+						</picture>
+						<figcaption>
+							Quel est l'impact de l'inflation sur mes finances perso ?
+						</figcaption>
+					</figure>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+					<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+					<div class="article-content__text-quote">
+						<q>Lorem ipsum dolor sit amet, consectetur adipisicing eli</q>
+						<h6 class="article-content__text-quote-desc">&#95; Lorem ipsum dolor</h6>
+					</div>
+					<h2>Lorem ipsum dolor sit amet</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua:</p>
+					<ul class="article-content__text-list">
+						<li>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.  </li>
+						<li>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</li>
+					</ul>
+					<div class="article-content__text-block">
+						<h6>Hello</h6>
+						<h4>Projet immobilier</h4>
+						<p>Pour mon projet immobilier, <br>le mieux est encore de le simuler ensemble</p>
+						<a href="" class="c-btn">Faire la simulation</a>
+					</div>
+					<p>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
+					<div class="article-content__text-nav">
+						<ul>
+							<li><a href="">TAg N&#176;01</a></li>
+							<li><a href="">TAg N&#176;02</a></li>
+							<li><a href="">TAg N&#176;03</a></li>
+						</ul>
+					</div>
+				</article> <!-- end .article-content__text-->
+				<aside class="article-content__sidebar">
+					<article class="b-commercial  u-pos-relative">
+						<h3 class="b-commercial__heading  u-text--darkRed  u-text--uppercase">Crédit conso simple comme hello !</h3>
+						<h3 class="b-commercial__heading  u-text--black1  u-text--uppercase"">Des crédits sur mesure en quelques clics&#42;</h3>
+						<div class="b-commercial__bank-logo">
+							<svg id="BD_RVB" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1417.32 1417.32"><defs><style>.cls-1{fill:url(#Nouvelle_nuance_de_dégradé_1);}.cls-2{fill:#1a171b;}.cls-3{fill:#fff;}</style><linearGradient id="Nouvelle_nuance_de_dégradé_1" x1="170.36" y1="86.61" x2="1244.81" y2="1161.06" gradientUnits="userSpaceOnUse"><stop offset="0.01" stop-color="#0ad1e0"/><stop offset="1" stop-color="#0080a6"/></linearGradient></defs><title>Hello_Bank_Logo2017BD_RVB</title><path class="cls-1" d="M1225,86.63H190.17a48.21,48.21,0,0,0-48.07,48.07V1113A48.21,48.21,0,0,0,190.17,1161h65l125.38,164.59c8.8,8.8,16,5.82,16-6.63V1161H1225a48.21,48.21,0,0,0,48.07-48.07V134.7A48.21,48.21,0,0,0,1225,86.63Z"/><path class="cls-2" d="M464.09,1264.07a3.06,3.06,0,1,1,6.11,0v5.56c3.33-4.92,8.18-9.13,15.72-9.13,9.84,0,19.61,7.78,19.61,21.28v.16c0,13.42-9.69,21.36-19.61,21.36-7.62,0-12.54-4.13-15.72-8.73v17.86a3,3,0,0,1-3,3.1,3.05,3.05,0,0,1-3.1-3.1ZM499.26,1282v-.16c0-9.69-6.67-15.88-14.45-15.88-7.62,0-14.85,6.43-14.85,15.8v.16c0,9.53,7.22,15.88,14.85,15.88C492.75,1297.81,499.26,1291.94,499.26,1282Z"/><path class="cls-2" d="M521.66,1290.51v-.16c0-8.66,7.15-13.26,17.55-13.26a43.64,43.64,0,0,1,12.62,1.75v-1.43c0-7.38-4.52-11.19-12.23-11.19a25.65,25.65,0,0,0-10.64,2.3,3.11,3.11,0,0,1-1.11.24,2.71,2.71,0,0,1-2.7-2.62,2.8,2.8,0,0,1,1.67-2.54,32.33,32.33,0,0,1,13.42-2.78c5.79,0,10.24,1.51,13.26,4.53,2.78,2.78,4.21,6.75,4.21,12v22.47a2.9,2.9,0,0,1-2.94,3,2.82,2.82,0,0,1-2.94-2.86v-3.73a18,18,0,0,1-14.85,7.06C529.36,1303.29,521.66,1298.92,521.66,1290.51Zm30.25-3.17v-4a42.92,42.92,0,0,0-12.07-1.74c-7.7,0-12,3.33-12,8.49v.16c0,5.16,4.76,8.18,10.32,8.18C545.71,1298.45,551.91,1293.84,551.91,1287.33Z"/><path class="cls-2" d="M578.67,1264.07a3.09,3.09,0,0,1,3-3.1,3,3,0,0,1,3.09,3.1v7.7c3-6.83,9-11,14.13-11a2.94,2.94,0,0,1,3,3.1,3,3,0,0,1-2.7,3.1c-7.94,1-14.45,6.91-14.45,18.74v14a3.06,3.06,0,1,1-6.11,0Z"/><path class="cls-2" d="M651.56,1250a3.17,3.17,0,0,1,3.1-3.18h20.56c6.35,0,11.35,1.83,14.53,4.92a12.34,12.34,0,0,1,3.57,8.89v.16c0,7.22-4.45,11-8.81,12.86,6.59,2,11.91,5.8,11.91,13.42v.16c0,9.53-8,15.16-20.17,15.16h-21.6a3.17,3.17,0,0,1-3.1-3.17Zm22.63,21.6c7.54,0,12.78-3.41,12.78-9.92v-.16c0-5.48-4.37-9.05-12.31-9.05H657.76v19.14Zm2.22,25.17c8.42,0,13.66-3.73,13.66-9.92v-.16c0-6-5.08-9.53-14.77-9.53H657.76v19.61Z"/><path class="cls-2" d="M716.84,1249.7a3.15,3.15,0,0,1,3.1-3.1h.87a3.84,3.84,0,0,1,3.17,1.83l33.74,43v-41.92a3.06,3.06,0,1,1,6.11,0v50.18a2.82,2.82,0,0,1-2.86,2.94h-.32a4.3,4.3,0,0,1-3.25-1.91l-34.46-44.06v43a3.06,3.06,0,1,1-6.11,0Z"/><path class="cls-2" d="M787.51,1250a3.17,3.17,0,0,1,3.1-3.18h17.7c12.54,0,20.8,6.67,20.8,17.62v.16c0,12-10,18.18-21.83,18.18h-13.5v16.83a3.14,3.14,0,1,1-6.27,0Zm20,27.07c9.21,0,15.24-4.92,15.24-12.23v-.16c0-7.94-6-12.07-14.93-12.07H793.78v24.45Z"/><path class="cls-2" d="M880.25,1250a3.17,3.17,0,0,1,3.1-3.18h17.7c12.55,0,20.8,6.67,20.8,17.62v.16c0,12-10,18.18-21.83,18.18h-13.5v16.83a3.14,3.14,0,1,1-6.27,0Zm20,27.07c9.21,0,15.24-4.92,15.24-12.23v-.16c0-7.94-6-12.07-14.93-12.07H886.53v24.45Z"/><path class="cls-2" d="M932.66,1298.29l22.55-49.3a4.1,4.1,0,0,1,4-2.78h.32a4,4,0,0,1,3.89,2.78l22.55,49.22a4.26,4.26,0,0,1,.4,1.59,3,3,0,0,1-3,3,3.42,3.42,0,0,1-3.1-2.3l-5.8-12.78H943.94l-5.8,12.94a3.14,3.14,0,0,1-3,2.14,2.85,2.85,0,0,1-2.86-2.86A3.61,3.61,0,0,1,932.66,1298.29ZM972,1282l-12.78-28.43L946.4,1282Z"/><path class="cls-2" d="M1006.27,1250a3.17,3.17,0,0,1,3.1-3.18h20.8c6.83,0,12.31,2.07,15.8,5.56a15.35,15.35,0,0,1,4.29,11v.16c0,9.13-6.19,14.45-14.85,16.12l13.81,17.78a3.42,3.42,0,0,1,1,2.3,3.28,3.28,0,0,1-3.18,3.1,3.66,3.66,0,0,1-2.94-1.67l-15.64-20.32h-16v18.82a3.14,3.14,0,1,1-6.27,0Zm23.34,25.17c8.34,0,14.29-4.29,14.29-11.43v-.16c0-6.83-5.24-11-14.21-11h-17.15v22.55Z"/><path class="cls-2" d="M1072.18,1249.62a3.14,3.14,0,1,1,6.27,0v50a3.14,3.14,0,1,1-6.27,0Z"/><path class="cls-2" d="M1102.67,1250a3.17,3.17,0,0,1,3.1-3.18h20.56c6.35,0,11.35,1.83,14.53,4.92a12.34,12.34,0,0,1,3.57,8.89v.16c0,7.22-4.45,11-8.81,12.86,6.59,2,11.91,5.8,11.91,13.42v.16c0,9.53-8,15.16-20.17,15.16h-21.6a3.17,3.17,0,0,1-3.1-3.17Zm22.63,21.6c7.54,0,12.78-3.41,12.78-9.92v-.16c0-5.48-4.36-9.05-12.31-9.05h-16.91v19.14Zm2.22,25.17c8.42,0,13.66-3.73,13.66-9.92v-.16c0-6-5.08-9.53-14.77-9.53h-17.55v19.61Z"/><path class="cls-2" d="M1164.53,1298.29l22.55-49.3a4.1,4.1,0,0,1,4-2.78h.32a4,4,0,0,1,3.89,2.78l22.55,49.22a4.21,4.21,0,0,1,.4,1.59,3,3,0,0,1-3,3,3.42,3.42,0,0,1-3.09-2.3l-5.8-12.78H1175.8l-5.8,12.94a3.15,3.15,0,0,1-3,2.14,2.85,2.85,0,0,1-2.86-2.86A3.62,3.62,0,0,1,1164.53,1298.29Zm39.3-16.27L1191,1253.59,1178.26,1282Z"/><path class="cls-2" d="M1235.2,1295.75a2.82,2.82,0,0,1-1.19-2.38,3,3,0,0,1,3-3.1,2.77,2.77,0,0,1,1.91.71,25.28,25.28,0,0,0,17.55,6.59c7.46,0,12.38-4,12.38-9.45V1288c0-5.16-2.78-8.1-14.45-10.56-12.78-2.78-18.66-6.91-18.66-16v-.16c0-8.74,7.7-15.16,18.26-15.16,7.3,0,12.62,1.82,17.7,5.48a3.22,3.22,0,0,1,1.35,2.54,3,3,0,0,1-3,3,2.93,2.93,0,0,1-1.83-.56,23.24,23.24,0,0,0-14.37-4.84c-7.22,0-11.83,4-11.83,9v.16c0,5.24,2.86,8.18,15.08,10.8,12.39,2.7,18.1,7.23,18.1,15.72v.16c0,9.52-7.94,15.72-19,15.72A32.47,32.47,0,0,1,1235.2,1295.75Z"/><path class="cls-3" d="M255.2,341.56h45.48V449.15h123.5V341.56h45.47v258.8H424.18V491.31H300.68V600.36H255.2Z"/><path class="cls-3" d="M495.23,503.49v-.73c0-55.84,39.56-101.7,95.4-101.7,62.12,0,93.53,48.82,93.53,105,0,4.08-.36,8.16-.73,12.57H540c4.82,31.8,27.37,49.55,56.2,49.55,21.82,0,37.34-8.13,52.87-23.29L675.3,568.2c-18.49,22.19-44,36.61-79.85,36.61C538.87,604.8,495.23,563.76,495.23,503.49Zm144.58-14.41c-3-28.85-20-51.4-49.53-51.4-27.38,0-46.61,21.07-50.68,51.4Z"/><path class="cls-3" d="M710.84,330.43h44.74V600.36H710.84Z"/><path class="cls-3" d="M794.78,330.43H839.5V600.36H794.78Z"/><path class="cls-3" d="M864.57,503.86v-.74c0-55.83,44.37-102.06,104.27-102.06s103.9,45.49,103.9,101.33v.73c0,55.47-44.37,101.68-104.63,101.68C908.57,604.8,864.57,559.33,864.57,503.86Zm163.44,0v-.74c0-34.39-24.77-62.86-59.9-62.86-35.87,0-58.79,28.12-58.79,62.13v.73c0,34,24.79,62.86,59.52,62.86C1005.09,566,1028,537.52,1028,503.86Z"/><path class="cls-3" d="M1115.23,646.74H1160V847.81h-44.74Z"/><path class="cls-3" d="M1115.23,872.74H1160v39.55h-44.74Z"/><path class="cls-3" d="M679.65,717.38h44.75V747.7c12.58-18.49,30.7-34.39,61-34.39,44,0,69.52,29.59,69.52,75.08V912.61H810.19V801.68c0-30.3-15.17-47.68-41.79-47.68-25.88,0-44,18.11-44,48.43V912.61H679.65Z"/><path class="cls-3" d="M887.08,646.74h44.74V803.92l81-86.54h54.35l-77.66,79.5,80.23,115.73H1018l-58.79-84.3-27.35,28.47v55.83H887.08Z"/><path class="cls-3" d="M366.12,713.87c-28.3,0-55.59,12.31-66.2,17.93V645.93H255.2V865.18c31.16,44.09,79.05,52.06,110.92,52.06,52.93,0,97.06-36.62,97.06-101.3v-.76C463.18,750.46,419.55,713.87,366.12,713.87Zm57.8,102.07c0,38.44-27.26,62.46-61.9,62.46-13.82,0-38.75-1.86-62.17-22l.07-14.77V772A112.34,112.34,0,0,1,362,752.72c34.65,0,61.9,24.77,61.9,62.47Z"/><path class="cls-3" d="M619.07,902.74c-19.63,12.8-51.82,13.95-73.09,13.95-33.37,0-68.5-21.08-68.5-60.26v-.74c0-43.25,32.63-67.64,78.13-67.64,23.64,0,38.83,3.3,54,8.11v-3.69c0-27-17-40.13-48.06-40.13-21.82,0-38.1,4.81-55.85,12.19L493.48,730.7c21.46-9.61,42.53-16.27,74.32-16.27,57.69,0,84.78,35.47,84.78,82.46v47.51C652.57,859.74,647.7,884,619.07,902.74Zm-8.74-75.52c-11.47-4.42-27.37-7.75-44.76-7.75-28.09,0-49.3,15.14-49.3,34v.73c0,18.5,19,28.85,40.09,28.85,23.19,0,54-8.44,54-42.47Z"/></svg>
+						</div>
+						<div class="b-commercial__button">
+							<a class="c-btn c-btn--red c-btn--shadowed" href="#" onclick="return false;">Découvrez vite votre offre</a>
+						</div>
+						<div class="b-commercial__note">
+							<span class="u-text--black1  u-text--uppercase">*VOIR CONDITION</span>
+						</div>
+					</article>
+					<article class="b-article-video  u-pos-relative">
+						<div class="b-article-video__background-txt">La Rédaction</div>
+						<a class="b-article-video__content" href="#" onclick="return false;">
+							<h3 class="b-article-video__content__teaser-name  u-text--uppercase">Sélection de la rédaction</h3>
+							<div class="b-article-video__content__teaser-video  u-pos-relative">
+								<img class="b-article-video__content__teaser-video__img" src="assets/images/b-article-video/thumb.jpg">
+								<div class="b-article-video__content__teaser-video__button">
+									<div class="b-article-video__content__teaser-video__button__play  u-pos-relative"></div>
+								</div>
+								<p class="b-article-video__content__teaser-video__txt">Lorem ipsum dolor sit amet, consectetur</p>
+							</div>
+						</a>
+					</article>
+					<article class="b-article-preview">
+						<a class="b-article-preview__media  u-clearfix" href="#" onclick="return false;">
+							<img class="b-article-preview__media__img" src="assets/images/b-article-preview/related-1.jpg">
+
+							<div class="b-article-preview__media__info">
+								<h6 class="b-article-preview__media__info__heading  u-text--uppercase">Immobiliier</h6>
+								<p class="b-article-preview__media__info__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+							</div>
+						</a>
+						<a class="b-article-preview__media  u-clearfix" href="#" onclick="return false;">
+							<img class="b-article-preview__media__img" src="assets/images/b-article-preview/related-2.jpg">
+
+							<div class="b-article-preview__media__info">
+								<h6 class="b-article-preview__media__info__heading  u-text--uppercase">Immobiliier</h6>
+								<p class="b-article-preview__media__info__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+							</div>
+						</a>
+						<a class="b-article-preview__media  u-clearfix" href="#" onclick="return false;">
+							<img class="b-article-preview__media__img" src="assets/images/b-article-preview/related-3.jpg">
+
+							<div class="b-article-preview__media__info">
+								<h6 class="b-article-preview__media__info__heading  u-text--uppercase">Immobiliier</h6>
+								<p class="b-article-preview__media__info__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+							</div>
+						</a>
+						<a class="b-article-preview__media  u-clearfix" href="#" onclick="return false;">
+							<img class="b-article-preview__media__img" src="assets/images/b-article-preview/related-4.jpg">
+
+							<div class="b-article-preview__media__info">
+								<h6 class="b-article-preview__media__info__heading  u-text--uppercase">Immobiliier</h6>
+								<p class="b-article-preview__media__info__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+							</div>
+						</a>
+						<a class="b-article-preview__media  u-clearfix" href="#" onclick="return false;">
+							<img class="b-article-preview__media__img" src="assets/images/b-article-preview/related-5.jpg">
+
+							<div class="b-article-preview__media__info">
+								<h6 class="b-article-preview__media__info__heading  u-text--uppercase">Immobiliier</h6>
+								<p class="b-article-preview__media__info__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+							</div>
+						</a>
+						<div class="b-article-preview__button">
+							<a class="c-btn" href="#" onclick="return false;">Voir plus d’articles</a>
+						</div>
+					</article>
+					<article class="b-quiz-teaser">
+						<a class="b-quiz-teaser__media" href="#" onclick="return false;">
+							<img class="b-quiz-teaser__media__img" src="assets/images/b-quiz-teaser/quiz-img.jpg">
+							<div class="b-quiz-teaser__media__info">
+								<h3 class="b-quiz-teaser__media__info__heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+								<p class="b-quiz-teaser__media__info__txt  u-text--gray">Le passage des études à la vie active est un moment important : mes premiers salaires me permettent d'accéder à l'indépendance. Je deviens ...</p>
+								<span class="b-quiz-teaser__media__info__tag">Faire le Quiz</span>
+							</div>
+						</a>
+					</article>
+					<article class="b-article-quote  u-pos-relative">
+						<span class="b-article-quote__background-mark">?</span>
+						<h5 class="b-article-quote__heading-bold  u-text--white  u-text--uppercase">Le savies vous ?</h5>
+						<h6 class="b-article-quote__heading-reg  u-text--white  u-text--uppercase">Des controles sur tout le territoire</h6>
+						<div class="b-article-quote__block-quote">
+							<cite class="b-article-quote__block-quote__cite  u-text--white">&Lt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&Gt;</cite>
+							<span class="b-article-quote__block-quote__tag  u-text--white">&num;hellobank!</span>
+						</div>
+					</article>
+				</aside> <!-- end .article-content__sidebar-->
+			</div> <!-- end .main-wrapper-->
+		</section> <!-- end .article-content-->
+
+		<section class="b-recents">
+			<div class="main-wrapper  main-wrapper--v1  u-pos-relative">
+				<div class="b-recents__heading">
+					<h3 class="c-block-name">Nous vous recommandons</h3>
+				</div>
+				<div class="b-recents__news  u-clearfix">
+					<article class="c-media-landscape">
+						<div class="c-media-landscape__body">
+							<a href="#" onclick="return false;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </a>
+						</div>
+						<div class="c-media-landscape__img">
+							<a href="#" onclick="return false;">
+								<img src="assets/images/b-recents/thumb-1.jpg" alt="">
+							</a>
+						</div>
+					</article>
+					<article class="c-media-landscape">
+						<div class="c-media-landscape__body">
+							<a href="#" onclick="return false;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </a>
+						</div>
+						<div class="c-media-landscape__img">
+							<a href="#" onclick="return false;">
+								<img src="assets/images/b-recents/thumb-2.jpg" alt="">
+							</a>
+						</div>
+					</article>
+					<article class="c-media-landscape">
+						<div class="c-media-landscape__body">
+							<a href="#" onclick="return false;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </a>
+						</div>
+						<div class="c-media-landscape__img">
+							<a href="#" onclick="return false;">
+								<img src="assets/images/b-recents/thumb-3.jpg" alt="">
+							</a>
+						</div>
+					</article>
+					<article class="c-media-landscape">
+						<div class="c-media-landscape__body">
+							<a href="#" onclick="return false;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </a>
+						</div>
+						<div class="c-media-landscape__img">
+							<a href="#" onclick="return false;">
+								<img src="assets/images/b-recents/thumb-4.jpg" alt="">
+							</a>
+						</div>
+					</article>
+					<article class="c-media-landscape">
+						<div class="c-media-landscape__body">
+							<a href="#" onclick="return false;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </a>
+						</div>
+						<div class="c-media-landscape__img">
+							<a href="#" onclick="return false;">
+								<img src="assets/images/b-recents/thumb-5.jpg" alt="">
+							</a>
+						</div>
+					</article>
+					<article class="c-media-landscape">
+						<div class="c-media-landscape__body">
+							<a href="#" onclick="return false;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </a>
+						</div>
+						<div class="c-media-landscape__img">
+							<a href="#" onclick="return false;">
+								<img src="assets/images/b-recents/thumb-6.jpg" alt="">
+							</a>
+						</div>
+					</article>
+					<article class="c-media-landscape">
+						<div class="c-media-landscape__body">
+							<a href="#" onclick="return false;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </a>
+						</div>
+						<div class="c-media-landscape__img">
+							<a href="#" onclick="return false;">
+								<img src="assets/images/b-recents/thumb-7.jpg" alt="">
+							</a>
+						</div>
+					</article>
+					<article class="c-media-landscape">
+						<div class="c-media-landscape__body">
+							<a href="#" onclick="return false;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </a>
+						</div>
+						<div class="c-media-landscape__img">
+							<a href="#" onclick="return false;">
+								<img src="assets/images/b-recents/thumb-8.jpg" alt="">
+							</a>
+						</div>
+					</article>
+					<article class="c-media-landscape">
+						<div class="c-media-landscape__body">
+							<a href="#" onclick="return false;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </a>
+						</div>
+						<div class="c-media-landscape__img">
+							<a href="#" onclick="return false;">
+								<img src="assets/images/b-recents/thumb-9.jpg" alt="">
+							</a>
+						</div>
+					</article>
+				</div>
+			</div> <!-- end .main-wrapper-->
+		</section> <!-- end .b-recents-->
+		<section class="b-lifestyle">
+			<div class="main-wrapper  main-wrapper--v1">
+				<div class="b-lifestyle__heading">
+					<div class="c-block-heading">
+						<h2 class="c-block-heading__first-h2">Les News Lifestyle</h2>
+						<h2 class="c-block-heading__second-h2">Lifestyle</h2>
+					</div>
+				</div>
+				<div class="b-lifestyle__news  u-clearfix">
+					<article class="c-media">
+						<div class="c-media__icon">
+							<span>immobilier</span>
+						</div>
+						<div class="c-media__content">
+							<a href="" class="c-media__img">
+								<img src="assets/images/b-lifestyle/thumb-1.jpg" alt="">
+							</a>
+							<div class="c-media__body">
+								<h3>
+									<a href="">Vos comptes bancaires comme vous ne les avez jamais vus !</a>
+								</h3>
+								<a href="" class="c-media__link">Lire l’article</a>
+							</div>
+						</div>
+					</article>
+					<article class="c-media">
+						<div class="c-media__icon">
+							<span>immobilier</span>
+						</div>
+						<div class="c-media__content">
+							<a href="" class="c-media__img">
+								<img src="assets/images/b-lifestyle/thumb-2.jpg" alt="">
+							</a>
+							<div class="c-media__body">
+								<h3>
+									<a href="">Vos comptes bancaires comme vous ne les avez jamais vus !</a>
+								</h3>
+								<a href="" class="c-media__link">Lire l’article</a>
+							</div>
+						</div>
+					</article>
+					<article class="c-media">
+						<div class="c-media__icon">
+							<span>immobilier</span>
+						</div>
+						<div class="c-media__content">
+							<a href="" class="c-media__img">
+								<img src="assets/images/b-lifestyle/thumb-3.jpg" alt="">
+							</a>
+							<div class="c-media__body">
+								<h3>
+									<a href="">Vos comptes bancaires comme vous ne les avez jamais vus !</a>
+								</h3>
+								<a href="" class="c-media__link">Lire l’article</a>
+							</div>
+						</div>
+					</article>
+					<article class="c-media">
+						<div class="c-media__icon">
+							<span>immobilier</span>
+						</div>
+						<div class="c-media__content">
+							<a href="" class="c-media__img">
+								<img src="assets/images/b-lifestyle/thumb-4.jpg" alt="">
+							</a>
+							<div class="c-media__body">
+								<h3>
+									<a href="">Vos comptes bancaires comme vous ne les avez jamais vus !</a>
+								</h3>
+								<a href="" class="c-media__link">Lire l’article</a>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div> <!-- end .main-wrapper-->
+		</section> <!-- end .b-lifestyle-->
+		<section class="b-recents">
+			<div class="main-wrapper  main-wrapper--v1  u-pos-relative">
+				<div class="b-recents__heading">
+					<h3 class="c-block-name">Pour aller plus loin</h3>
+				</div>
+				<div class="b-recents__news  u-clearfix">
+					<article class="c-media-landscape">
+						<div class="c-media-landscape__body">
+							<a href="#" onclick="return false;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </a>
+						</div>
+						<div class="c-media-landscape__img">
+							<a href="#" onclick="return false;">
+								<img src="assets/images/b-recents/thumb-1.jpg" alt="">
+							</a>
+						</div>
+					</article>
+					<article class="c-media-landscape">
+						<div class="c-media-landscape__body">
+							<a href="#" onclick="return false;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </a>
+						</div>
+						<div class="c-media-landscape__img">
+							<a href="#" onclick="return false;">
+								<img src="assets/images/b-recents/thumb-2.jpg" alt="">
+							</a>
+						</div>
+					</article>
+					<article class="c-media-landscape">
+						<div class="c-media-landscape__body">
+							<a href="#" onclick="return false;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </a>
+						</div>
+						<div class="c-media-landscape__img">
+							<a href="#" onclick="return false;">
+								<img src="assets/images/b-recents/thumb-3.jpg" alt="">
+							</a>
+						</div>
+					</article>
+					<article class="c-media-landscape">
+						<div class="c-media-landscape__body">
+							<a href="#" onclick="return false;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </a>
+						</div>
+						<div class="c-media-landscape__img">
+							<a href="#" onclick="return false;">
+								<img src="assets/images/b-recents/thumb-4.jpg" alt="">
+							</a>
+						</div>
+					</article>
+					<article class="c-media-landscape">
+						<div class="c-media-landscape__body">
+							<a href="#" onclick="return false;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </a>
+						</div>
+						<div class="c-media-landscape__img">
+							<a href="#" onclick="return false;">
+								<img src="assets/images/b-recents/thumb-5.jpg" alt="">
+							</a>
+						</div>
+					</article>
+					<article class="c-media-landscape">
+						<div class="c-media-landscape__body">
+							<a href="#" onclick="return false;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </a>
+						</div>
+						<div class="c-media-landscape__img">
+							<a href="#" onclick="return false;">
+								<img src="assets/images/b-recents/thumb-6.jpg" alt="">
+							</a>
+						</div>
+					</article>
+					<article class="c-media-landscape">
+						<div class="c-media-landscape__body">
+							<a href="#" onclick="return false;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </a>
+						</div>
+						<div class="c-media-landscape__img">
+							<a href="#" onclick="return false;">
+								<img src="assets/images/b-recents/thumb-7.jpg" alt="">
+							</a>
+						</div>
+					</article>
+					<article class="c-media-landscape">
+						<div class="c-media-landscape__body">
+							<a href="#" onclick="return false;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </a>
+						</div>
+						<div class="c-media-landscape__img">
+							<a href="#" onclick="return false;">
+								<img src="assets/images/b-recents/thumb-8.jpg" alt="">
+							</a>
+						</div>
+					</article>
+					<article class="c-media-landscape">
+						<div class="c-media-landscape__body">
+							<a href="#" onclick="return false;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </a>
+						</div>
+						<div class="c-media-landscape__img">
+							<a href="#" onclick="return false;">
+								<img src="assets/images/b-recents/thumb-9.jpg" alt="">
+							</a>
+						</div>
+					</article>
+				</div>
+			</div> <!-- end .main-wrapper-->
+		</section> <!-- end .b-recents-->
+	</div> <!-- end .main-content-->
+	<footer class="b-footer">
+		<div class="main-wrapper  main-wrapper--v1  u-clearfix">
+			<ul class="b-footer__ul-txt-links">
+				<li class="b-footer__ul-txt-links__li"><a class="b-footer__ul-txt-links__li__a  u-text--gray  u-text--uppercase" href="#" onclick="return false;">Mentions légales</a></li>
+				<li class="b-footer__ul-txt-links__li"><a class="b-footer__ul-txt-links__li__a  u-text--gray  u-text--uppercase" href="#" onclick="return false;">CGU</a></li>
+				<li class="b-footer__ul-txt-links__li"><a class="b-footer__ul-txt-links__li__a  u-text--gray  u-text--uppercase" href="#" onclick="return false;">Tous les tags</a></li>
+				<li class="b-footer__ul-txt-links__li"><a class="b-footer__ul-txt-links__li__a  u-text--gray  u-text--uppercase" href="#" onclick="return false;">Information cookies</a></li>
+				<li class="b-footer__ul-txt-links__li"><a class="b-footer__ul-txt-links__li__a  u-text--gray  u-text--uppercase" href="#" onclick="return false;">Découvrez Hello bank!</a></li>
+			</ul>
+			<div class="b-footer__social">
+				<ul class="b-footer__social__ul-links">
+					<li class="b-footer__social__ul-links__li">
+						<a class="b-footer__social__ul-links__li__a  b-footer__social__ul-links__li__a--fb" href="https://www.facebook.com/HelloBankFr">
+							<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Plan de travail 1</title><path d="M22.67,0H1.32A1.32,1.32,0,0,0,0,1.32V22.68A1.32,1.32,0,0,0,1.32,24H12.82V14.71H9.69V11.08h3.13V8.41c0-3.1,1.89-4.79,4.66-4.79a25.66,25.66,0,0,1,2.8.14V7H18.36c-1.5,0-1.8.72-1.8,1.76v2.31h3.59l-.47,3.62H16.56V24h6.12A1.32,1.32,0,0,0,24,22.67V1.32A1.32,1.32,0,0,0,22.67,0Z"/></svg>
+						</a>
+					</li>
+					<li class="b-footer__social__ul-links__li">
+						<a class="b-footer__social__ul-links__li__a  b-footer__social__ul-links__li__a--tw" href="https://twitter.com/Hellobank_fr">
+							<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 19.5"><title>Plan de travail 1</title><path id="twitter-1" d="M24,2.31a9.85,9.85,0,0,1-2.83.78A4.94,4.94,0,0,0,23.34.36a9.85,9.85,0,0,1-3.13,1.19A4.93,4.93,0,0,0,11.82,6,14,14,0,0,1,1.67.9,4.93,4.93,0,0,0,3.19,7.48,4.9,4.9,0,0,1,1,6.86a4.93,4.93,0,0,0,3.95,4.89,4.94,4.94,0,0,1-2.22.08,4.93,4.93,0,0,0,4.6,3.42,9.91,9.91,0,0,1-7.29,2A13.94,13.94,0,0,0,7.55,19.5a13.93,13.93,0,0,0,14-14.65A10,10,0,0,0,24,2.31Z"/></svg>
+						</a>
+					</li>
+					<li class="b-footer__social__ul-links__li">
+						<a class="b-footer__social__ul-links__li__a  b-footer__social__ul-links__li__a--yt" href="https://www.youtube.com/channel/UCRscY04ptyKRlR8lBUnghwQ">
+							<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 18"><title>Plan de travail 1</title><path id="youtube-6" d="M19.62.18C16-.06,8-.06,4.38.18.49.45,0,2.8,0,9s.48,8.55,4.38,8.82c3.6.25,11.63.25,15.23,0C23.51,17.55,24,15.2,24,9S23.52.45,19.62.18ZM9,13V5l8,4Z"/></svg>
+						</a>
+					</li>
+					<li class="b-footer__social__ul-links__li">
+						<a class="b-footer__social__ul-links__li__a  b-footer__social__ul-links__li__a--in" href="https://www.linkedin.com/company/5128446/">
+							<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 23"><title>Plan de travail 1</title><path id="linkedin-1" d="M5,2.5A2.48,2.48,0,1,1,2.5,0,2.49,2.49,0,0,1,5,2.5ZM5,7H0V23H5Zm8,0H8V23h5V14.6c0-4.67,6-5.05,6,0V23h5V12.87C24,5,15.08,5.28,13,9.15Z"/></svg>
+						</a>
+					</li>
+				</ul>
+				<a class="b-footer__social__logo-link" href="#" onclick="return false;">
+					<svg id="BD_RVB" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1417.32 1417.32"><defs><style>.cls-1{fill:url(#Nouvelle_nuance_de_dégradé_1);}.cls-2{fill:#1a171b;}.cls-3{fill:#fff;}</style><linearGradient id="Nouvelle_nuance_de_dégradé_1" x1="170.36" y1="86.61" x2="1244.81" y2="1161.06" gradientUnits="userSpaceOnUse"><stop offset="0.01" stop-color="#0ad1e0"/><stop offset="1" stop-color="#0080a6"/></linearGradient></defs><title>Hello_Bank_Logo2017BD_RVB</title><path class="cls-1" d="M1225,86.63H190.17a48.21,48.21,0,0,0-48.07,48.07V1113A48.21,48.21,0,0,0,190.17,1161h65l125.38,164.59c8.8,8.8,16,5.82,16-6.63V1161H1225a48.21,48.21,0,0,0,48.07-48.07V134.7A48.21,48.21,0,0,0,1225,86.63Z"/><path class="cls-2" d="M464.09,1264.07a3.06,3.06,0,1,1,6.11,0v5.56c3.33-4.92,8.18-9.13,15.72-9.13,9.84,0,19.61,7.78,19.61,21.28v.16c0,13.42-9.69,21.36-19.61,21.36-7.62,0-12.54-4.13-15.72-8.73v17.86a3,3,0,0,1-3,3.1,3.05,3.05,0,0,1-3.1-3.1ZM499.26,1282v-.16c0-9.69-6.67-15.88-14.45-15.88-7.62,0-14.85,6.43-14.85,15.8v.16c0,9.53,7.22,15.88,14.85,15.88C492.75,1297.81,499.26,1291.94,499.26,1282Z"/><path class="cls-2" d="M521.66,1290.51v-.16c0-8.66,7.15-13.26,17.55-13.26a43.64,43.64,0,0,1,12.62,1.75v-1.43c0-7.38-4.52-11.19-12.23-11.19a25.65,25.65,0,0,0-10.64,2.3,3.11,3.11,0,0,1-1.11.24,2.71,2.71,0,0,1-2.7-2.62,2.8,2.8,0,0,1,1.67-2.54,32.33,32.33,0,0,1,13.42-2.78c5.79,0,10.24,1.51,13.26,4.53,2.78,2.78,4.21,6.75,4.21,12v22.47a2.9,2.9,0,0,1-2.94,3,2.82,2.82,0,0,1-2.94-2.86v-3.73a18,18,0,0,1-14.85,7.06C529.36,1303.29,521.66,1298.92,521.66,1290.51Zm30.25-3.17v-4a42.92,42.92,0,0,0-12.07-1.74c-7.7,0-12,3.33-12,8.49v.16c0,5.16,4.76,8.18,10.32,8.18C545.71,1298.45,551.91,1293.84,551.91,1287.33Z"/><path class="cls-2" d="M578.67,1264.07a3.09,3.09,0,0,1,3-3.1,3,3,0,0,1,3.09,3.1v7.7c3-6.83,9-11,14.13-11a2.94,2.94,0,0,1,3,3.1,3,3,0,0,1-2.7,3.1c-7.94,1-14.45,6.91-14.45,18.74v14a3.06,3.06,0,1,1-6.11,0Z"/><path class="cls-2" d="M651.56,1250a3.17,3.17,0,0,1,3.1-3.18h20.56c6.35,0,11.35,1.83,14.53,4.92a12.34,12.34,0,0,1,3.57,8.89v.16c0,7.22-4.45,11-8.81,12.86,6.59,2,11.91,5.8,11.91,13.42v.16c0,9.53-8,15.16-20.17,15.16h-21.6a3.17,3.17,0,0,1-3.1-3.17Zm22.63,21.6c7.54,0,12.78-3.41,12.78-9.92v-.16c0-5.48-4.37-9.05-12.31-9.05H657.76v19.14Zm2.22,25.17c8.42,0,13.66-3.73,13.66-9.92v-.16c0-6-5.08-9.53-14.77-9.53H657.76v19.61Z"/><path class="cls-2" d="M716.84,1249.7a3.15,3.15,0,0,1,3.1-3.1h.87a3.84,3.84,0,0,1,3.17,1.83l33.74,43v-41.92a3.06,3.06,0,1,1,6.11,0v50.18a2.82,2.82,0,0,1-2.86,2.94h-.32a4.3,4.3,0,0,1-3.25-1.91l-34.46-44.06v43a3.06,3.06,0,1,1-6.11,0Z"/><path class="cls-2" d="M787.51,1250a3.17,3.17,0,0,1,3.1-3.18h17.7c12.54,0,20.8,6.67,20.8,17.62v.16c0,12-10,18.18-21.83,18.18h-13.5v16.83a3.14,3.14,0,1,1-6.27,0Zm20,27.07c9.21,0,15.24-4.92,15.24-12.23v-.16c0-7.94-6-12.07-14.93-12.07H793.78v24.45Z"/><path class="cls-2" d="M880.25,1250a3.17,3.17,0,0,1,3.1-3.18h17.7c12.55,0,20.8,6.67,20.8,17.62v.16c0,12-10,18.18-21.83,18.18h-13.5v16.83a3.14,3.14,0,1,1-6.27,0Zm20,27.07c9.21,0,15.24-4.92,15.24-12.23v-.16c0-7.94-6-12.07-14.93-12.07H886.53v24.45Z"/><path class="cls-2" d="M932.66,1298.29l22.55-49.3a4.1,4.1,0,0,1,4-2.78h.32a4,4,0,0,1,3.89,2.78l22.55,49.22a4.26,4.26,0,0,1,.4,1.59,3,3,0,0,1-3,3,3.42,3.42,0,0,1-3.1-2.3l-5.8-12.78H943.94l-5.8,12.94a3.14,3.14,0,0,1-3,2.14,2.85,2.85,0,0,1-2.86-2.86A3.61,3.61,0,0,1,932.66,1298.29ZM972,1282l-12.78-28.43L946.4,1282Z"/><path class="cls-2" d="M1006.27,1250a3.17,3.17,0,0,1,3.1-3.18h20.8c6.83,0,12.31,2.07,15.8,5.56a15.35,15.35,0,0,1,4.29,11v.16c0,9.13-6.19,14.45-14.85,16.12l13.81,17.78a3.42,3.42,0,0,1,1,2.3,3.28,3.28,0,0,1-3.18,3.1,3.66,3.66,0,0,1-2.94-1.67l-15.64-20.32h-16v18.82a3.14,3.14,0,1,1-6.27,0Zm23.34,25.17c8.34,0,14.29-4.29,14.29-11.43v-.16c0-6.83-5.24-11-14.21-11h-17.15v22.55Z"/><path class="cls-2" d="M1072.18,1249.62a3.14,3.14,0,1,1,6.27,0v50a3.14,3.14,0,1,1-6.27,0Z"/><path class="cls-2" d="M1102.67,1250a3.17,3.17,0,0,1,3.1-3.18h20.56c6.35,0,11.35,1.83,14.53,4.92a12.34,12.34,0,0,1,3.57,8.89v.16c0,7.22-4.45,11-8.81,12.86,6.59,2,11.91,5.8,11.91,13.42v.16c0,9.53-8,15.16-20.17,15.16h-21.6a3.17,3.17,0,0,1-3.1-3.17Zm22.63,21.6c7.54,0,12.78-3.41,12.78-9.92v-.16c0-5.48-4.36-9.05-12.31-9.05h-16.91v19.14Zm2.22,25.17c8.42,0,13.66-3.73,13.66-9.92v-.16c0-6-5.08-9.53-14.77-9.53h-17.55v19.61Z"/><path class="cls-2" d="M1164.53,1298.29l22.55-49.3a4.1,4.1,0,0,1,4-2.78h.32a4,4,0,0,1,3.89,2.78l22.55,49.22a4.21,4.21,0,0,1,.4,1.59,3,3,0,0,1-3,3,3.42,3.42,0,0,1-3.09-2.3l-5.8-12.78H1175.8l-5.8,12.94a3.15,3.15,0,0,1-3,2.14,2.85,2.85,0,0,1-2.86-2.86A3.62,3.62,0,0,1,1164.53,1298.29Zm39.3-16.27L1191,1253.59,1178.26,1282Z"/><path class="cls-2" d="M1235.2,1295.75a2.82,2.82,0,0,1-1.19-2.38,3,3,0,0,1,3-3.1,2.77,2.77,0,0,1,1.91.71,25.28,25.28,0,0,0,17.55,6.59c7.46,0,12.38-4,12.38-9.45V1288c0-5.16-2.78-8.1-14.45-10.56-12.78-2.78-18.66-6.91-18.66-16v-.16c0-8.74,7.7-15.16,18.26-15.16,7.3,0,12.62,1.82,17.7,5.48a3.22,3.22,0,0,1,1.35,2.54,3,3,0,0,1-3,3,2.93,2.93,0,0,1-1.83-.56,23.24,23.24,0,0,0-14.37-4.84c-7.22,0-11.83,4-11.83,9v.16c0,5.24,2.86,8.18,15.08,10.8,12.39,2.7,18.1,7.23,18.1,15.72v.16c0,9.52-7.94,15.72-19,15.72A32.47,32.47,0,0,1,1235.2,1295.75Z"/><path class="cls-3" d="M255.2,341.56h45.48V449.15h123.5V341.56h45.47v258.8H424.18V491.31H300.68V600.36H255.2Z"/><path class="cls-3" d="M495.23,503.49v-.73c0-55.84,39.56-101.7,95.4-101.7,62.12,0,93.53,48.82,93.53,105,0,4.08-.36,8.16-.73,12.57H540c4.82,31.8,27.37,49.55,56.2,49.55,21.82,0,37.34-8.13,52.87-23.29L675.3,568.2c-18.49,22.19-44,36.61-79.85,36.61C538.87,604.8,495.23,563.76,495.23,503.49Zm144.58-14.41c-3-28.85-20-51.4-49.53-51.4-27.38,0-46.61,21.07-50.68,51.4Z"/><path class="cls-3" d="M710.84,330.43h44.74V600.36H710.84Z"/><path class="cls-3" d="M794.78,330.43H839.5V600.36H794.78Z"/><path class="cls-3" d="M864.57,503.86v-.74c0-55.83,44.37-102.06,104.27-102.06s103.9,45.49,103.9,101.33v.73c0,55.47-44.37,101.68-104.63,101.68C908.57,604.8,864.57,559.33,864.57,503.86Zm163.44,0v-.74c0-34.39-24.77-62.86-59.9-62.86-35.87,0-58.79,28.12-58.79,62.13v.73c0,34,24.79,62.86,59.52,62.86C1005.09,566,1028,537.52,1028,503.86Z"/><path class="cls-3" d="M1115.23,646.74H1160V847.81h-44.74Z"/><path class="cls-3" d="M1115.23,872.74H1160v39.55h-44.74Z"/><path class="cls-3" d="M679.65,717.38h44.75V747.7c12.58-18.49,30.7-34.39,61-34.39,44,0,69.52,29.59,69.52,75.08V912.61H810.19V801.68c0-30.3-15.17-47.68-41.79-47.68-25.88,0-44,18.11-44,48.43V912.61H679.65Z"/><path class="cls-3" d="M887.08,646.74h44.74V803.92l81-86.54h54.35l-77.66,79.5,80.23,115.73H1018l-58.79-84.3-27.35,28.47v55.83H887.08Z"/><path class="cls-3" d="M366.12,713.87c-28.3,0-55.59,12.31-66.2,17.93V645.93H255.2V865.18c31.16,44.09,79.05,52.06,110.92,52.06,52.93,0,97.06-36.62,97.06-101.3v-.76C463.18,750.46,419.55,713.87,366.12,713.87Zm57.8,102.07c0,38.44-27.26,62.46-61.9,62.46-13.82,0-38.75-1.86-62.17-22l.07-14.77V772A112.34,112.34,0,0,1,362,752.72c34.65,0,61.9,24.77,61.9,62.47Z"/><path class="cls-3" d="M619.07,902.74c-19.63,12.8-51.82,13.95-73.09,13.95-33.37,0-68.5-21.08-68.5-60.26v-.74c0-43.25,32.63-67.64,78.13-67.64,23.64,0,38.83,3.3,54,8.11v-3.69c0-27-17-40.13-48.06-40.13-21.82,0-38.1,4.81-55.85,12.19L493.48,730.7c21.46-9.61,42.53-16.27,74.32-16.27,57.69,0,84.78,35.47,84.78,82.46v47.51C652.57,859.74,647.7,884,619.07,902.74Zm-8.74-75.52c-11.47-4.42-27.37-7.75-44.76-7.75-28.09,0-49.3,15.14-49.3,34v.73c0,18.5,19,28.85,40.09,28.85,23.19,0,54-8.44,54-42.47Z"/></svg>
+				</a>
+			</div>
+		</div>
+	</footer> <!-- end .footer-->
+	<script src="main/js/main.js"></script>
+</body>
+</html>
