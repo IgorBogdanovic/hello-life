@@ -2,16 +2,27 @@
 	padding-top: 11.5%;
 
 	@include breakpoint(desktop) {
+		overflow: hidden;
+    	height: 134.1rem;
 		padding-top: 19.1rem;
+    }
+
+    .main-wrapper {
+    	@include breakpoint(desktop) {
+			padding-right: 11rem;
+	    }
     }
 
     &__tag-list { // active only on desktop
 		float: left;
+		overflow: hidden;
 		width: 30%;
+		height: 79.5rem;
 
     	&__file {
-    		opacity: 0.5;
+    		opacity: 0.1;
     		margin-bottom: 5rem;
+    		cursor: pointer;
 
     		&__heading {
 				font-family: "HelloType-Bold", sans-serif;
@@ -65,7 +76,10 @@
 	&__article-list {
 		@include breakpoint(desktop) {
 			float: right;
-	    	width: 48.6%;
+			overflow-y: auto;
+	    	width: 49.3%;
+	    	height: 115rem;
+	    	padding-right: 1.8rem;
 	    }
 
 		&__file {
@@ -73,6 +87,13 @@
 
 			@include breakpoint(desktop) {
 				margin-bottom: 18rem;
+				opacity: 0.4;
+				pointer-events: none;
+
+		    	&.active {
+		    		opacity: 1;
+		    		pointer-events: auto;
+		    	}
 		    }
 
 			&__tag { // active only on mobile
@@ -107,9 +128,11 @@
 			}
 
 			.c-media--dossier {
+				width: 46.99%;
 				margin-bottom: 5.85%;
 
 				@include breakpoint(desktop) {
+
 					margin-bottom: 9.6%;
 					
 					&:nth-child(odd) {
@@ -120,6 +143,10 @@
 						float: right;
 					}
 			    }
+
+			    &-wrapper--on-click {
+			    	display: none;
+			    }
 			}
 
 			&__button {
@@ -128,6 +155,10 @@
 
 				@include breakpoint(desktop) {
 					padding-top: 1.5%;
+			    }
+
+			    &.hidden {
+			    	visibility: hidden;
 			    }
 			}
 		}
