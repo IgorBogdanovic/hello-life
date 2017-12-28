@@ -8578,21 +8578,21 @@ $(document).ready(function() {
 		);
 
 		// disable overal scroll when mouse is over articleList --> SHOULD BE REMOVED as client originaly requsted
-		articleList.bind('mousewheel DOMMouseScroll', function(e) {
-		    var scrollTo = null;
+		// articleList.bind('mousewheel DOMMouseScroll', function(e) {
+		//     var scrollTo = null;
 
-		    if (e.type == 'mousewheel') {
-		        scrollTo = (e.originalEvent.wheelDelta * -1);
-		    }
-		    else if (e.type == 'DOMMouseScroll') {
-		        scrollTo = 40 * e.originalEvent.detail;
-		    }
+		//     if (e.type == 'mousewheel') {
+		//         scrollTo = (e.originalEvent.wheelDelta * -1);
+		//     }
+		//     else if (e.type == 'DOMMouseScroll') {
+		//         scrollTo = 40 * e.originalEvent.detail;
+		//     }
 
-		    if (scrollTo) {
-		        e.preventDefault();
-		        $(this).scrollTop(scrollTo + $(this).scrollTop());
-		    }
-		});
+		//     if (scrollTo) {
+		//         e.preventDefault();
+		//         $(this).scrollTop(scrollTo + $(this).scrollTop());
+		//     }
+		// });
 
 		// assigning controller to specific div
 		var controller = new ScrollMagic.Controller({container: '.dossier-articles__article-list'});

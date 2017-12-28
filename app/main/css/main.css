@@ -3702,7 +3702,11 @@ html {
       overflow-y: auto;
       width: 49.3%;
       height: 115rem;
-      padding-right: 1.8rem; } }
+      padding-right: 1.8rem;
+      -ms-overflow-style: none;
+      overflow: -moz-scrollbars-none; }
+      .dossier-articles__article-list::-webkit-scrollbar {
+        display: none; } }
   .dossier-articles__article-list__file {
     margin-bottom: 16.2%; }
     @media (min-width: 751px) {

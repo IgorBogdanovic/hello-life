@@ -80,6 +80,12 @@
 	    	width: 49.3%;
 	    	height: 115rem;
 	    	padding-right: 1.8rem;
+	    	-ms-overflow-style: none;
+		    overflow: -moz-scrollbars-none;
+
+		    &::-webkit-scrollbar { 
+			    display: none;
+			}
 	    }
 
 		&__file {
