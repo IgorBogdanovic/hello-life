@@ -3762,10 +3762,10 @@ html {
           .dossier-articles__article-list__file__tag__txt {
             line-height: 0rem; } }
     .dossier-articles__article-list__file .c-media--dossier {
-      width: 46.99%;
       margin-bottom: 5.85%; }
       @media (min-width: 751px) {
         .dossier-articles__article-list__file .c-media--dossier {
+          width: 46.99%;
           margin-bottom: 9.6%; }
           .dossier-articles__article-list__file .c-media--dossier:nth-child(odd) {
             float: left; }

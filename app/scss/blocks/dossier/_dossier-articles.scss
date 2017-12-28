@@ -128,10 +128,10 @@
 			}
 
 			.c-media--dossier {
-				width: 46.99%;
 				margin-bottom: 5.85%;
 
 				@include breakpoint(desktop) {
+					width: 46.99%;
 
 					margin-bottom: 9.6%;
 					
