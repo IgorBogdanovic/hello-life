@@ -1,0 +1,67 @@
+.tl-tags-content {
+	margin-top: 18.5rem;
+	padding-top: 6.8rem;
+
+	@include breakpoint(desktop) {
+		margin-top: 0;
+		padding-top: 19.4rem;
+		margin-bottom: 4.6rem;
+	}
+
+	& h1 {
+		color: $blue;
+		margin-bottom: 10.9rem;
+
+		@include breakpoint(desktop) {
+			margin-bottom: 9.5rem;
+		}
+	}
+
+	&__item {
+		@include breakpoint(desktop) {
+			display: inline-block;
+			vertical-align: top;
+			width: 20%;
+			margin-right: 5.5%;
+		}
+
+		& h3 {
+			font-family: 'HelloType-Bold', sans-serif;
+			@include fontSizeRem(80, 48);
+			color: $gray;
+			text-transform: uppercase;
+			margin-bottom: 2.3rem;
+
+			@include breakpoint(desktop) {
+				margin-bottom: 2.4rem;
+			}
+		}
+
+		& ul {
+			margin-bottom: 7rem;
+
+			@include breakpoint(desktop) {
+				margin-bottom: 5.3rem;
+			}
+
+			& li {
+				& a {
+					font-family: 'HelloType-Regular', sans-serif;
+					@include fontSizeRem(30, 20);
+					@include lineHeightRem(40, 24); 
+					color: $black1;
+
+					&:hover {
+						@include breakpoint(desktop) {
+							color: $blue;
+						}
+					}
+				}
+			}
+		} 
+
+		&:nth-of-type(4n) {
+			margin-right: 0;
+		}
+	}
+}

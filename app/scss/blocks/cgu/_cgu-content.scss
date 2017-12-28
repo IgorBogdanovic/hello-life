@@ -1,0 +1,91 @@
+.cgu-content {
+	margin-top: 18.5rem;
+	padding-top: 6.8rem;
+
+	@include breakpoint(desktop) {
+		margin-top: 0;
+		padding-top: 19.4rem;
+		margin-bottom: 5.1rem;
+	}
+
+	& .main-wrapper--v1 {
+		@include breakpoint(desktop) {
+			padding-left: 22.8rem;
+			padding-right: 22.8rem;
+		}
+	}
+
+	& h1 {
+		color: $blue;
+		margin-bottom: 11.4rem;
+
+		@include breakpoint(desktop) {
+			margin-bottom: 9.8rem;
+		}
+	}
+
+	& h2 {
+		font-family: 'HelloType-Regular', sans-serif;
+		@include fontSizeRem(40, 30);
+		@include letterSpacingEm(-20, -20);
+		color: $black1;
+		margin-bottom: 6rem;
+
+		@include breakpoint(desktop) {
+			margin-bottom: 3.4rem;
+			margin-top: 5.1rem;
+		}
+	}
+
+	& p {
+		font-family: 'HelloType-Regular', sans-serif;
+		@include fontSizeRem(26, 16);
+		@include lineHeightRem(48, 28);
+		color: $black1;
+		margin-bottom: 5.1rem;
+
+		@include breakpoint(desktop) {
+			margin-bottom: 3.2rem;
+		}
+	}
+
+	& ul {
+		margin-left: 3.1rem;
+		margin-bottom: 5.4rem;
+
+		@include breakpoint(desktop) {
+			margin-bottom: 2.6rem;
+		}
+
+		& li {
+			font-family: 'HelloType-Regular', sans-serif;
+			@include fontSizeRem(26, 16);
+			@include lineHeightRem(48, 28);
+			color: $black1;
+			text-indent: -3.1rem;
+			margin-bottom: 0.5rem;
+
+			@include breakpoint(desktop) {
+				margin-bottom: 0;
+			}
+
+			&::before {
+				content: "";
+				display: inline-block;
+				width: 1.6rem;
+				height: 0.8rem;
+				background: $gray;
+				border-radius: 0.4rem;
+				margin-right: 1.4rem;
+				margin-bottom: 0.4rem;
+
+				@include breakpoint(desktop) {
+					width: 1rem;
+					height: 0.5rem;
+					border-radius: 0.25rem;
+					margin-right: 1.2rem;
+				}
+			}
+		}
+	}
+}
