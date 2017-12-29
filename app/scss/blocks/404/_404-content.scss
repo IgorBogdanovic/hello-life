@@ -1,0 +1,108 @@
+.b-404-content {
+	margin-top: 18.5rem;
+	position: relative;
+
+	@include breakpoint(desktop) {
+		margin-top: 15rem;
+	}
+
+	&__img {
+		& img {
+			width: 100%;
+		}
+	}
+
+	&__desc {
+		position: absolute;
+		top: 4.7rem;
+		left: 0;
+		width: 100%;
+
+		@include breakpoint(desktop) {
+			top: 12.6%;
+			left: 41%;
+			width: 50%;
+		}
+
+		& h2 {
+			font-family: 'HelloType-Bold', sans-serif;
+			@include fontSizeRem(73, 80);
+			color: $black1;
+			text-transform: uppercase;
+			text-align: center;
+			margin-bottom: 1.9rem;
+		}
+
+		& p {
+			font-family: 'HelloType-Bold', sans-serif;
+			@include fontSizeRem(33, 34);
+			@include lineHeightRem(40, 42); 
+			color: $black1;
+			text-transform: uppercase;
+			text-align: center;
+			padding-left: 6rem;
+			padding-right: 6rem;
+			margin-bottom: 4.7rem;
+
+			@include breakpoint(desktop) {
+    			width: 57.6rem;
+    			margin: 0 auto;
+    			margin-bottom: 6.5rem;
+			}
+		}
+
+		&-btn {
+			@include breakpoint(desktop) {
+				width: 57.4rem;
+				margin: 0 auto;
+			}
+
+			& .c-btn {
+				height: 7.8rem;
+				padding-left: 0;
+				padding-right: 0;
+				padding-top: 3rem;
+				line-height: 1;
+				width: 49%;
+				display: block;
+				margin: 0 auto;
+				text-align: center;
+
+				@include breakpoint(desktop) {
+					display: inline-block;
+					width: 47.4%;
+					height: 6rem;
+					padding-top: 2.5rem;
+				}
+
+				&:first-of-type {
+					margin-bottom: 2rem;
+					background: $lightBlue;
+
+					@include breakpoint(desktop) {
+						margin-right: 4.7%;
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+
+	&__anim {
+		position: absolute;
+		top: 61rem;
+		left: 26.4rem;
+		width: 29%;
+
+		@include breakpoint(desktop) {
+			width: 14%;
+			top: 22%;
+			left: 21.15%;
+		}
+
+		& img {
+			width: 100%;
+		}
+	}
+}
+
