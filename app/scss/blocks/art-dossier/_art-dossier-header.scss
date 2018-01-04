@@ -1,0 +1,383 @@
+.art-dossier-header {
+	margin-top: 18.5rem;
+	position: relative;
+	height: 37.4rem;
+	overflow: hidden;
+	-webkit-transition: 0.4s all ease;
+  	-moz-transition: 0.4s all ease;
+  	-o-transition: 0.4s all ease;
+	transition: 0.4s all ease;
+
+	@include breakpoint(desktop) {
+		height: 25vw;
+		margin-top: 0;
+	}
+
+	&.active {
+		height: 114.9rem;
+
+		& .art-dossier-header__img {
+			top: 0;
+		}
+
+		& .art-dossier-header__heading {
+			font-family: 'HelloType-Regular', sans-serif;
+			@include fontSizeRem(46, 31);
+			@include lineHeightRem(54, 20); 
+			width: 44%;
+			top: 6rem;
+
+
+			& span {
+				@include fontSizeRem(32, 31);
+				margin-bottom: 1.5rem;
+			}
+		}
+
+		& .art-dossier-header__preview {
+			visibility: hidden;
+			opacity: 0;
+		}
+
+		& .art-dossier-header__trigger {
+			&::after {
+				display: none;
+			}
+		}
+	}
+
+	&.activeDesk {
+		@include breakpoint(desktop) {
+			height: 29vw;
+		}
+
+		& .art-dossier-header__overlay {
+			@include breakpoint(desktop) {
+				visibility: visible;
+				opacity: 0.35;
+			}
+		}
+	}
+
+	& .main-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		@include breakpoint(desktop) {
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			-moz-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			transform: translateX(-50%);
+		}
+	}
+
+	& .main-wrapper--v1 {
+		padding-left: 7.7rem; 
+		padding-right: 0;
+
+		@include breakpoint(desktop) {
+			padding-left: 12.8rem;
+			padding-right: 12.8rem;
+		}
+	}
+
+	&__overlay {
+		display: none;
+
+		@include breakpoint(desktop) {
+			display: block;
+			position: absolute;
+			background: $black;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			visibility: hidden;
+			opacity: 0;
+			-webkit-transition: 0.4s all ease;
+		  	-moz-transition: 0.4s all ease;
+		  	-o-transition: 0.4s all ease;
+			transition: 0.4s all ease;
+		}
+	}
+
+	&__img {
+		position: relative;
+		top: -10rem;
+		-webkit-transition: 0.4s all ease;
+	  	-moz-transition: 0.4s all ease;
+	  	-o-transition: 0.4s all ease;
+		transition: 0.4s all ease;
+
+		@include breakpoint(desktop) {
+			position: static;
+			top: 0;
+		}
+
+		& img {
+			@include breakpoint(desktop) {
+				width: 100%;
+			}
+		}
+	}
+
+	&__heading {
+		font-family: 'HelloType-Regular', sans-serif;
+		@include fontSizeRem(28, 31);
+		@include lineHeightRem(34, 36);
+		color: $white;
+		width: 29.1%;
+		position: absolute;
+		top: 12.1rem;
+		left: 7.7rem;
+		-webkit-transition: 0.4s all ease;
+	  	-moz-transition: 0.4s all ease;
+	  	-o-transition: 0.4s all ease;
+		transition: 0.4s all ease;
+
+		@include breakpoint(desktop) {
+			width: 33%;
+			left: 5.8rem;
+			top: 16.1vw;
+		}
+
+		& span {
+			font-family: 'HelloType-Bold', sans-serif;
+			@include fontSizeRem(21, 23);
+			display: block;
+			margin-bottom: 1rem;
+
+			@include breakpoint(desktop) {
+				margin-bottom: 0rem;
+			}
+		}
+	}
+
+	&__preview {
+		width: 22.2rem;
+		position: absolute;
+		top: 12.1rem;
+		left: 31.9rem;
+		visibility: visible;
+		opacity: 1;
+		-webkit-transition: 0.4s all ease;
+	  	-moz-transition: 0.4s all ease;
+	  	-o-transition: 0.4s all ease;
+		transition: 0.4s all ease;
+
+		@include breakpoint(desktop) {
+			display: none;
+		}
+
+		&::before {
+			content: "";
+			width: 10.6rem;
+			height: 0.7rem;
+			display: block;
+			background: $white;
+			position: absolute;
+			bottom: 0;
+			left: 5.7rem;
+			z-index: 1;
+		}
+
+		& img {
+			width: 100%;
+			opacity: 0.3;
+		}
+	}
+
+	&__trigger {
+		width: 9rem;
+		height: 5.9rem;
+		background: $white;
+		border-radius: 3rem;
+		position: absolute;
+		top: 16rem;
+		left: 58rem;
+
+		@include breakpoint(desktop) {
+			display: none;
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			width: 2.9rem;
+			height: 0.4rem;
+			background: $black;
+			border-radius: 0.4rem;
+			margin-top: 2.8rem;
+			margin-left: 3.1rem;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			height: 2.9rem;
+			width: 0.4rem;
+			background: $black;
+			margin-top: -1.7rem;
+			margin-left: 4.35rem;
+			border-radius: 0.4rem;
+		}
+	}
+
+	&__slider-wrap {
+		margin-left: 0.3rem;
+		margin-top: 39.5rem;
+
+		@include breakpoint(desktop) {
+			margin-top: 14.3vw;
+			margin-left: 65rem;
+			position: relative;
+		}
+
+		& .c-arrow {
+			display: none;
+
+			@include breakpoint(desktop) {
+				display: block;
+				position: absolute;
+			}
+
+			&--left {
+				top: 1.7rem;
+				left: -8rem;
+				background: $white;
+			}
+
+			&--right {
+				top: 1.7rem;
+				right: -7.5rem;
+				background: $white;
+			}
+		}
+	}
+
+	&__slider {
+
+		@include breakpoint(desktop) {
+			width: 54rem;
+		}
+
+		&-slide {
+			width: 41rem;
+			margin-right: 2rem; 
+
+			@include breakpoint(desktop) {
+				width: 17.3rem;
+				margin-right: 1.2rem; 
+			}
+
+			&-img {
+				position: relative; 
+				margin-bottom: 1.7rem;
+
+				@include breakpoint(desktop) {
+					margin-bottom: 1rem;
+				}
+
+				& figcaption {
+					font-family: 'HelloType-Regular', sans-serif;
+					@include fontSizeRem(22, 31);
+					color: $white;
+					text-align: center;
+					margin-bottom: 2.1rem;
+
+					@include breakpoint(desktop) {
+						display: none;
+					}
+				}
+
+				&::after {
+					@include breakpoint(desktop) {
+						content: "";
+						width: 8.9rem;
+						height: 0.8rem;
+						display: block;
+						background: $lightBlue;
+						position: absolute;
+						bottom: 0;
+						left: 4rem;
+						z-index: 1;
+						visibility: hidden;
+						opacity: 0;
+						-webkit-transition: 0.4s all ease;
+					  	-moz-transition: 0.4s all ease;
+					  	-o-transition: 0.4s all ease;
+						transition: 0.4s all ease;
+					}
+				}
+
+				&:hover::after {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+
+			&-body {
+				& h3 {
+					font-family: 'HelloType-Regular', sans-serif;
+					@include fontSizeRem(26, 12);
+					@include lineHeightRem(34, 18); 
+					color: $white;
+
+					@include breakpoint(desktop) {
+						visibility: hidden;
+						opacity: 0;
+						-webkit-transition: 0.4s all ease;
+					  	-moz-transition: 0.4s all ease;
+					  	-o-transition: 0.4s all ease;
+						transition: 0.4s all ease;
+					}
+
+					&.active {
+						@include breakpoint(desktop) {
+							visibility: visible;
+							opacity: 1;
+						}
+					}
+				}
+			}
+
+			&.activeSlide {
+				& .art-dossier-header__slider-slide-img {
+
+					&::after {
+						content: "";
+						width: 20rem;
+						height: 1.3rem;
+						display: block;
+						background: $lightBlue;
+						position: absolute;
+						bottom: 0;
+						left: 10.5rem;
+						z-index: 2;
+
+						@include breakpoint(desktop) {
+							width: 8.9rem;
+							height: 0.8rem;
+							background: $white;
+							left: 4rem;
+							visibility: visible;
+							opacity: 1;
+						}
+					}
+
+					& img {
+						@include breakpoint(desktop) {
+							opacity: 0.3;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+

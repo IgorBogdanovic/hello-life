@@ -8,17 +8,17 @@
 	padding-left: 5.6%;
 	padding-right: 6.8%;
 	padding-top: 3.3rem;
-	z-index: 2; //check
+	z-index: 2; 
 
 	@include breakpoint(desktop) {
 		//position: absolute;
 		//top: 0;
-		position: relative; //check this
+		position: relative; 
 		height: 18.2rem;
 		width: 6rem;
 		padding: 0;
 		background: none;
-		left: auto; //check
+		left: auto; 
 		bottom: auto; 
 	}
 
@@ -138,6 +138,98 @@
 				&:hover {
 					@include breakpoint(desktop) {
 						fill: #0077b5;
+					}
+				}
+			}
+		}
+	}
+
+	&--lr {
+		@include breakpoint(desktop) {
+			position: fixed; 
+			height: auto;
+			width: 2.4rem;
+		}
+
+		& .c-social__text {
+			@include breakpoint(desktop) {
+				width: 16.7rem; 
+				height: 2.4rem; 
+			}
+		}
+
+		& .c-social__icons {
+			@include breakpoint(desktop) {
+				width: 100%;
+				top: 19.6rem;
+				right: auto;
+				left: -0.4rem;
+				text-align: left;
+			}
+
+			&-fb {
+				& svg {
+					@include breakpoint(desktop) {
+						fill: $white;
+					}
+					&:hover {
+						@include breakpoint(desktop) {
+							fill: #3b5998;
+						}
+					}
+				}
+			}
+
+			&-tw {
+				& svg {
+					@include breakpoint(desktop) {
+						fill: $white;
+					}
+					&:hover {
+						@include breakpoint(desktop) {
+							fill: #4099ff;
+						}
+					}
+				}
+			}
+
+			&-in {
+				& svg {
+					@include breakpoint(desktop) {
+						fill: $white;
+					}
+					&:hover {
+						@include breakpoint(desktop) {
+							fill: #0077b5;
+						}
+					}
+				}
+			}
+		}
+
+		&.black {
+			& .c-social__icons {
+				&-fb {
+					& svg {
+						@include breakpoint(desktop) {
+							fill: $black1;
+						}
+					}
+				}
+
+				&-tw {
+					& svg {
+						@include breakpoint(desktop) {
+							fill: $black1;
+						}
+					}
+				}
+
+				&-in {
+					& svg {
+						@include breakpoint(desktop) {
+							fill: $black1;
+						}
 					}
 				}
 			}

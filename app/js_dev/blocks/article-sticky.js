@@ -1,23 +1,6 @@
 $(window).on('load', function(){
-
-	if($('.article-diapo_page').length) {
-		var $articleSlider = $('.article-content__text-slider'),
-			$articleSliderWrap = $('.article-content__text-slider-wrap'),
-			$articleSliderArrowLeft = $articleSliderWrap.find('.c-arrow--left'),
-			$articleSliderArrowRight = $articleSliderWrap.find('.c-arrow--right');
-
-			//Initialize slider
-			$articleSlider.slick({
-				draggable: false,
-				swipe: false,
-				arrows: true,
-				prevArrow: $articleSliderArrowLeft,
-				nextArrow: $articleSliderArrowRight
-			});
-
-
-			//Sticky social
-			var $articleText = $('.article-content__text'),
+	if($('.sticky-page').length) {
+		var $articleText = $('.article-content__text'),
 			$articleTextTop = $articleText.offset().top,
 			$articleTextQuote = $('.article-content__text-quote'),
 			$articleTextQuoteTop = $articleTextQuote.offset().top,
@@ -35,12 +18,9 @@ $(window).on('load', function(){
 					duration: $stickyDuration,
 					triggerHook: (0.072)
 				})
-				.setPin("#diapoStickySocial")
+				.setPin("#stickySocial")
 				//.addIndicators()
 				.addTo(controller)
 			}
-	
-
-
 	}
 });

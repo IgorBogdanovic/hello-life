@@ -1,0 +1,116 @@
+.article-dossier-page {
+	& .article-content {
+		margin-top: 2.4rem;
+
+		@include breakpoint(desktop) {
+			margin-top: 0;
+		}
+
+		&__social {
+			margin-top: 4.8rem;
+		}
+		
+		& .c-social {
+			//margin-top: 4.8rem;
+
+			& .c-arrow {
+				display: none;
+				@include breakpoint(desktop) {
+					display: block;
+					margin-top: 23.1rem;
+					margin-left: 0.34rem;
+					background: $white;
+				}
+			}
+		}
+		&__text {
+			margin-bottom: 10.4rem;
+
+			@include breakpoint(desktop) {
+				margin-bottom: 6.4rem; 
+				margin-top: 4.3rem;
+			}
+
+			& p {
+				margin-bottom: 5.5rem;
+
+				@include breakpoint(desktop) {
+					margin-bottom: 2.8rem;
+				}
+			}
+
+			&-list {
+				margin-bottom: 5.9rem;
+
+				@include breakpoint(desktop) {
+					margin-bottom: 1.8rem;
+				}
+			}
+
+			&-nav {
+				margin-bottom: 6.4rem;
+
+				@include breakpoint(desktop) {
+					margin-bottom: 5.8rem;
+				}
+
+				& ul {
+					margin-top: 7.2rem;
+
+					@include breakpoint(desktop) {
+						margin-top: -1rem;
+					}
+
+					& li {
+						@include breakpoint(desktop) {
+							margin-top: 3.5rem;
+						}
+					}
+				}
+			}
+
+			&-numb {
+				font-family: 'HelloType-Regular', sans-serif;
+				@include fontSizeRem(24, 14);
+
+				@include breakpoint(desktop) {
+					display: inline-block;
+					margin-left: 19.2rem;
+					margin-right: 2rem;
+					vertical-align: middle;
+				}
+			}
+
+			&-btn {
+				text-align: center;
+				margin-top: 6.4rem;
+
+				@include breakpoint(desktop) {
+					display: inline-block;
+					margin-top: 0;
+				}
+
+				& .c-btn {
+					padding-left: 8.3rem; 
+					padding-right: 8.3rem;
+
+					@include breakpoint(desktop) {
+						padding-left: 6.6rem; 
+						padding-right: 6.6rem;
+					}
+				}
+			}
+		}
+
+		&__sidebar {
+			.b-article-video {
+				background: $lightGray;
+
+				&__background-txt {
+					color: $gray;
+					opacity: 0.2;
+				}
+			}
+		}
+	}
+}
