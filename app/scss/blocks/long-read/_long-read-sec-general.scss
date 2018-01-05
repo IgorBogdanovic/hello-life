@@ -1,0 +1,164 @@
+.long-read {
+
+	&__sec {
+		@include breakpoint(desktop) {
+			height: 100vh;
+			max-width: 1440px;
+    		margin: auto;
+			padding-left: 12.8rem;
+    		padding-right: 12.8rem;
+		}
+
+		.main-wrapper {
+			@include breakpoint(desktop) {
+				float: left;
+    			width: 57%;
+    			height: 47vh;
+    			padding-left: 0rem;
+    			padding-right: 0rem;
+    			overflow-y: auto;
+    			-ms-overflow-style: none;
+			    overflow: -moz-scrollbars-none;
+
+			    &::-webkit-scrollbar { 
+				    display: none;
+				}
+			}
+		}
+
+		&__heading {
+			font-family: "HelloType-Bold", sans-serif;
+			@include fontSizeRem(43.78, 38);
+			@include lineHeightRem(54, 38);
+			color: $black2;
+			text-align: center;
+			width: 65%;
+    		margin: auto;
+
+    		@include breakpoint(desktop) {
+				width: 100%;
+				margin-bottom: 4.8%;
+			}
+		}
+
+		&__full-scr {
+			background: none;
+			position: absolute;
+			right: 4%;
+		    bottom: 6.7%;
+		    width: 3.5rem;
+
+		    @include breakpoint(desktop) {
+				right: 3.2%;
+			    bottom: 4.8%;
+			    width: 2.5rem;
+			}
+		}
+
+		p {
+			font-family: "HelloType-Regular", sans-serif;
+			@include fontSizeRem(26, 16);
+			@include lineHeightRem(48, 28);
+			color: $black;
+
+			@include breakpoint(desktop) {
+				padding-left: 15%;
+			}
+
+			span {
+				cursor: pointer;
+				padding-top: 0.8rem;
+			    padding-bottom: 0.5rem;
+			    padding-left: 0.9rem;
+			}
+		}
+
+		&__quote {
+			text-align: center;
+			position: relative;
+			width: 100%;
+
+			& q {
+				font-family: 'HelloType-Bold', sans-serif;
+				@include fontSizeRem(52, 48);
+				@include lineHeightRem(51, 46);
+				@include letterSpacingEm(20, 0);
+				color: $blue;
+				quotes: "‘’" "‘’";
+
+				&::before {
+					content: open-quote;
+					display: block;
+					margin-bottom: -1.5rem;
+					margin-right: 1.5rem;
+
+					@include breakpoint(desktop) {
+						margin-right: 0;
+					}
+				}
+
+				&::after {
+					content: close-quote;
+					display: block;
+					margin-top: 1.5rem;
+    				margin-right: 1.5rem;
+
+    				@include breakpoint(desktop) {
+						margin-top: 1.7rem;
+						margin-right: 0;
+					}
+				}
+			}
+
+			&__tag {
+				font-family: 'HelloType-Bold', sans-serif;
+				@include fontSizeRem(26, 16);
+				color: $blue;
+				-webkit-transform: rotate(270deg);
+				-moz-transform: rotate(270deg);
+				-o-transform: rotate(270deg);
+				-ms-transform: rotate(270deg);
+				transform: rotate(270deg);
+				position: absolute;
+				top: 14rem;
+    			left: -19.5rem;
+
+    			@include breakpoint(desktop) {
+					top: 9.8rem;
+    				left: -8.3rem;
+				}
+			}
+		}
+
+		&__promo {
+			display: block;
+			text-align: center;
+			width: 80%;
+			margin: auto;
+
+			p {
+				@include fontSizeRem(30, 16);
+				@include lineHeightRem(36, 22);
+				@include letterSpacingEm(-30, 0);
+				display: inline-block;
+				text-decoration: underline;
+				color: $blue;
+
+				@include breakpoint(desktop) {
+					padding-left: 0;
+				}
+
+				img {
+					display: inline;
+					vertical-align: middle;
+					width: 4.4rem;
+					padding-right: 1rem;
+
+					@include breakpoint(desktop) {
+						width: 3.8rem;
+					}
+				}
+			}
+		}
+	}
+}

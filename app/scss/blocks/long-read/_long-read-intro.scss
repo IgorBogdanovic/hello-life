@@ -1,0 +1,69 @@
+.long-read {
+
+	&__intro {
+
+		&-heading {
+			font-family: "HelloType-Bold", sans-serif;
+			@include fontSizeRem(55, 44);
+			@include lineHeightRem(60, 50);
+			text-align: center;
+			position: absolute;
+			top: 17.5rem;
+
+			@include breakpoint(desktop) {
+				top: 52.9%;
+    			left: 50%;
+    			-webkit-transform: translate(-50%, -50%);
+				-moz-transform: translate(-50%, -50%);
+				-o-transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+			}
+
+			span {
+				display: block;
+			    width: 70%;
+			    margin: auto;
+
+			    @include breakpoint(desktop) {
+					width: 100%;
+				}
+			}
+		}
+
+		&-img {
+			width: 100%;
+
+			@include breakpoint(desktop) {
+				height: 100vh;
+			}
+		}
+
+		&-txt {
+			font-family: "HelloType-Bold", sans-serif;
+			@include fontSizeRem(26, 16);
+			@include lineHeightRem(48, 28);
+			padding-top: 8.3%;
+			padding-bottom: 3%;
+
+			@include breakpoint(desktop) {
+				height: 100vh;
+				padding-top: 27.2vh;
+    			padding-bottom: 0;
+
+				.main-wrapper--v1 {
+					padding-left: 23rem;
+    				padding-right: 23rem;
+				}
+			}
+
+			p {
+				padding-bottom: 9.6%;
+
+				@include breakpoint(desktop) {
+					padding-bottom: 3.1rem;
+				}
+			}
+		}
+	}
+}

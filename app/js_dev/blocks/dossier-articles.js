@@ -156,7 +156,7 @@ $(document).ready(function() {
 
 		    var scene = new ScrollMagic.Scene({triggerElement: elem})
 						.addTo(controller)
-						// .addIndicators()
+						.addIndicators()
 						.triggerHook(0.2)
 						.on("start end", function (e) {
 							if (TAG_CLICKED) {
