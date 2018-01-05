@@ -1,0 +1,43 @@
+.long-read {
+
+	&__img-sec {
+		padding-top: 12.5%;
+
+		@include breakpoint(desktop) {
+			padding-top: 6.3rem;
+			padding-bottom: 6.4rem;
+		}
+
+		&__img {
+			margin-top: 7.6%;
+    		margin-bottom: 8%;
+
+    		@include breakpoint(desktop) {
+				float: right;
+			    width: 40%;
+			    height: 26.7rem;
+				margin-top: 0.6%;
+				margin-bottom: 0;
+			}
+		}
+
+		&__quote {
+			margin-top: 8.8%;
+			margin-bottom: 6.5%;
+
+			@include breakpoint(desktop) {
+				padding-left: 2.5%;
+			    margin-top: 1.7%;
+			    margin-bottom: -1.8%;
+			}
+		}
+
+		&__promo {
+			margin-top: 6.5%;
+
+			@include breakpoint(desktop) {
+				margin-top: 1.5%;
+			}
+		}
+	}
+}

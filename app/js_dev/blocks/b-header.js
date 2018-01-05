@@ -118,17 +118,21 @@ $(window).on('load', function(){
 			$headerLogoBrand.removeClass('activeDesk');
 		})
 
-		//Add and remove sticky class on scroll
-		var $lastScrollTop = 0;
-		$(window).scroll(function(e){ 
-			var $st = $(this).scrollTop();
-			if($st > $lastScrollTop) {
-				$header.addClass('stickyDesk');
-			} 
-			else {
-				$header.removeClass('stickyDesk');
-			}
+		if($('#long-read').length) {
 			return false;
-		})
+		} else {
+			//Add and remove sticky class on scroll
+			var $lastScrollTop = 0;
+			$(window).scroll(function(e){ 
+				var $st = $(this).scrollTop();
+				if($st > $lastScrollTop) {
+					$header.addClass('stickyDesk');
+				} 
+				else {
+					$header.removeClass('stickyDesk');
+				}
+				return false;
+			})
+		}
 	}
 });

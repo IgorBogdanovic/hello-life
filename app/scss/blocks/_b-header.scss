@@ -31,49 +31,51 @@
 	}
 
 	&.stickyDesk {
-		background: $white;
+		@include breakpoint(desktop) {
+			background: $white;
 
-		&.activeDesk {
-			background: linear-gradient(45deg, #005a80, $blue);
-			height: 35rem;
-		}
-
-		& .b-header__logo {
-			margin-top: 0.7rem;
-			height: 8rem;
-			& svg {
-				width: 11rem;
-				height: 7rem;
+			&.activeDesk {
+				background: linear-gradient(45deg, #005a80, $blue);
+				height: 35rem;
 			}
-		}
 
-		& .b-header__logo-brand {
-			margin-top: 1.6rem;
-			& span {
-				@include fontSizeRem(24, 13);
-				margin-right: -0.8rem;
+			& .b-header__logo {
+				margin-top: 0.7rem;
+				height: 8rem;
+				& svg {
+					width: 11rem;
+					height: 7rem;
+				}
 			}
-			&-wrap {
-				width: 7.2rem;
-				height: 6rem;
+
+			& .b-header__logo-brand {
+				margin-top: 1.6rem;
+				& span {
+					@include fontSizeRem(24, 13);
+					margin-right: -0.8rem;
+				}
+				&-wrap {
+					width: 7.2rem;
+					height: 6rem;
+				}
 			}
-		}
 
-		& .b-header__navigation-item {
-			& > a {
-				padding-top: 3.2rem;
+			& .b-header__navigation-item {
+				& > a {
+					padding-top: 3.2rem;
+				}
 			}
-		}
 
-		& .b-header__search-desk {
-			padding-top: 8rem;
-		}
+			& .b-header__search-desk {
+				padding-top: 8rem;
+			}
 
-		& .b-header__drop-down {
-			top: 11.6rem;
+			& .b-header__drop-down {
+				top: 11.6rem;
 
-			& .b-header__drop-down-slide {
-				margin-top: 3.3rem;
+				& .b-header__drop-down-slide {
+					margin-top: 3.3rem;
+				}
 			}
 		}
 	}
