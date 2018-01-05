@@ -1,8 +1,24 @@
 .long-read {
 	margin-top: 18.5rem;
 
+	@include breakpoint(mobile) {
+
+		.b-lifestyle .main-wrapper--v1 {
+			padding-top: 8%;
+		}
+		
+		.b-footer {
+			margin-bottom: 9.9rem;
+		}
+	}
+
 	@include breakpoint(desktop) {
 		margin-top: 0;
+
+		.b-lifestyle .main-wrapper--v1 {
+			padding-top: 9.9rem;
+    		padding-bottom: 7.5rem;
+		}
 
 		.b-header.stickyDesk .b-header__logo {
 			height: 7.4rem;

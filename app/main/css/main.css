@@ -477,7 +477,9 @@ html {
     .c-social--lr {
       position: fixed;
       height: auto;
-      width: 2.4rem; } }
+      width: 2.4rem;
+      left: 6.2vw;
+      bottom: 47.5vh; } }
   @media (min-width: 751px) {
     .c-social--lr .c-social__text {
       width: 16.7rem;
@@ -5333,6 +5335,20 @@ html {
         padding-bottom: 3.1rem; } }
 
 @media (min-width: 751px) {
+  .long-read {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+    .long-read-panel {
+      position: absolute;
+      height: 100%;
+      width: 100%; }
+      .long-read-panel .lr-panel__content {
+        position: absolute;
+        top: 100%;
+        width: 100%; } }
+
+@media (min-width: 751px) {
   .long-read__sec {
     height: 100vh;
     max-width: 1440px;
@@ -5374,6 +5390,7 @@ html {
   @media (min-width: 751px) {
     .long-read__sec__heading {
       width: 100%;
+      margin-top: 8.1rem;
       margin-bottom: 4.8%; } }
 
 .long-read__sec__full-scr {
@@ -6009,9 +6026,17 @@ html {
 
 .long-read {
   margin-top: 18.5rem; }
+  @media (max-width: 750px) {
+    .long-read .b-lifestyle .main-wrapper--v1 {
+      padding-top: 8%; }
+    .long-read .b-footer {
+      margin-bottom: 9.9rem; } }
   @media (min-width: 751px) {
     .long-read {
       margin-top: 0; }
+      .long-read .b-lifestyle .main-wrapper--v1 {
+        padding-top: 9.9rem;
+        padding-bottom: 7.5rem; }
       .long-read .b-header.stickyDesk .b-header__logo {
         height: 7.4rem; }
       .long-read .b-recents__heading {
