@@ -1921,7 +1921,8 @@ html {
       display: inline-block;
       position: relative;
       bottom: 0.3rem;
-      left: 2.9rem; }
+      left: 2.9rem;
+      height: 9.9rem; }
       @media (min-width: 751px) {
         .b-footer__social__logo-link {
           bottom: 2rem;
@@ -3514,9 +3515,11 @@ html {
       padding-top: 4.3%;
       padding-bottom: 2.7%;
       padding-left: 4.7%;
+      margin-bottom: 0.2%;
       outline: none;
       border: none;
-      border-radius: 0; }
+      border-radius: 0;
+      overflow: auto; }
       @media (max-width: 750px) {
         .dossier-expert__question__form-wrapper textarea {
           font-size: 2.6rem; } }
@@ -3537,6 +3540,7 @@ html {
     .dossier-expert__question__form-wrapper input {
       font-family: 'HelloType-Bold', sans-serif;
       width: 100%;
+      height: 6.53rem;
       padding-bottom: 0.9%;
       padding-left: 4.7%;
       outline: none;
@@ -3561,6 +3565,7 @@ html {
           letter-spacing: 0em; } }
       @media (min-width: 751px) {
         .dossier-expert__question__form-wrapper input {
+          height: 6.155rem;
           padding-bottom: 0.7%;
           padding-left: 5%; } }
   .dossier-expert__question__button {

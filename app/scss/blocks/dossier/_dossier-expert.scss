@@ -74,9 +74,11 @@
 				padding-top: 4.3%;
 				padding-bottom: 2.7%;
     			padding-left: 4.7%;
+    			margin-bottom: 0.2%;
     			outline: none;
     			border: none;
     			border-radius: 0;
+    			overflow: auto;
 
     			@include breakpoint(desktop) {
 					padding-top: 5%;
@@ -91,12 +93,14 @@
 				@include lineHeightRem(60, 58);
 				@include letterSpacingEm(-10, 0);
 				width: 100%;
+				height: 6.53rem;
 				padding-bottom: 0.9%;
     			padding-left: 4.7%;
     			outline: none;
     			border: none;
 
     			@include breakpoint(desktop) {
+    				height: 6.155rem;
 					padding-bottom: 0.7%;
     				padding-left: 5%;
 				}
