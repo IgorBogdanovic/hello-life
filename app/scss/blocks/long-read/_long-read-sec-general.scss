@@ -97,6 +97,10 @@
 			position: relative;
 			width: 100%;
 
+			@include breakpoint(desktop) {
+				left: -100%;
+			}
+
 			& q {
 				font-family: 'HelloType-Bold', sans-serif;
 				@include fontSizeRem(52, 48);

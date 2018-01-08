@@ -10,6 +10,10 @@
 			position: absolute;
 			top: 17.5rem;
 
+			&.z-index {
+				z-index: 1;
+			}
+
 			@include breakpoint(desktop) {
 				top: 52.9%;
     			left: 50%;
@@ -48,7 +52,7 @@
 
 			@include breakpoint(desktop) {
 				height: 100vh;
-				padding-top: 27.2vh;
+				padding-top: 37.2vh;
     			padding-bottom: 0;
 
 				.main-wrapper--v1 {

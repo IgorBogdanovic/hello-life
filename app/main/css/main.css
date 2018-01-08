@@ -5286,6 +5286,8 @@ html {
   @media (min-width: 751px) {
     .long-read__intro-heading {
       line-height: 5rem; } }
+  .long-read__intro-heading.z-index {
+    z-index: 1; }
   @media (min-width: 751px) {
     .long-read__intro-heading {
       top: 52.9%;
@@ -5328,7 +5330,7 @@ html {
   @media (min-width: 751px) {
     .long-read__intro-txt {
       height: 100vh;
-      padding-top: 27.2vh;
+      padding-top: 37.2vh;
       padding-bottom: 0; }
       .long-read__intro-txt .main-wrapper--v1 {
         padding-left: 23rem;
@@ -5438,6 +5440,9 @@ html {
   text-align: center;
   position: relative;
   width: 100%; }
+  @media (min-width: 751px) {
+    .long-read__sec__quote {
+      left: -100%; } }
   .long-read__sec__quote q {
     font-family: 'HelloType-Bold', sans-serif;
     color: #0081a8;
