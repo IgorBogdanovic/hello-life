@@ -62,4 +62,76 @@
 			border-radius: 5.6rem;
 		}
 	}
+
+	&--play {
+		height: 10rem;
+		line-height: 1;
+		padding: 0;
+		width: 10rem;
+		border-radius: 5rem;
+		text-align: center;
+		background: $white;
+		color: $black1;
+
+		@include breakpoint(desktop) {
+			height: 5.8rem;
+			width: 5.8rem;
+		}
+
+		& i {
+			@include fontSizeRem(50, 28);
+
+			@include breakpoint(desktop) {
+				margin-top: 0.2rem;
+			}
+		}
+	}
+
+	&--slider {
+		height: 6rem;
+		line-height: 6rem;
+		padding-left: 3rem;
+		padding-right: 3rem;
+		border-radius: 6rem;
+		font-family: 'HelloType-Regular', sans-serif;
+		@include letterSpacingEm(0, 0);
+
+		@include breakpoint(desktop) {
+			height: 5.8rem;
+			line-height: 1;
+			padding-left: 2.5rem;
+			padding-right: 2.5rem;
+			border-radius: 5.8rem;
+			transition: all 0.3s ease;
+		}
+
+		&__play {
+				display: inline-block;
+				width: 0; 
+			  	height: 0; 
+			  	border-top: 1rem solid transparent;
+	 			border-bottom: 1rem solid transparent;
+	  			border-left: 1rem solid $black1;
+	  			margin-right: 0.6rem;
+	  			vertical-align: middle;
+
+				@include breakpoint(desktop) {
+					margin-right: 0;
+				}
+		}
+
+		& span {
+			@include breakpoint(desktop) {
+				display: none;
+			}
+		}
+	}
 }
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+.videos-top {
+	padding-top: 8rem;
+	padding-bottom: 4.9rem;
+
+	@include breakpoint(desktop) {
+		padding-top: 10.1rem;
+		padding-bottom: 11.6rem;
+	}
+
+	&__heading {
+		font-family: 'HelloType-Bold', sans-serif;
+		@include fontSizeRem(43, 32);
+		@include letterSpacingEm(-80, -80);
+		color: #191919;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 8.6rem;
+
+		@include breakpoint(desktop) {
+			margin-bottom: 3.7rem;
+		}
+	}
+
+	& .c-media {
+		margin-bottom: 7.6rem;
+
+		@include breakpoint(desktop) {
+			margin-bottom: 0;
+			width: 22.8%;
+			margin-right: 2.93333333%;
+			float: left;
+		}
+
+		&:nth-of-type(4) {
+			@include breakpoint(desktop) {
+				margin-right: 0;
+			}
+		}
+	}
+}

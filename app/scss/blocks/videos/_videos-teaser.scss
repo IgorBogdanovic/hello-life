@@ -1,0 +1,110 @@
+.videos-teaser {
+	position: relative;
+
+	& .main-wrapper {
+		position: absolute;
+		top: 10.7rem; 
+		left: 0;
+		text-align: right;
+
+		@include breakpoint(desktop) {
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			-moz-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			transform: translateX(-50%);
+			top: 27.5%;
+			text-align: right;
+		}
+	}
+
+	&__img {
+		& img {
+			width: 100%;
+		}
+	}
+
+	&__logo {
+		width: 11.6rem;
+		height: 13rem;
+		float: right;
+		margin-right: -1.1rem;
+		margin-bottom: 1rem;
+
+		@include breakpoint(desktop) {
+			width: 9.1rem;
+			height: 10.5rem;
+			margin-bottom: 0.5rem;
+		}
+
+		& svg {
+			width: 100%;
+			height: 100%;
+
+			& .cls-2 {
+				fill: $white;
+			}
+		}
+	}
+
+	& h2 {
+		font-family: 'HelloType-Regular', sans-serif;
+		@include fontSizeRem(46, 38);
+		color: $white;
+		margin-bottom: 1rem;
+		padding-left: 18%;
+		clear: both;
+		@include lineHeightRem(54, 46);
+
+		@include breakpoint(desktop) {
+			padding-left: 65%;
+			margin-bottom: 1.4rem;
+		}
+	}
+
+	& p {
+		color: $white;
+		margin-bottom: 2rem;
+		font-family: 'HelloType-Regular', sans-serif;
+		@include fontSizeRem(20, 16);
+		@include lineHeightRem(26, 22.06); 
+		@include letterSpacingEm(25, 25);
+		padding-left: 26%;
+		margin-right: 0.6%;
+		margin-bottom: 4.6rem;
+
+		@include breakpoint(desktop) {
+			padding-left: 71%;
+			margin-right: 0;
+			margin-bottom: 5.7rem;
+		}
+	}
+
+	& .c-btn {
+		&--white {
+			height: 6.2rem;
+			line-height: 6.2rem;
+			padding-left: 3.3rem;
+			padding-right: 3.3rem;
+
+			@include breakpoint(desktop) {
+				height: 6rem;
+				line-height: 6rem;
+				padding-left: 6.4rem;
+				padding-right: 6.4rem;
+			}
+		}
+		&--play {
+			border: 0;
+			position: absolute;
+			top: 33.3rem;
+			left: 7.9rem;
+
+			@include breakpoint(desktop) {
+				top: 13.3rem;
+				left: 23.3rem;
+			}
+		}
+	}
+}

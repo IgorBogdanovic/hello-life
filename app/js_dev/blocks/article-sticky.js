@@ -16,10 +16,10 @@ $(window).on('load', function(){
 				var scene = new ScrollMagic.Scene({
 					triggerElement: ".article-content__text", 
 					duration: $stickyDuration,
-					triggerHook: (0.072)
+					triggerHook: 0.072
 				})
 				.setPin("#stickySocial")
-				//.addIndicators()
+				.addIndicators()
 				.addTo(controller)
 			}
 	}

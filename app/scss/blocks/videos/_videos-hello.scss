@@ -1,0 +1,30 @@
+.videos-hello {
+	background: #191919;
+	padding-top: 7.1rem;
+	padding-bottom: 6.2rem;
+
+	@include breakpoint(desktop) {
+		padding-top: 10.5rem;
+		padding-bottom: 10rem;
+	}
+
+	& .c-heading {
+		color: $white;
+		margin-bottom: 2.4rem;
+
+		@include breakpoint(desktop) {
+			margin-bottom: 2.8rem;
+		}
+	}
+
+	& .c-txt-header {
+		color: $white;
+		@include fontSizeRem(20, 14);
+		@include lineHeightRem(26, 18);
+		@include letterSpacingEm(25, 25);
+
+		@include breakpoint(desktop) {
+			width: 52%;
+		}
+	}
+}
