@@ -57,9 +57,18 @@
 //Article dossier
 @import 'art-dossier/art-dossier-header';
 
+
 //Long-read
 @import 'long-read/long-read-intro';
 @import 'long-read/long-read-sec-general';
 @import 'long-read/long-read-video-sec';
 @import 'long-read/long-read-img-sec';
 @import 'long-read/long-read-diapo-sec';
+
+//Videos
+@import 'videos/videos-header';
+@import 'videos/videos-hello';
+@import 'videos/videos-teaser';
+@import 'videos/videos-top';
+@import 'videos/videos-slider';
+

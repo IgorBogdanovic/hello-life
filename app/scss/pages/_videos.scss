@@ -1,0 +1,16 @@
+.videos-page {
+	& .b-recents .main-wrapper--v1 {
+
+		@include breakpoint(desktop) {
+			padding-top: 10.4rem;
+			padding-bottom: 7.6rem;
+		}
+
+		& .b-recents__heading {
+			@include breakpoint(desktop) {
+				top: 30.4rem;
+	    		left: -5.8rem;
+			}
+		}
+	}
+}
