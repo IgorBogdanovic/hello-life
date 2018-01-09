@@ -49,7 +49,7 @@ $(document).ready(function() {
 			var scene1 = new ScrollMagic.Scene({
 			        triggerElement: "#long-read-content",
 			        triggerHook: "onLeave",
-			        duration: "600%"
+			        duration: "750%"
 			    })
 			    .setPin("#long-read-content")
 			    .setTween(wipeAnimation)
@@ -78,60 +78,27 @@ $(document).ready(function() {
 			    .addTo(controller2);
 
 			// section quote functionality
-			var quoteAnimation = new TimelineMax();
 			var longReadPanelSecWithQuoteLength = longReadPanelSecWithQuote.length;
 			var scenesQuote = [];
 
 			longReadPanelSecWithQuote.each(function(index, elem){
 				var el = $(elem);
 				var quote = el.find('.long-read__sec__quote');
-				// console.log(el);
-				// console.log(longReadPanelSecWithQuoteLength);
-
-				// quoteAnimation.to(quote, 1, { left: 0 });
-
 
 				if (index < longReadPanelSecWithQuoteLength) {
-					
-					// console.log(elem);
-					// console.log(quote);
-					quoteAnimation.to(quote, 1, { left: 0 });
 
-					// scenesQuote.push(
-					// 	(new ScrollMagic.Scene({
-					//         triggerElement: elem,
-					//         triggerHook: 0.11,
-					//         duration: 0
-					//     })
-					//     //.setTween(new TimelineMax().to('.long-read__sec__quote', 1, { left: 0 }))
-					//     .setTween(quoteAnimation.to(quote, 1, { left: 0 });)
-					//     .addIndicators()
-					//     .addTo(controller1);)
-					// );
-
-					var scene4 = new ScrollMagic.Scene({
+					var sceneQ = new ScrollMagic.Scene({
 				        triggerElement: elem,
 				        triggerHook: 0.11,
 				        duration: 0
 				    })
-				    //.setTween(new TimelineMax().to('.long-read__sec__quote', 1, { left: 0 }))
-				    .setTween(quoteAnimation)
-				    .addIndicators()
+				    .setTween(new TimelineMax().to(quote, 1, { left: 0 }))
+				    //.addIndicators()
 				    .addTo(controller1);
+
+					scenesQuote.push(sceneQ);
 				}
 
-
-
-				// scene for quote transition
-
-
-				// if (index > 0 && index < longReadContentLength) {
-				// 	wipeAnimation.fromTo(elem, 1, {y: "100%"}, {y: "0%", ease: Linear.easeNone});
-
-				// 	if (el.children().hasClass('lr-panel__content')) {
-				// 		wipeAnimation.to("section.long-read-panel .lr-panel__content", 1, {y: "-100%", ease: Linear.easeNone});
-				// 	}
-				// }
 			});
 
 		}

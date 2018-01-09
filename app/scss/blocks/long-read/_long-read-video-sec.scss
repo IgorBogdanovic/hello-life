@@ -108,6 +108,7 @@
 				top: -9rem;
 			    right: -2rem;
 			    width: 9rem;
+			    cursor: pointer;
 
 			    @include breakpoint(desktop) {
 					top: 0.5rem;
