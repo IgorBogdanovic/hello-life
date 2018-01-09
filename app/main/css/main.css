@@ -5703,7 +5703,8 @@ html {
       position: absolute;
       top: -9rem;
       right: -2rem;
-      width: 9rem; }
+      width: 9rem;
+      cursor: pointer; }
       @media (min-width: 751px) {
         .long-read__video-sec__pop-up__close {
           top: 0.5rem;
