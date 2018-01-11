@@ -14,13 +14,16 @@ $(window).on('load', function(){
 			if($windowWidth > $breakpoint) {
 				var controller = new ScrollMagic.Controller();
 				var scene = new ScrollMagic.Scene({
-					triggerElement: ".article-content__text", 
+					triggerElement: ".article-content__trigger", 
 					duration: $stickyDuration,
-					triggerHook: 0.072
+					triggerHook: 0
 				})
 				.setPin("#stickySocial")
-				.addIndicators()
+				//.addIndicators()
 				.addTo(controller)
 			}
 	}
 });
+
+
+

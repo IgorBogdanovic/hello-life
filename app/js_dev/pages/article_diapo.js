@@ -15,7 +15,6 @@ $(window).on('load', function(){
 				nextArrow: $articleSliderArrowRight
 			});
 
-
 			//Sticky social
 			var $articleText = $('.article-content__text'),
 			$articleTextTop = $articleText.offset().top,
@@ -31,16 +30,13 @@ $(window).on('load', function(){
 			if($windowWidth > $breakpoint) {
 				var controller = new ScrollMagic.Controller();
 				var scene = new ScrollMagic.Scene({
-					triggerElement: ".article-content__text", 
+					triggerElement: ".article-content__trigger", 
 					duration: $stickyDuration,
-					triggerHook: (0.072)
+					triggerHook: 0
 				})
 				.setPin("#diapoStickySocial")
 				//.addIndicators()
 				.addTo(controller)
 			}
-	
-
-
 	}
 });

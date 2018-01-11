@@ -17,6 +17,12 @@
 		}
 	}
 
+	&__trigger {
+		width: 100%;
+		background: green;
+		margin-top: -5.5rem;
+	}
+
 	// & .c-social {
 	// 	@include breakpoint(desktop) {
 	// 		width: 4.3%;

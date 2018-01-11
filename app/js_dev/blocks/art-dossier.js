@@ -62,9 +62,9 @@ $(window).on('load', function(){
 			if($windowWidth > $breakpoint) {
 				var controller = new ScrollMagic.Controller();
 				var scene = new ScrollMagic.Scene({
-					triggerElement: ".article-content__text", 
+					triggerElement: ".article-content__trigger", 
 					duration: $stickyDuration,
-					triggerHook: (0.072)
+					triggerHook: 0
 				})
 				.setPin("#stickySocialDossier")
 				//.addIndicators()
@@ -77,7 +77,6 @@ $(window).on('load', function(){
 				$page.animate({ scrollTop: 0 }, "slow");
 				return false;
 			})
-
 		}
 	}
 });
