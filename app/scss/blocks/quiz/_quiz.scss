@@ -1,0 +1,627 @@
+.quiz {
+	margin-top: 18.5rem;
+
+	@include breakpoint(desktop) {
+		margin-top: 15.4rem;
+	}
+
+	& .main-wrapper {
+		position: relative;
+	}
+
+	&__intro {
+		background: $lightGray;
+		padding-bottom: 7.6rem;
+
+		@include breakpoint(desktop) {
+			padding-bottom: 0;
+			position: relative;
+			height: 42rem;
+			overflow: hidden;
+		}
+
+		&.hidden {
+			& .quiz__intro-body {
+				visibility: hidden;
+				opacity: 0;
+				@include breakpoint(desktop) {
+					width: 77%;
+				}
+			}
+			& .quiz__intro-img {
+				width: 23%;
+				overflow: hidden;
+				&-text {
+					visibility: hidden;
+					opacity: 0;
+				}
+			}
+		}
+
+		&.inactive {
+			display: none;
+		}
+
+		&-img {
+			position: relative;
+			margin-bottom: 7.2rem;
+
+			@include breakpoint(desktop) {
+				margin-bottom: 0;
+				width: 48.9%;
+				-webkit-transition: 0.3s all ease;
+			  	-moz-transition: 0.3s all ease;
+			  	-o-transition: 0.3s all ease;
+				transition: 0.3s all ease;
+			}
+
+			& img {
+				@include breakpoint(desktop) {
+					width: 70.4rem;
+					max-width: none;
+				}
+			}
+
+			&-text {
+				position: absolute;
+				left: 12rem;
+				right: 12rem;
+				text-align: center;
+				top: 3.9rem; 
+				-webkit-transition: 0.1s all ease;
+			  	-moz-transition: 0.1s all ease;
+			  	-o-transition: 0.1s all ease;
+				transition: 0.1s all ease;
+
+				@include breakpoint(desktop) {
+					right: auto;
+					width: 70%;
+					left: 15%;
+					top: 13.6rem;
+				}
+
+				& h1 {
+					font-family: 'HelloType-Bold', sans-serif;
+					@include fontSizeRem(40, 40);
+					@include lineHeightRem(45, 46); 
+					color: $white;
+				}
+			}
+		}
+
+		&-body {
+			text-align: center;
+			padding-left: 8rem;
+			padding-right: 8rem;
+			-webkit-transition: 0.3s all ease;
+		  	-moz-transition: 0.3s all ease;
+		  	-o-transition: 0.3s all ease;
+			transition: 0.3s all ease;
+
+			@include breakpoint(desktop) {
+				width: 51.1%;
+				position: absolute;
+				top: 0;
+				right: 0;
+				padding-left: 9.6%;
+				padding-right: 9.2%;
+				background: $lightGray;
+			}
+
+			& h3 {
+				font-family: 'HelloType-Bold', sans-serif;
+				@include fontSizeRem(30, 19);
+				margin-bottom: 3.5rem;
+				color: $black;
+
+				@include breakpoint(desktop) {
+					margin-bottom: 1.74rem;
+					margin-top: 7.2rem;
+				}
+			}
+
+			& p {
+				font-family: 'HelloType-Regular', sans-serif;
+				@include fontSizeRem(34, 24);
+				@include lineHeightRem(40, 31); 
+				color: $black1;
+				margin-bottom: 6.4rem;
+
+				@include breakpoint(desktop) {
+					margin-bottom: 5.3rem;
+				}
+			}
+
+			&-btn {
+				margin-bottom: 20rem;
+
+				& .c-btn {
+					height: 7.5rem;
+					line-height: 7.5rem;
+					padding-left: 5.8rem;
+					padding-right: 5.8rem;
+
+					@include breakpoint(desktop) {
+						padding-left: 6.1rem;
+						padding-right: 6.1rem;
+						height: 6rem;
+						line-height: 6rem;
+					}
+				}
+			}
+		}
+	}
+
+	&__question {
+		background: $lightGray;
+		padding-bottom: 6.2rem;
+		display: none;
+
+		@include breakpoint(desktop) {
+			padding-bottom: 0;
+			position: relative;
+			height: 42rem;
+			overflow: hidden;
+		}
+
+		&.visible {
+			& .quiz__question-body {
+				@include breakpoint(desktop) {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+
+			& .quiz__question-img {
+
+				&-text {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+		}
+
+		&.active {
+			@include breakpoint(desktop) {
+				display: block;
+			}
+		}
+
+		&.inactive {
+			& .quiz__question-body {
+				@include breakpoint(desktop) {
+					width: 51.1%;
+				}
+				&-img {
+					@include breakpoint(desktop) {
+						display: none;
+					}
+				}
+				&-text {
+					@include breakpoint(desktop) {
+						display: none;
+					}
+					&-btn {
+						@include breakpoint(desktop) {
+							display: none;
+						}
+					}
+				}
+			}
+			& .quiz__question-img {
+				@include breakpoint(desktop) {
+					width: 48.9%;
+				}
+			}
+		}
+
+		&-img {
+			position: relative;
+			margin-bottom: 6.9rem;
+
+			@include breakpoint(desktop) {
+				margin-bottom: 0;
+				width: 23%;
+				overflow: hidden;
+			}
+
+			& img {
+				@include breakpoint(desktop) {
+					width: 70.4rem;
+					max-width: none;
+				}
+			}
+
+			&-text {
+				position: absolute;
+				text-align: center;
+				width: 100%;
+				top: 9.9rem;
+
+				@include breakpoint(desktop) {
+					top: 19.6rem;
+					visibility: hidden;
+					opacity: 0;
+					-webkit-transition: 0.3s all ease;
+				  	-moz-transition: 0.3s all ease;
+				  	-o-transition: 0.3s all ease;
+					transition: 0.3s all ease;
+				}
+
+				& p {
+					font-family: 'HelloType-Bold', sans-serif;
+					@include fontSizeRem(60, 40);
+					@include letterSpacingEm(-150, -125);
+					color: $white;
+				}
+			}
+		}
+
+		&-body {
+			padding-left: 8rem;
+			padding-right: 8rem;
+
+			@include breakpoint(desktop) {
+				width: 77%;
+				position: absolute;
+				top: 0;
+				right: 0;
+				padding-top: 8.4rem;
+				padding-bottom: 20rem;
+				padding-left: 4.64%;
+				padding-right: 9.2%;
+				background: $lightGray;
+				visibility: hidden;
+				opacity: 0;
+				-webkit-transition: 0.3s all ease;
+			  	-moz-transition: 0.3s all ease;
+			  	-o-transition: 0.3s all ease;
+				transition: 0.3s all ease;
+			}
+
+			&-img {
+				margin-bottom: 5rem;
+
+				@include breakpoint(desktop) {
+					width: 37.3%;
+					float: left;
+				}
+			}
+
+			&-text {
+				@include breakpoint(desktop) {
+					width: 62.7%;
+					float: left;
+					padding-left: 11.1%;
+					margin-top: -0.1rem;
+				}
+
+				& h4 {
+					font-family: 'HelloType-Regular', sans-serif;
+					@include fontSizeRem(30, 21);
+					@include lineHeightRem(34, 24); 
+					margin-bottom: 3rem;
+					color: $black;
+
+					@include breakpoint(desktop) {
+						margin-bottom: 2rem;
+					}
+				}
+
+				& form {
+					& label {
+						display: block;
+						font-family: 'HelloType-Regular', sans-serif;
+						@include fontSizeRem(22, 15);
+						@include lineHeightRem(24, 18);
+						padding-left: 3rem;
+						margin-bottom: 1.7rem;
+						position: relative;
+
+						@include breakpoint(desktop) {
+							margin-bottom: 0.96rem;
+							padding-left: 2rem;
+						}
+
+						& input {
+							position: absolute;
+							left: -0.2rem;
+							width: 1.5rem;
+							height: 1.5rem;
+
+							@include breakpoint(desktop) {
+								width: 1rem;
+								height: 1rem;
+							}
+						}
+					}
+				}
+
+				&-btn {
+					text-align: center;
+					margin-top: 6rem;
+
+					@include breakpoint(desktop) {
+						text-align: left;
+						margin-top: 4.7rem;
+					}
+
+					& .c-btn {
+						height: 7.5rem;
+						line-height: 7.5rem;
+						padding-left: 3.4rem;
+						padding-right: 3.4rem;
+
+						@include breakpoint(desktop) {
+							padding-left: 3.9rem;
+							padding-right: 3.9rem;
+							height: 6rem;
+							line-height: 6rem;
+						}
+
+						&.disabled {
+							opacity: 0.4;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__end {
+		background: $lightGray;
+		padding-bottom: 8.5rem;
+		display: none;
+
+		@include breakpoint(desktop) {
+			position: relative;
+			height: 42rem;
+			overflow: hidden;
+			padding-bottom: 0;
+			visibility: hidden;
+			opacity: 0;
+			-webkit-transition: 0.3s all ease;
+		  	-moz-transition: 0.3s all ease;
+		  	-o-transition: 0.3s all ease;
+			transition: 0.3s all ease;
+		}
+
+		&.visible {
+			@include breakpoint(desktop) {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+
+		&.active {
+			@include breakpoint(desktop) {
+				display: block;
+			}
+		}
+
+		&-img {
+			position: relative;
+			margin-bottom: 6.5rem;
+
+			@include breakpoint(desktop) {
+				margin-bottom: 0;
+				width: 48.9%;
+			}
+
+			&-text {
+				position: absolute;
+				text-align: center;
+				width: 100%;
+				top: 6.55rem;
+
+				@include breakpoint(desktop) {
+					top: 14.2rem;
+				}
+
+				& h1 {
+					font-family: 'HelloType-Bold', sans-serif;
+					@include fontSizeRem(40, 30);
+					@include lineHeightRem(45, 34); 
+					color: $white;
+					padding-left: 10%;
+					padding-right: 10%;
+
+					@include breakpoint(desktop) {
+						margin-bottom: 2.6rem;
+						padding-left: 17.2%;
+						padding-right: 14%;
+					}
+				}
+
+				& .c-social {
+					@include breakpoint(desktop) {
+						position: relative;
+						display: inline-block;
+						margin-left: 2.5rem;
+					}
+				}
+			}
+		}
+
+		&-body {
+			padding-left: 8rem;
+			padding-right: 8rem;
+			text-align: center;
+
+			@include breakpoint(desktop) {
+				width: 51.1%;
+				position: absolute;
+				top: 0;
+				right: 0;
+				padding-top: 5.2rem;
+				padding-bottom: 6rem;
+				padding-left: 13.5rem;
+				padding-right: 13.1rem;
+			}
+
+			& > p {
+				font-family: 'HelloType-Regular', sans-serif;
+				@include fontSizeRem(22, 15);
+				@include lineHeightRem(26, 18); 
+				margin-bottom: 5.3rem;
+				color: $black1;
+
+				@include breakpoint(desktop) {
+					margin-bottom: 5.9rem;
+				}
+			}
+
+			& h3 {
+				font-family: 'HelloType-Bold', sans-serif;
+				@include fontSizeRem(30, 19);
+				margin-bottom: 3.7rem;
+				color: $black;
+
+				@include breakpoint(desktop) {
+					margin-bottom: 3rem;
+				}
+			}
+
+			&-slider {
+				&-wrap {
+					padding-left: 14%;
+					padding-right: 14%;
+					position: relative;
+
+					@include breakpoint(desktop) {
+						padding-left: 18%;
+						padding-right: 18%;
+					}
+
+					& .c-arrow--left {
+						position: absolute;
+						top: -1.9rem;
+						left: -4rem;
+						background: $white;
+
+						@include breakpoint(desktop) {
+							top: 0;
+							left: -6rem;
+						}
+					}
+
+					& .c-arrow--right {
+						position: absolute;
+						top: -1.9rem;
+						right: -4rem;
+						background: $white;
+
+						@include breakpoint(desktop) {
+							top: 0;
+							right: -6rem;
+						}
+					}
+				}
+				&-slide {
+					margin-bottom: 6.7rem;
+
+					@include breakpoint(desktop) {
+						margin-bottom: 4.1rem;
+					}
+
+					& p {
+						font-family: 'HelloType-Regular', sans-serif;
+						@include fontSizeRem(30, 21);
+						@include lineHeightRem(34, 24); 
+						margin-bottom: 2.2rem;
+						color: $black1;
+
+						@include breakpoint(desktop) {
+							margin-bottom: 1.6rem;
+						}
+					}
+
+					& h4 {
+						font-family: 'HelloType-Bold', sans-serif;
+						@include fontSizeRem(34, 25);
+						@include lineHeightRem(30, 30); 
+						color: $blue;
+
+						@include breakpoint(desktop) {
+							text-align: center;
+						}
+					}
+				}
+
+				& .slick-dots {
+					& li {
+						width: 1.4rem;
+						height: 1.4rem;
+						margin-right: 1.8rem;
+						border-radius: 50%;
+						border: 1px solid $black;
+						display: inline-block;
+
+						@include breakpoint(desktop) {
+							width: 0.8rem;
+							height: 0.8rem;
+							margin-right: 1.038rem;
+						}
+
+						&.slick-active {
+							background: $black;
+						}
+
+						&:last-of-type {
+							margin-right: 0;
+						}
+					}
+
+					& button {
+						font-size: 0;
+						border: 0;
+						padding: 0;
+
+					}
+				}
+
+				& .slick-slide {
+					outline: none;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
