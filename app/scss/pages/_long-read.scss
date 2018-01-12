@@ -1,7 +1,14 @@
-.long-read {
+#long-read {
 	margin-top: 18.5rem;
 
 	@include breakpoint(mobile) {
+		.lr__slide-links {
+			display: none;
+		}
+
+		.lr__progress-bar {
+			display: none;
+		}
 
 		.b-lifestyle .main-wrapper--v1 {
 			padding-top: 8%;
@@ -14,6 +21,45 @@
 
 	@include breakpoint(desktop) {
 		margin-top: 0;
+
+		.lr__fixed-aside-content {
+			position: fixed;
+		    z-index: 9;
+		    top: 43.4%;
+		    left: 6.2vw;
+		    -webkit-transform: translateY(-50%);
+			-moz-transform: translateY(-50%);
+			-o-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+
+			.lr__slide-links {
+				display: inline-block;
+				margin-bottom: 1.2rem;
+
+				li {
+					cursor: pointer;
+					background-color: #e3e3e3;
+					border-radius: 50%;
+					width: 0.8rem;
+	    			height: 0.8rem;
+					margin-bottom: 1.6rem;
+
+					&.active {
+						background-color: $darkBlue;
+					}
+				}
+			}
+		}
+
+		.lr__progress-bar {
+			display: block;
+			z-index: 9;
+			position: fixed;
+			bottom: 3rem;
+		    height: 0.2%;
+		    background-color: $darkBlue;
+		}
 
 		.b-lifestyle .main-wrapper--v1 {
 			padding-top: 9.9rem;

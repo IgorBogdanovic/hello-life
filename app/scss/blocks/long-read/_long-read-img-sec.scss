@@ -6,18 +6,47 @@
 		@include breakpoint(desktop) {
 			padding-top: 6.3rem;
 			padding-bottom: 6.4rem;
+
+			&.slide-in {
+				.long-read__img-sec__heading {
+					@include breakpoint(desktop) {
+						color: $white;
+					}
+				}
+
+				.long-read__img-sec__img {
+					@include breakpoint(desktop) {
+					    top: 0;
+					    left: 0;
+					    width: 100%;
+					    height: 100%;
+					}
+				}
+			}
 		}
 
 		&__img {
+			position: relative;
 			margin-top: 7.6%;
     		margin-bottom: 8%;
 
     		@include breakpoint(desktop) {
-				float: right;
-			    width: 40%;
+    			z-index: 1;
+    			position: absolute;
+			    top: 24.5rem;
+			    width: 47.5rem;
 			    height: 26.7rem;
-				margin-top: 0.6%;
+				margin-top: 0;
 				margin-bottom: 0;
+				-webkit-transition: all 1s ease-in-out;
+			    -moz-transition: all 1s ease-in-out;
+			    -o-transition: all 1s ease-in-out;
+			    transition: all 1s ease-in-out;
+
+			    img {
+					width: 100%;
+					height: 100%;
+				}
 			}
 		}
 
