@@ -7,32 +7,11 @@
 		@include letterSpacingEm(-40, -40);
 		text-transform: uppercase;
 		color: $lightGray;
+		position: relative;
 
 		@include breakpoint(desktop) {
 			padding: 0 40rem;
 		}
-	}
-
-	&__second-h2 {
-		font-family: 'Sketch', sans-serif;
-		@include fontSizeRem(112, 100);
-		color: $darkRed;
-		// background: -webkit-linear-gradient(90deg, #eee, #333);
-		// background: -moz-linear-gradient(90deg, #eee, #333);
-		// background: -o-linear-gradient(90deg, #eee, #333);
-		// background: -ms-linear-gradient(90deg, #eee, #333);
-		// background: linear-gradient(90deg, #eee, #333);
-		// -webkit-background-clip: text;
-		// -webkit-text-fill-color: transparent;
-	
-		text-transform: none;
-		text-align: center;
-		transform: translateY(-7.8rem);
-
-		@include breakpoint(desktop) {
-			transform: translateY(-6rem);
-		}
-
 
 		&:after {
 			content: "";
@@ -41,16 +20,45 @@
 			border-radius: 0.6rem;
 			display: block;
 			background: $blue;
-			margin-left: 26.2rem;
-			margin-top: -1rem;
+			position: absolute;
+			bottom: -4.2rem;
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			-moz-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			transform: translateX(-50%);
 
 			@include breakpoint(desktop) {
-				margin-left: 56.3rem;
 				height: 0.5rem;
 				width: 5.9rem;
 				border-radius: 0.6rem;
-				margin-top: -0.7rem;
+				bottom: -3.9rem;
 			}
+		}
+	}
+
+	&__second-h2 {
+		font-family: 'Sketch', sans-serif;
+		@include fontSizeRem(112, 100);
+		@include lineHeightRem(120, 108);
+		@include letterSpacingEm(-25, -25);
+		background: -webkit-linear-gradient(90deg, $blue, $lightBlue);
+		background: -moz-linear-gradient(90deg, $blue, $lightBlue);
+		background: -o-linear-gradient(90deg, $blue, $lightBlue);
+		background: -ms-linear-gradient(90deg, $blue, $lightBlue);
+		background: linear-gradient(90deg, $blue, $lightBlue);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		text-align: center;
+		position: relative;
+		z-index: 1;
+		top: -7.3rem;
+
+		@include breakpoint(desktop) {
+			top: -6.3rem;
+			margin-left: 34%;
+			margin-right: 34%;
 		}
 	}
 }

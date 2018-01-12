@@ -25,30 +25,42 @@
 
 		&__first-h2 {
 			color: $white;
+
+			&:after {
+				bottom: -3.2rem;
+				background-color: $gray;
+
+				@include breakpoint(desktop) {
+					bottom: -3.7rem;
+				}
+			}
 		}
 
 		&__second-h2 {
-			color: #ff996c;
+			top: -8.2rem;
+			background: -webkit-linear-gradient(90deg, #e24d0b, #fbb396);
+			background: -moz-linear-gradient(90deg, #e24d0b, #fbb396);
+			background: -o-linear-gradient(90deg, #e24d0b, #fbb396);
+			background: -ms-linear-gradient(90deg, #e24d0b, #fbb396);
+			background: linear-gradient(90deg, #e24d0b, #fbb396);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			margin-left: 20%;
+			margin-right: 20%;
+			@include letterSpacingEm(0, 0);
 
-			&:after {
-				background-color: $gray;
-				margin-top: -0.7rem;
-				margin-left: 19.2rem;
-
-				@include breakpoint(desktop) {
-					margin-top: -0.6rem;
-    				margin-left: 61.9rem;
-			    }
+			@include breakpoint(desktop) {
+				top: -6.6rem;
 			}
 		}
 	}
 
 	&__menu {
-		margin-top: -4%;
+		margin-top: -5.4%;
 		margin-left: 10%;
 
 		@include breakpoint(desktop) {
-			margin-top: -1%;
+			margin-top: -1.6%;
     		margin-left: 8.7%;
 	    }
 		
