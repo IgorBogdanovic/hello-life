@@ -8,7 +8,7 @@
 		padding-bottom: 3rem;
 	}
 
-	& .main-wrapper {
+	& > .main-wrapper {
 		height: 93.6rem;
 		overflow: hidden;
 
@@ -170,10 +170,13 @@
 			@include breakpoint(desktop) {
 				display: block;
 				width: 100%;
-				margin: 0 auto;
-				max-width: 1440px;
 				margin-top: 3rem;
-				padding-left: 92.6rem;
+			}
+
+			& .main-wrapper {
+				@include breakpoint(desktop) {
+					padding-left: 92rem;
+				}
 			}
 		}
 	}

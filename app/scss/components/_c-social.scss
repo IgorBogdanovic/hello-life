@@ -426,7 +426,12 @@
 					@include breakpoint(desktop) {
 						fill: $white;
 					}
-					
+
+					&:hover {
+						@include breakpoint(desktop) {
+							fill: #3b5998;
+						}
+					}
 				}
 			}
 
@@ -443,6 +448,11 @@
 					@include breakpoint(desktop) {
 						fill: $white;
 					}
+					&:hover {
+						@include breakpoint(desktop) {
+							fill: #4099ff;
+						}
+					}
 				}
 			}
 
@@ -455,6 +465,11 @@
 				& svg {
 					@include breakpoint(desktop) {
 						fill: $white;
+					}
+					&:hover {
+						@include breakpoint(desktop) {
+							fill: #0077b5;
+						}
 					}
 				}
 			}

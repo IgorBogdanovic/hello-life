@@ -1,7 +1,6 @@
 .b-header {
 	height: auto; 
 	z-index: 10; 
-
 	position: fixed;
     top: 0;
     left: 0;
@@ -12,7 +11,6 @@
 		-moz-transition: 0.3s height ease;
 	 	-o-transition: 0.3s height ease;
 		transition: 0.3s height ease;
-		position: fixed; //remove this
 		width: 100%;
 		top: 0;
 		left: 0;
@@ -28,6 +26,75 @@
 		height: 38.4rem;
 		overflow: hidden;
 		background: linear-gradient(45deg, #005a80, $blue);
+	}
+
+	&.text-white {
+		& .b-header__navigation-item {
+			& a {
+				@include breakpoint(desktop) {
+					color: $white;
+				}
+
+				&:hover {
+					@include breakpoint(desktop) {
+						color: $lightBlue;
+					}
+				}
+			}
+
+			&.whiteHoverBlue {
+				& > a {
+					@include breakpoint(desktop) {
+						color: $lightBlue;
+					}
+				}
+			}
+
+			&.activeItem {
+				& > a {
+					@include breakpoint(desktop) {
+						border-top: 0.2rem solid $lightBlue;
+						color: $lightBlue;
+					}
+				}
+			}
+		}
+
+		& .b-header__logo {
+			& svg .cls-5 {
+				@include breakpoint(desktop) {
+					fill: $white;
+				}
+			}
+		}
+
+		& .b-header__logo-brand {
+			& span {
+				color: $white;
+			}
+			&-wrap {
+				& svg {
+					& .cls-2 {
+						fill: $white;
+					}
+				}
+			}
+		}
+
+		& .b-header__navigation-search {
+				& a:hover {
+					@include breakpoint(desktop) {
+						color: $white;
+					}
+				}
+				 &-icon {
+					& svg {
+						@include breakpoint(desktop) {
+							fill: $white;
+						}
+					}
+			}
+		}
 	}
 
 	&.stickyDesk {
@@ -63,6 +130,7 @@
 			& .b-header__navigation-item {
 				& > a {
 					padding-top: 3.2rem;
+					//color: $gray;
 				}
 			}
 
@@ -79,6 +147,8 @@
 			}
 		}
 	}
+
+	
 
 	& .main-wrapper {
 		position: relative;
@@ -168,7 +238,7 @@
 		padding: 7.8rem 8rem;
 		position: relative;
 		background: $white;
-		box-shadow: 0rem 0.1rem 1.5rem -0.1rem rgba(0,0,0,0.43);
+		box-shadow: 0rem 0.1rem 1.5rem -0.1rem rgba(0,0,0,0.2);
 		z-index: 1;
 
 		@include breakpoint(desktop) {
@@ -357,6 +427,21 @@
 					color: $white;
 				}
 			}
+			&.blueHover {
+				& a {
+					border-top: 0.2rem solid $lightBlue;
+					color: $lightBlue;
+				}
+			}
+
+			&.activeItem {
+				& > a {
+					@include breakpoint(desktop) {
+						border-top: 0.2rem solid $lightBlue;
+						color: $lightBlue;
+					}
+				}
+			}
 		}
 
 		&-search {
@@ -502,8 +587,10 @@
 							}
 
 							&:hover {
-								color: $lightBlue;
-								border-top: 0;
+								@include breakpoint(desktop) {
+									color: $lightBlue;
+									border-top: 0;
+								}
 							}
 						}
 

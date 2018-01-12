@@ -16432,6 +16432,8 @@ $(window).on('load', function(){
 			$header.addClass('active');
 			$headerMobile.addClass('active');
 			$headerLogo.addClass('active');
+
+			//Prevent page scroll when menu is active
 			$('body').css({"overflow-y": "hidden"});
 		});
 
@@ -16443,13 +16445,16 @@ $(window).on('load', function(){
 			$header.removeClass('active');
 			$headerMobile.removeClass('active');
 			$headerLogo.removeClass('active');
+
+			//Enable page scroll when menu is inactive
 			$('body').css({"overflow-y": "visible"});
 		});
 	}
 	else {
 
+		//Menu functionality for desktop
 		//Show dropdown on hover
-		$headerListItemWithDrop.mouseover(function(){
+		$headerListItemWithDrop.mouseenter(function(){
 			$header.addClass('activeDesk');
 			$headerDropDown.removeClass('activeDesk');
 			$(this).find('.b-header__drop-down').addClass('activeDesk');
@@ -16457,19 +16462,24 @@ $(window).on('load', function(){
 			$headerSearchIcon.addClass('activeDesk');
 			$headerLogo.addClass('activeDesk');
 			$headerListItem.addClass('activeDesk');
-			//$(this).siblings().addClass('activeDesk');
 			$headerLogoBrand.addClass('activeDesk');
 			$(this).removeClass('activeDesk');
-			//$headerDropDown.addClass('activeDesk');
 			$headerSearchField.removeClass('active');
-
-			$(this).mouseout(function(){
-				//$(this).addClass('activeDesk');
-				//console.log($(this));
-			})
+			$(this).siblings().removeClass('blueHover');
+			$(this).siblings().removeClass('whiteHoverBlue');
 		})
 
-		//Close dropdown
+		//Keep hover class on mouseleave
+		$headerListItemWithDrop.mouseleave(function(){
+			$(this).addClass('blueHover');
+			$(this).siblings().removeClass('blueHover');
+
+			if($header.hasClass('b-header--white')) {
+				$(this).addClass('whiteHoverBlue');
+			}
+		})
+
+		//Close dropdown and search field when mouse hovers list item without dropdown
 		$headerListItemNoDrop.hover(function(){
 			$header.removeClass('activeDesk');
 			$headerDropDown.removeClass('activeDesk');
@@ -16479,9 +16489,15 @@ $(window).on('load', function(){
 			$headerListItem.removeClass('activeDesk');
 			$headerLogoBrand.removeClass('activeDesk');
 			$headerSearchField.removeClass('active');
+			$headerListItemWithDrop.removeClass('blueHover');
+			$headerListItemWithDrop.removeClass('whiteHoverBlue');
+
+			if($header.hasClass('b-header--white') && !$header.hasClass('stickyDesk')) {
+				$header.addClass('text-white');
+			}
 		})
 
-		//Close dropdown 
+		//Close dropdown when mouse leave header
 		$header.mouseleave(function(){
 			$(this).removeClass('activeDesk');
 			$headerDropDown.removeClass('activeDesk');
@@ -16490,13 +16506,14 @@ $(window).on('load', function(){
 			$headerLogo.removeClass('activeDesk');
 			$headerListItem.removeClass('activeDesk');
 			$headerLogoBrand.removeClass('activeDesk');
+			$headerListItemWithDrop.removeClass('blueHover');
+			$headerListItemWithDrop.removeClass('whiteHoverBlue');
 		})
 
 		//Open search field
 		$headerSearchIcon.click(function(e){
 			e.preventDefault();
 			$headerSearchField.toggleClass('active');
-
 			$header.removeClass('activeDesk');
 			$headerDropDown.removeClass('activeDesk');
 			$headerHello.removeClass('activeDesk');
@@ -16504,6 +16521,12 @@ $(window).on('load', function(){
 			$headerLogo.removeClass('activeDesk');
 			$headerListItem.removeClass('activeDesk');
 			$headerLogoBrand.removeClass('activeDesk');
+			$headerListItemWithDrop.removeClass('blueHover');
+			$headerListItemWithDrop.removeClass('whiteHoverBlue');
+
+			if($header.hasClass('b-header--white') && !$header.hasClass('stickyDesk')) {
+				$header.toggleClass('text-white');
+			}
 		})
 
 		if($('#long-read').length) {
@@ -16518,6 +16541,21 @@ $(window).on('load', function(){
 				} 
 				else {
 					$header.removeClass('stickyDesk');
+				}
+
+				//Add and remove text--white class on scroll if header has one
+				if($header.hasClass('b-header--white')) {
+					if($st > $lastScrollTop) {
+						$header.removeClass('text-white');
+					} 
+					else {
+						if($headerSearchField.hasClass('active')) {
+							$header.removeClass('text-white');
+						}
+						else {
+							$header.addClass('text-white');
+						}
+					}
 				}
 				return false;
 			})
