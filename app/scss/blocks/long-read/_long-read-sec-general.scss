@@ -17,6 +17,12 @@
 		    }
 		}
 		////////////////////
+
+		&-panel {
+			&.z-index {
+				z-index: 1;
+			}
+		}
 	}
 
 	&__sec {
@@ -26,6 +32,14 @@
     		margin: auto;
 			padding-left: 12.8rem;
     		padding-right: 12.8rem;
+		}
+
+		&-wrap {
+			position: relative;
+
+			@include breakpoint(desktop) {
+				position: static;
+			}
 		}
 
 		.main-wrapper {
@@ -50,6 +64,8 @@
 			@include lineHeightRem(54, 38);
 			color: $black2;
 			text-align: center;
+			z-index: 2;
+			position: relative;
 			width: 65%;
     		margin: auto;
 
@@ -57,10 +73,15 @@
 				width: 100%;
 				margin-top: 8.1rem;
 				margin-bottom: 4.8%;
+				-webkit-transition: all 1s ease-in-out;
+			    -moz-transition: all 1s ease-in-out;
+			    -o-transition: all 1s ease-in-out;
+			    transition: all 1s ease-in-out;
 			}
 		}
 
 		&__full-scr {
+			display: none;
 			background: none;
 			position: absolute;
 			right: 4%;
@@ -68,6 +89,7 @@
 		    width: 3.5rem;
 
 		    @include breakpoint(desktop) {
+		    	display: block;
 				right: 3.2%;
 			    bottom: 4.8%;
 			    width: 2.5rem;

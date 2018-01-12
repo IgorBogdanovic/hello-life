@@ -146,11 +146,11 @@
 
 	&--lr {
 		@include breakpoint(desktop) {
-			position: fixed; 
+			//position: fixed; 
 			height: auto;
 			width: 2.4rem;
-			left: 6.2vw;
-    		bottom: 47.5vh;
+			//left: 6.2vw;
+    		//bottom: 47.5vh;
 		}
 
 		& .c-social__text {

@@ -7,12 +7,9 @@
 			@include fontSizeRem(55, 44);
 			@include lineHeightRem(60, 50);
 			text-align: center;
+			z-index: 1;
 			position: absolute;
 			top: 17.5rem;
-
-			&.z-index {
-				z-index: 1;
-			}
 
 			@include breakpoint(desktop) {
 				top: 52.9%;
