@@ -33,7 +33,7 @@
 			margin-bottom: 8.4%;
 
 			@include breakpoint(desktop) {
-				z-index: 1;
+				z-index: 2;
 				position: absolute;
 			    top: 24.5rem;
 			    width: 47.5rem;
@@ -72,11 +72,13 @@
 					vertical-align: bottom;
 					display: inline-block;
 					width: 2.8rem;
+					height: 3rem;
 					margin-right: 0.8rem;
 
 					@include breakpoint(desktop) {
 						vertical-align: middle;
 						width: 1.8rem;
+						height: 2.1rem;
 						margin-right: 1.8rem;
 					}
 				}
@@ -143,12 +145,14 @@
 				top: -9rem;
 			    right: -2rem;
 			    width: 9rem;
+			    height: 9rem;
 			    cursor: pointer;
 
 			    @include breakpoint(desktop) {
 					top: 0.5rem;
 				    right: -5rem;
 				    width: 4.5rem;
+				    height: 4.5rem;
 				}
 
 			    svg {

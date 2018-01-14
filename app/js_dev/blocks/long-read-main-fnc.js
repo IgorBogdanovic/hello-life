@@ -334,9 +334,6 @@ $(window).on('load', function() {
 					targetSection = $(this).index();
 			 		var targetPos = targetSection * $windowHeight;
 
-				 	$('.lr__slide-links li.active').removeClass('active');
-				 	$(this).addClass('active');
-
 				 	controller1.scrollTo(function (newScrollPos) {
 					    $('html, body').animate({scrollTop: newScrollPos}, 1000);
 					});

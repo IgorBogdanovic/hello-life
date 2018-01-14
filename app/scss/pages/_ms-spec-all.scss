@@ -1,0 +1,38 @@
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.c-block-heading__second-h2 {
+		background: none;
+		color: $blue;
+	}
+
+	.hp-hello .c-block-heading__second-h2 {
+		background: none;
+		color: #e24d0b;
+	}
+
+	.b-lifestyle .c-block-heading__second-h2 {
+		background: none;
+		color: #df5051;
+	}
+
+	.b-quiz-teaser__media__info__heading {
+		background: none;
+		color: #fb7979;
+	}
+
+	.b-quiz-teaser__media__info__tag {
+		background: none;
+		color: #fb7979;
+	}
+
+	@include breakpoint(desktop) {
+		.b-quiz-teaser__media:hover > .b-quiz-teaser__media__info .b-quiz-teaser__media__info__heading {
+			background: none;
+			color: #df5050;
+		}
+
+		.b-quiz-teaser__media:hover > .b-quiz-teaser__media__info .b-quiz-teaser__media__info__tag {
+			background: none;
+			color: #df5050;
+		}
+	}
+}

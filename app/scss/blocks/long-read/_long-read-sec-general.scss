@@ -64,7 +64,7 @@
 			@include lineHeightRem(54, 38);
 			color: $black2;
 			text-align: center;
-			z-index: 2;
+			z-index: 3;
 			position: relative;
 			width: 65%;
     		margin: auto;
@@ -84,15 +84,13 @@
 			display: none;
 			background: none;
 			position: absolute;
-			right: 4%;
-		    bottom: 6.7%;
-		    width: 3.5rem;
 
 		    @include breakpoint(desktop) {
 		    	display: block;
 				right: 3.2%;
 			    bottom: 4.8%;
 			    width: 2.5rem;
+			    height: 2.8rem;
 			}
 		}
 

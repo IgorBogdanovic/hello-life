@@ -1,7 +1,6 @@
 # Hello Life website
 
 The website is static.
-Work under construction :)
 
 ## Languages used:
 - HTML
@@ -37,4 +36,3 @@ Work under construction :)
 - Tous les dossiers: (https://giga0.github.io/hello-life/app/tous_les_dossiers.html)
 - Videos: (https://giga0.github.io/hello-life/app/videos.html)
 - Page 404: (https://giga0.github.io/hello-life/app/404.html)
-

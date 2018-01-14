@@ -53,6 +53,7 @@
     						top: -2rem;
     						right: -9.8rem;
     						width: 9rem;
+                            height: 9rem;
 
                             @include breakpoint(desktop) {
                                 display: none;
