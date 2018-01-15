@@ -16870,22 +16870,21 @@ $(document).ready(function() {
 
 		helloSlider.on('beforeChange', function(){
 
-			$('.hp-hello__slider__carousel__slide.slick-active').removeClass('active');
+			$(this).find('.hp-hello__slider__carousel__slide.slick-active').removeClass('active');
 
 		}).on('afterChange', function(){
 
-			$('.hp-hello__slider__carousel__slide.slick-active').addClass('active');
-
+			$(this).find('.hp-hello__slider__carousel__slide.slick-active').addClass('active');
 			helloSliderSlidesCheck();
 
 		});
 
 		helloSliderRightArrow.on('click', function() {
-		    helloSlider.slick('slickNext');
+		    $('.hp-hello__slider__carousel.active').slick('slickNext');
 		});
 
 		helloSliderLeftArrow.on('click', function() {
-		    helloSlider.slick('slickPrev');
+		    $('.hp-hello__slider__carousel.active').slick('slickPrev');
 		});
 
 		menuTab.on('click', function() {
