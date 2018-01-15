@@ -52,10 +52,10 @@
 	}
 
 	&__news {
-		margin-top: -2.3%;
+		margin-top: -4.4%; 
 
 		@include breakpoint(desktop) {
-			margin-top: 0.1%;
+			margin-top: -0.5%;
 	    }
 
 		.c-media {
