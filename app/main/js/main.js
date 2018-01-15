@@ -17013,10 +17013,6 @@ $(window).on('load', function() {
 			$windowHeight = $(window).height(),
 			$breakpoint = 750;
 
-		window.scroll({
-			behavior: 'smooth' 
-		});
-
 		if($windowWidth <= $breakpoint) {
 
 			/*------------------------------------------
