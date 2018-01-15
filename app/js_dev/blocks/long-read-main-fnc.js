@@ -333,7 +333,7 @@ $(window).on('load', function() {
 				 	controller1.scrollTo(function (newScrollPos) {
 					    $('html, body').animate({scrollTop: newScrollPos}, 1000);
 					});
-					controller1.scrollTo(targetPos);
+					controller1.scrollTo(targetPos+1);
 				}
 			);
 
