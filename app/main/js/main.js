@@ -16404,7 +16404,10 @@ $(window).on('load', function(){
 		$headerLogo = $('.b-header__logo'),
 		$headerLogoBrand = $('.b-header__logo-brand'),
 		$windowWidth = $(window).width(),
-		$breakpoint = 750;
+		$breakpoint = 750,
+		$check = $headerListItemWithDrop.find('.proba');
+
+		console.log($check);
 
 
 	if($windowWidth <= $breakpoint) {
@@ -16417,11 +16420,21 @@ $(window).on('load', function(){
 		});
 
 		//Show different dropdowns
-		$headerListItemWithDrop.click(function(e){
+		// $headerListItemWithDrop.click(function(e){
+		// 	e.preventDefault();
+		// 	//e.stopPropagation();
+		// 	$(this).siblings().removeClass('active');
+		// 	$(this).toggleClass('active');
+		// })
+
+		$check.click(function(e){
 			e.preventDefault();
-			e.stopPropagation();
+			//e.stopPropagation();
 			$(this).siblings().removeClass('active');
 			$(this).toggleClass('active');
+
+			$(this).parent().siblings().removeClass('active');
+			$(this).parent().toggleClass('active');
 		})
 
 		//Open menu on mobile
