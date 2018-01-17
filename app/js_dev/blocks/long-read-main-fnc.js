@@ -80,7 +80,7 @@ $(window).on('load', function() {
 			$('body').css({ 'height': '100%', 'margin': '0' });
 
 			var controller1 = new ScrollMagic.Controller();
-			var controller2 = new ScrollMagic.Controller({container: '.long-read__intro'});
+			//var controller2 = new ScrollMagic.Controller({container: '.long-read__intro'});
 
 			var longReadContentLength = longReadContent.children().length,
 				longReadProgressBarTotal = 1 / longReadContentLength,
@@ -102,10 +102,11 @@ $(window).on('load', function() {
 				var el = $(elem);
 
 				if (index > 0 && index < longReadContentLength) {
-					wipeAnimation.fromTo(elem, 1, {y: "100%"}, {y: "0%", ease: Linear.easeNone});
-
 					if (el.children().hasClass('lr-panel__content')) {
+						wipeAnimation.fromTo(elem, 1, {y: "100000%"}, {y: "0%", ease: Linear.easeNone});
 						wipeAnimation.to("section.long-read-panel .lr-panel__content", 1, {y: "-100%", ease: Linear.easeNone});
+					} else {
+						wipeAnimation.fromTo(elem, 1, {y: "100%"}, {y: "0%", ease: Linear.easeNone});
 					}
 				}
 			});
@@ -152,14 +153,14 @@ $(window).on('load', function() {
 			var scene2 = new ScrollMagic.Scene({
 			        triggerElement: ".long-read__intro-txt",
 			        triggerHook: 0.53,
-			        duration: "53%"
+			        duration: "29%"
 			    })
-			    .setTween(TweenMax.to('.long-read__intro-heading', 1, { top: "24vh" }))
+			    .setTween(TweenMax.to('.long-read__intro-heading', 1, { top: "24vh", ease:Linear.easeNone }))
 			    .on("end", function (e) {
 				    	longReadSocial.toggleClass('black');
 				    })
 			    //.addIndicators()
-			    .addTo(controller2);
+			    .addTo(controller1);
 
 			// section quote functionality
 			var longReadPanelSecWithQuoteLength = longReadPanelSecWithQuote.length;
@@ -210,7 +211,7 @@ $(window).on('load', function() {
 			            'autoplay': 0,
 			            'rel': 0,
 			            'showinfo': 0,
-			            'controls': 0,
+			            'controls': 1,
 						'autohide': 1
 			        },
 			        events: {
