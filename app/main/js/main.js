@@ -16405,10 +16405,7 @@ $(window).on('load', function(){
 		$headerLogoBrand = $('.b-header__logo-brand'),
 		$windowWidth = $(window).width(),
 		$breakpoint = 750,
-		$check = $headerListItemWithDrop.find('.proba');
-
-		console.log($check);
-
+		$headerDropDownTrigger = $('.b-header__navigation-item-trigger');
 
 	if($windowWidth <= $breakpoint) {
 
@@ -16427,12 +16424,10 @@ $(window).on('load', function(){
 		// 	$(this).toggleClass('active');
 		// })
 
-		$check.click(function(e){
+		//Show different dropdowns
+		$headerDropDownTrigger.click(function(e){
 			e.preventDefault();
 			//e.stopPropagation();
-			$(this).siblings().removeClass('active');
-			$(this).toggleClass('active');
-
 			$(this).parent().siblings().removeClass('active');
 			$(this).parent().toggleClass('active');
 		})

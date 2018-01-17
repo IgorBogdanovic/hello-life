@@ -2116,7 +2116,7 @@ html {
         font-size: 2.8rem; } }
     @media (min-width: 751px) {
       .b-lifestyle__txt {
-        font-size: 1.2rem; } }
+        font-size: 1.4rem; } }
     @media (max-width: 750px) {
       .b-lifestyle__txt {
         line-height: 3.4rem; } }
@@ -2131,7 +2131,7 @@ html {
         letter-spacing: 0.025em; } }
     @media (min-width: 751px) {
       .b-lifestyle__txt {
-        margin-top: 2.4%;
+        margin-top: 1.6%;
         width: 48.5%;
         float: right; } }
     @media (min-width: 751px) {
@@ -2176,7 +2176,7 @@ html {
       @media (min-width: 751px) {
         .b-lifestyle__news--hp-only .c-media:nth-child(2) {
           float: right;
-          margin-top: 2.5%; } }
+          margin-top: 1.8%; } }
       @media (min-width: 751px) {
         .b-lifestyle__news--hp-only .c-media:nth-child(3) {
           float: left;
@@ -2434,7 +2434,8 @@ html {
         margin-bottom: 0;
         padding-left: 2.54rem; } }
     .b-header__navigation-item {
-      position: relative; }
+      position: relative;
+      z-index: 1; }
       @media (min-width: 751px) {
         .b-header__navigation-item {
           position: static;

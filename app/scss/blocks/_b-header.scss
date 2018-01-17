@@ -367,6 +367,7 @@
 
 		&-item {
 			position: relative;
+			z-index: 1;
 
 			@include breakpoint(desktop) {
 				position: static;

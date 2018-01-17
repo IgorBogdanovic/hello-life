@@ -30,7 +30,7 @@
 
 	&__txt {
 		font-family: 'HelloType-Regular', sans-serif;
-		@include fontSizeRem(28, 12);
+		@include fontSizeRem(28, 14);
 		@include lineHeightRem(34, 20); 
 		@include letterSpacingEm(25, 25);
 		color: $gray;
@@ -38,7 +38,7 @@
 		margin-top: -4.7%;
 
 		@include breakpoint(desktop) {
-	    	margin-top: 2.4%;
+	    	margin-top: 1.6%;
 	    	width: 48.5%;
     		float: right;
 	    }
@@ -107,7 +107,7 @@
 			    &:nth-child(2){
 			    	@include breakpoint(desktop) {
 			    		float: right;
-				    	margin-top: 2.5%;
+				    	margin-top: 1.8%;
 				    }
 			    }
 
