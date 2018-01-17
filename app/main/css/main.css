@@ -2523,7 +2523,8 @@ html {
     .b-header__navigation-list-icon {
       position: absolute;
       top: 3.5rem;
-      right: 9.8rem; }
+      right: 9.8rem;
+      z-index: -1; }
       @media (min-width: 751px) {
         .b-header__navigation-list-icon {
           display: none; } }

@@ -494,6 +494,7 @@
 			position: absolute;
 			top: 3.5rem;
 			right: 9.8rem;
+			z-index: -1;
 
 			@include breakpoint(desktop) {
 				display: none;
