@@ -33,6 +33,8 @@ gulp.task('concatJS', function() {
   .pipe(order([
     "plugins/slick.js",
     "plugins/picturefill.js",
+    "plugins/iscroll.js",
+    "plugins/jquery.ba-throttle-debounce.js",
     "plugins/TweenMax.js",
     "plugins/ScrollMagic.js",
     "plugins/debug.addIndicators.js",
