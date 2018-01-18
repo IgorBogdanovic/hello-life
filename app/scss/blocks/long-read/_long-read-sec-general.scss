@@ -10,10 +10,15 @@
 			height: 100%;
 		    width: 100%;
 
+		    &:last-child {
+		    	pointer-events: none;
+		    }
+
 			.lr-panel__content {
 				position: absolute;
 		    	top: 100%;
 		    	width: 100%;
+		    	pointer-events: auto;
 		    }
 		}
 		////////////////////

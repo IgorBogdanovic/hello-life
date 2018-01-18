@@ -2,7 +2,8 @@ $(window).on('load', function() {
 
 	if($('#long-read').length) {
 
-		var longReadContent = $('#long-read-content'),
+		var longReadHeader = $('.b-header'),
+			longReadContent = $('#long-read-content'),
 			longReadAsideContent = $('.lr__fixed-aside-content'),
 			longReadSlideLinks = $('.lr__slide-links'),
 			longReadSocial = $('.c-social--lr'),
@@ -44,7 +45,8 @@ $(window).on('load', function() {
 			            'autoplay': 0,
 			            'rel': 0,
 			            'showinfo': 0,
-			            'controls': 0,
+			            'controls': 1,
+			            'fs': 0,
 						'autohide': 1
 			        },
 			        events: {
@@ -80,7 +82,6 @@ $(window).on('load', function() {
 			$('body').css({ 'height': '100%', 'margin': '0' });
 
 			var controller1 = new ScrollMagic.Controller();
-			//var controller2 = new ScrollMagic.Controller({container: '.long-read__intro'});
 
 			var longReadContentLength = longReadContent.children().length,
 				longReadProgressBarTotal = 1 / longReadContentLength,
@@ -103,7 +104,7 @@ $(window).on('load', function() {
 
 				if (index > 0 && index < longReadContentLength) {
 					if (el.children().hasClass('lr-panel__content')) {
-						wipeAnimation.fromTo(elem, 1, {y: "100000%"}, {y: "0%", ease: Linear.easeNone});
+						wipeAnimation.fromTo(elem, 1, {y: "100%"}, {y: "0%", ease: Linear.easeNone});
 						wipeAnimation.to("section.long-read-panel .lr-panel__content", 1, {y: "-100%", ease: Linear.easeNone});
 					} else {
 						wipeAnimation.fromTo(elem, 1, {y: "100%"}, {y: "0%", ease: Linear.easeNone});
@@ -187,8 +188,11 @@ $(window).on('load', function() {
 			});
 
 			// section video functionality
-			var longReadSecVideoLength = longReadSecVideo.length;
-			var scenesVideo = [];
+			var longReadSecVideoLength = longReadSecVideo.length,
+				longReadHeaderHeight = longReadHeader.outerHeight(),
+				triggerHookForVideoAndImg = longReadHeaderHeight/$windowHeight,
+				durationForVideoAndImg = longReadHeaderHeight - 1,
+				scenesVideo = [];
 
 			/*------------------------------------------
 					> Long-read Youtube API  <			
@@ -212,6 +216,7 @@ $(window).on('load', function() {
 			            'rel': 0,
 			            'showinfo': 0,
 			            'controls': 1,
+			            'fs': 0,
 						'autohide': 1
 			        },
 			        events: {
@@ -240,8 +245,8 @@ $(window).on('load', function() {
 
 					var sceneV = new ScrollMagic.Scene({
 				        triggerElement: elem,
-				        triggerHook: 0.11,
-				        duration: "10%"
+				        triggerHook: triggerHookForVideoAndImg,
+				        duration: durationForVideoAndImg
 				    })
 				    .on("start", function (e) {
 				    	if (e.scrollDirection == 'FORWARD') {
@@ -254,6 +259,7 @@ $(window).on('load', function() {
 				    		if (longReadSecVideo.hasClass('slide-in')) {
 				    			longReadSecVideo.removeClass('slide-in');
 				    			longReadSecVideoMediaHolder.css({'left': mediaHolderCssLeft});
+				    			longReadHeader.animate({top: 0}, 500);
 				    		}
 				    	}
 				    })
@@ -266,15 +272,25 @@ $(window).on('load', function() {
 			    		if (longReadSecVideo.hasClass('slide-in')) {
 			    			longReadSecVideo.removeClass('slide-in');
 			    			longReadSecVideoMediaHolder.css({'left': mediaHolderCssLeft});
+			    			longReadHeader.animate({top: 0}, 500);
 			    		}
 
 			    		$(window).scroll(function() {
 							if (longReadSecVideo.hasClass('slide-in')) {
 				    			longReadSecVideo.removeClass('slide-in');
 				    			longReadSecVideoMediaHolder.css({'left': mediaHolderCssLeft});
+				    			longReadHeader.animate({top: 0}, 500);
 				    		}
 						});
 				    })
+				    .on("progress", function (e) {
+				    	var longReadHeaderTopValue = -(e.progress * 100 * longReadHeaderHeight / 100);
+
+				    	if ( longReadSecVideo.hasClass('slide-in') ) {
+				    		longReadHeader.css({'top': longReadHeaderTopValue});
+				    	}
+					    
+					})
 				    //.addIndicators()
 				    .addTo(controller1);
 
@@ -293,8 +309,8 @@ $(window).on('load', function() {
 				if (index < longReadSecImgLength) {
 					var sceneI = new ScrollMagic.Scene({
 				        triggerElement: elem,
-				        triggerHook: 0.11,
-				        duration: "10%"
+				        triggerHook: triggerHookForVideoAndImg,
+				        duration: durationForVideoAndImg
 				    })
 				    .on("start", function (e) {
 				    	playerVideo.pauseVideo();
@@ -304,14 +320,24 @@ $(window).on('load', function() {
 				    	if (longReadSecImg.hasClass('slide-in')) {
 			    			longReadSecImg.removeClass('slide-in');
 			    			longReadSecImgMediaHolder.css({'left': mediaHolderCssLeft});
+			    			longReadHeader.animate({top: 0}, 500);
 			    		}
 			    		$(window).scroll(function() {
 							if (longReadSecImg.hasClass('slide-in')) {
 				    			longReadSecImg.removeClass('slide-in');
 				    			longReadSecImgMediaHolder.css({'left': mediaHolderCssLeft});
+				    			longReadHeader.animate({top: 0}, 500);
 				    		}
 						});
 				    })
+				    .on("progress", function (e) {
+				    	var longReadHeaderTopValue = -(e.progress * 100 * longReadHeaderHeight / 100);
+
+				    	if ( longReadSecImg.hasClass('slide-in') ) {
+				    		longReadHeader.css({'top': longReadHeaderTopValue});
+				    	}
+					    
+					})
 				    //.addIndicators()
 				    .addTo(controller1);
 
@@ -340,13 +366,33 @@ $(window).on('load', function() {
 
 			longReadSecFullScr.click(
 				function() {
-					if ($(this).parent().css('left') == '0px') {
-					    $(this).parent().css({'left': mediaHolderCssLeft});
+
+					var longReadPanelIndex = $(this).parents('.long-read-panel').index(),
+						targetPos = longReadPanelIndex * $windowHeight,
+						thisParent = $(this).parent(),
+						thisLongReadSec = $(this).parents('.long-read__sec');
+
+					if ( !thisLongReadSec.hasClass('slide-in') ) {
+
+						controller1.scrollTo(function (newScrollPos) {
+						    $('html, body').animate({scrollTop: newScrollPos}, 500);
+						});
+						controller1.scrollTo(targetPos);
+
+						setTimeout (function () {
+					        thisParent.css({'left': '0px'});
+					        thisLongReadSec.addClass('slide-in');
+					        longReadHeader.animate({top: -longReadHeaderHeight}, 500);
+					    }, 600);
+
 					} else {
-						$(this).parent().css({'left': '0px'});
+
+					    thisParent.css({'left': mediaHolderCssLeft});
+					    thisLongReadSec.removeClass('slide-in');
+					    longReadHeader.animate({top: 0}, 500);
+
 					}
 
-					$(this).parents('.long-read__sec').toggleClass('slide-in');
 				}
 			);
 
