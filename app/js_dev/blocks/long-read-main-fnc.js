@@ -32,9 +32,7 @@ $(window).on('load', function() {
 			var firstScriptTag = document.getElementsByTagName('script')[0];
 			firstScriptTag.parentNode.insertBefore(tag0, firstScriptTag);
 
-			var $windowWidth = $(window).width(),
-				$breakpoint = 750,
-				playerVideo;
+			var playerVideo;
 
 			onYouTubeIframeAPIReady = function () {
 			    playerVideo = new YT.Player('long-read__video-frame', {
@@ -81,6 +79,12 @@ $(window).on('load', function() {
 			$('html').css({ 'height': '100%', 'margin': '0' });
 			$('body').css({ 'height': '100%', 'margin': '0' });
 
+			$(window).resize(function() {
+				if ($(window).height() != $windowHeight) {
+					$windowHeight = $(window).height();
+				}
+			});
+
 			var controller1 = new ScrollMagic.Controller();
 
 			var longReadContentLength = longReadContent.children().length,
@@ -114,7 +118,7 @@ $(window).on('load', function() {
 
 			// scene for section wipes
 			var scene1 = new ScrollMagic.Scene({
-			        triggerElement: "#long-read-content",
+			        //triggerElement: "#long-read-content",
 			        triggerHook: "onLeave",
 			        duration: "600%"
 			    })
@@ -202,9 +206,7 @@ $(window).on('load', function() {
 			var firstScriptTag = document.getElementsByTagName('script')[0];
 			firstScriptTag.parentNode.insertBefore(tag0, firstScriptTag);
 
-			var $windowWidth = $(window).width(),
-				$breakpoint = 750,
-				playerVideo;
+			var playerVideo;
 
 			onYouTubeIframeAPIReady = function () {
 			    playerVideo = new YT.Player('long-read__video-frame', {

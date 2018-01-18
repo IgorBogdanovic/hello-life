@@ -5519,7 +5519,7 @@ html {
 @media (min-width: 751px) {
   .long-read {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow: hidden; }
     .long-read-panel {
       position: absolute;
